@@ -65,7 +65,7 @@ export default function Home() {
               His Holiness Jagadguru Mahayogi Siddhababa
             </motion.p>
             <motion.p variants={fadeInUp} className="text-sm md:text-base text-primary-foreground/75 font-medium tracking-widest uppercase mb-4">
-              Guided Meditation <span className="mx-2 text-secondary">·</span> Timeless Spiritual Teachings <span className="mx-2 text-secondary">·</span> Enlightened Meditation Master
+              Guided Meditation <span className="mx-2 text-secondary">·</span> Timeless Spiritual Teachings <span className="mx-2 text-secondary">·</span> With Enlightened Himalayan Yogi &amp; Meditation Master
             </motion.p>
             <motion.p variants={fadeInUp} className="text-base md:text-xl text-primary-foreground/85 font-light italic mb-12 max-w-xl mx-auto leading-relaxed">
               For inner peace, clarity, and transformation.
