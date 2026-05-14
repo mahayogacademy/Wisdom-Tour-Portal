@@ -145,8 +145,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What to Expect / Program */}
-      {/* Decorative divider */}
+      {/* Decorative divider before The Journey */}
       <div className="flex items-center justify-center gap-4 py-2 px-8">
         <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-primary/40" />
         <div className="flex items-center gap-2 text-secondary/60">
@@ -371,31 +370,10 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="mt-auto relative z-10">
-                <a
-                  href="#ebook-form"
-                  className="inline-flex items-center gap-2.5 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-6 py-3 rounded-xl transition-colors w-full justify-center"
-                >
-                  <Download className="w-4 h-4" />
-                  Download Free E-Book
-                </a>
-                <p className="text-xs text-muted-foreground text-center mt-3 font-light">
-                  Enter your email below to receive your free copy instantly.
-                </p>
+              <div className="relative z-10 border-t border-border pt-5 mt-auto">
+                <EbookForm />
               </div>
             </motion.div>
-          </motion.div>
-
-          {/* E-Book Email Form */}
-          <motion.div
-            id="ebook-form"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-60px" }}
-            variants={fadeInUp}
-            className="mt-8"
-          >
-            <EbookForm />
           </motion.div>
         </div>
       </section>

@@ -23,33 +23,32 @@ export function EbookForm() {
 
   if (submitted) {
     return (
-      <div className="bg-background border border-border rounded-2xl p-8 md:p-10 flex flex-col items-center text-center gap-4 shadow-sm">
-        <div className="w-14 h-14 rounded-full bg-secondary/15 flex items-center justify-center">
-          <CheckCircle className="w-7 h-7 text-secondary" />
+      <div className="flex flex-col items-center text-center gap-4 py-4">
+        <div className="w-12 h-12 rounded-full bg-secondary/15 flex items-center justify-center">
+          <CheckCircle className="w-6 h-6 text-secondary" />
         </div>
-        <h4 className="font-serif text-2xl font-bold text-primary">Thank You, {name}!</h4>
-        <p className="text-muted-foreground font-light text-sm md:text-base max-w-sm">
-          Your free copy of <span className="text-primary font-medium italic">The Hidden Science Within You</span> is on its way to <span className="text-primary font-medium">{email}</span>.
-        </p>
-        <p className="text-xs text-muted-foreground">Please check your inbox — it may take a few minutes to arrive.</p>
+        <div>
+          <h4 className="font-serif text-xl font-bold text-primary mb-1">Thank You, {name}!</h4>
+          <p className="text-muted-foreground font-light text-sm max-w-xs mx-auto">
+            Your free copy of{" "}
+            <span className="text-primary font-medium italic">The Hidden Science Within You</span>{" "}
+            is on its way to <span className="text-primary font-medium">{email}</span>.
+          </p>
+          <p className="text-xs text-muted-foreground mt-2">Please check your inbox — it may take a few minutes to arrive.</p>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="bg-background border border-border rounded-2xl p-6 md:p-10 shadow-sm">
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-6">
-        <div>
-          <h4 className="font-serif text-xl md:text-2xl font-bold text-primary">
-            Get Your Free E-Book
-          </h4>
-          <p className="text-muted-foreground font-light text-sm mt-1">
-            Enter your details below and we will send it straight to your inbox.
-          </p>
-        </div>
-        <div className="flex items-center gap-2 text-xs font-medium text-secondary bg-secondary/10 px-3 py-1.5 rounded-full shrink-0 w-fit">
-          <Mail className="w-3.5 h-3.5" />
-          No spam, ever
+    <div>
+      <div className="flex items-center justify-between gap-3 mb-4">
+        <p className="text-muted-foreground font-light text-sm">
+          Enter your details and we will send it straight to your inbox.
+        </p>
+        <div className="flex items-center gap-1.5 text-xs font-medium text-secondary bg-secondary/10 px-3 py-1.5 rounded-full shrink-0">
+          <Mail className="w-3 h-3" />
+          No spam
         </div>
       </div>
 
