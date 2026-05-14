@@ -45,8 +45,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 md:pt-48 md:pb-32 min-h-[85vh] md:min-h-[90vh] flex items-center">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-primary/70 mix-blend-multiply z-10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background z-10" />
+          <div className="absolute inset-0 bg-primary/55 mix-blend-multiply z-10" />
+          <div className="absolute inset-0 z-10" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.35) 0%, transparent 30%, transparent 70%, var(--color-background, hsl(40 30% 96%)) 100%)" }} />
           <img
             src={heroImg}
             alt="Himalayan mountains sunrise"
