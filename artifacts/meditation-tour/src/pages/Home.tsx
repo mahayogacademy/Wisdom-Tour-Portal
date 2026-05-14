@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { MapPin, Calendar, ArrowRight } from "lucide-react";
+import { MapPin, Calendar, ArrowRight, CheckCircle, BookOpen, Download } from "lucide-react";
 import { Nav } from "@/components/Nav";
+import { EbookForm } from "@/components/EbookForm";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
@@ -237,12 +238,13 @@ export default function Home() {
         <div className="absolute top-0 right-0 -mr-32 -mt-32 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
-        <div className="container relative z-10 mx-auto px-4 lg:px-8 text-center max-w-4xl">
+        <div className="container relative z-10 mx-auto px-4 lg:px-8 max-w-5xl">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={staggerContainer}
+            className="text-center"
           >
             <motion.h2 variants={fadeInUp} className="font-serif text-3xl md:text-5xl font-bold text-primary mb-4">
               The Journey
@@ -250,26 +252,107 @@ export default function Home() {
             <motion.p variants={fadeInUp} className="text-base md:text-xl text-muted-foreground font-light mb-10 md:mb-16">
               A meticulously crafted program designed for deep transformation.
             </motion.p>
+          </motion.div>
 
-            <motion.div variants={fadeInUp} className="bg-background rounded-2xl p-6 md:p-12 shadow-sm border border-border text-left">
-              <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3">Himalayan Siddha Mahayog Meditation</h3>
-              <div className="inline-block bg-secondary/10 text-secondary px-4 py-1 rounded-full text-sm font-medium mb-5">
-                3 Session Special
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={staggerContainer}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8"
+          >
+            {/* Program Card */}
+            <motion.div variants={fadeInUp} className="bg-background rounded-2xl p-6 md:p-10 shadow-sm border border-border text-left flex flex-col gap-5">
+              <div>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3">Himalayan Siddha Mahayog Meditation</h3>
+                <div className="inline-block bg-secondary/10 text-secondary px-4 py-1 rounded-full text-sm font-medium mb-4">
+                  3 Session Special
+                </div>
+                <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed">
+                  Over the course of three transformative sessions, you will be guided through ancient meditation techniques designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
+                </p>
               </div>
-              <p className="text-muted-foreground font-light text-base md:text-lg mb-7 leading-relaxed">
-                Over the course of three transformative sessions, you will be guided through ancient meditation techniques designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 text-sm font-medium text-primary">
+
+              {/* What to Expect */}
+              <div>
+                <h4 className="font-serif text-lg md:text-xl font-semibold text-primary mb-4">What to Expect</h4>
+                <ul className="flex flex-col gap-3">
+                  {[
+                    "Live guided meditation with a Himalayan Siddha master",
+                    "Activation of dormant chakra & kundalini energy",
+                    "Ancient breathing techniques (pranayama) for clarity and calm",
+                    "Personal guidance on your spiritual path",
+                    "A profound experience of inner stillness and awakening",
+                    "Community of sincere seekers from across Canada",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm md:text-base text-muted-foreground font-light">
+                      <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3 text-sm font-medium text-primary pt-2 border-t border-border mt-auto">
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5 text-secondary shrink-0" />
+                  <Calendar className="w-4 h-4 text-secondary shrink-0" />
                   <span>Dates: Coming Soon</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-secondary shrink-0" />
+                  <MapPin className="w-4 h-4 text-secondary shrink-0" />
                   <span>Venues: Coming Soon</span>
                 </div>
               </div>
             </motion.div>
+
+            {/* E-Book Download Card */}
+            <motion.div variants={fadeInUp} className="bg-background rounded-2xl p-6 md:p-10 shadow-sm border border-border text-left flex flex-col gap-5 relative overflow-hidden">
+              {/* Decorative glow */}
+              <div className="absolute top-0 right-0 w-48 h-48 bg-secondary/10 rounded-full blur-3xl pointer-events-none -mr-12 -mt-12" />
+
+              <div className="relative z-10">
+                <div className="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center mb-5">
+                  <BookOpen className="w-6 h-6 text-secondary" />
+                </div>
+                <div className="inline-block bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-medium mb-4 border border-primary/20">
+                  Free Download
+                </div>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-2 leading-snug">
+                  The Hidden Science Within You
+                </h3>
+                <p className="text-secondary font-medium text-sm mb-5">
+                  Understanding Himalayan Siddha Mahayog
+                </p>
+                <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed mb-8">
+                  Discover the ancient wisdom that has guided seekers for thousands of years. This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
+                </p>
+              </div>
+
+              <div className="mt-auto relative z-10">
+                <a
+                  href="#ebook-form"
+                  className="inline-flex items-center gap-2.5 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-6 py-3 rounded-xl transition-colors w-full justify-center"
+                >
+                  <Download className="w-4 h-4" />
+                  Download Free E-Book
+                </a>
+                <p className="text-xs text-muted-foreground text-center mt-3 font-light">
+                  Enter your email below to receive your free copy instantly.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* E-Book Email Form */}
+          <motion.div
+            id="ebook-form"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            variants={fadeInUp}
+            className="mt-8"
+          >
+            <EbookForm />
           </motion.div>
         </div>
       </section>
