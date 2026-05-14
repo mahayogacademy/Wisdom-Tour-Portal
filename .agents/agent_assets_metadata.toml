@@ -113,3 +113,9 @@ id = "nExR75wCwxLRt1b8tg-Fj"
 uri = "file://attached_assets/stock_images/city-edmonton-2.jpg"
 type = "image"
 title = "Edmonton Alberta skyline North Saskatchewan River bridge sunset"
+
+[[outputs]]
+id = "TTLZLiq0AxsHw3ggp-lLv"
+uri = "file://attached_assets/stock_images/city-vancouver-2.jpg"
+type = "image"
+title = "Vancouver British Columbia skyline mountains Gastown waterfront photography"
