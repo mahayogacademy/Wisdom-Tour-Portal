@@ -84,15 +84,15 @@ export default function Home() {
       {/* Teacher Section */}
       <section className="py-14 md:py-28 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12">
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
               variants={fadeInUp}
-              className="w-full lg:w-1/2"
+              className="w-full lg:w-auto lg:flex-shrink-0"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-w-xs sm:max-w-sm mx-auto lg:mx-0">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-w-xs sm:max-w-sm mx-auto lg:mx-0 lg:w-72">
                 <img
                   src={teacherImg}
                   alt="His Holiness Jagadguru Mahayogi Siddhababa"
@@ -111,7 +111,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
               variants={fadeInUp}
-              className="w-full lg:w-1/2"
+              className="w-full lg:w-auto lg:max-w-md"
             >
               <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">
                 Meet Enlightened Himalayan Yogi
