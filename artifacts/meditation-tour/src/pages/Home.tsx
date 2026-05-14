@@ -114,14 +114,14 @@ export default function Home() {
               className="w-full lg:w-1/2"
             >
               <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">
-                The Master &amp; The Lineage
+                The Master
               </h2>
               <div className="space-y-5 text-base md:text-lg text-muted-foreground font-light leading-relaxed">
                 <p>
-                  Jagadguru Mahayogi Siddhababa is a Himalayan Siddha master bringing ancient wisdom traditions to Canada. For the first time in this season, a rare gathering opens its doors to those seeking profound spiritual deepening.
+                  His Holiness Jagadguru Mahayogi Siddhababa is a Himalayan yogi and spiritual teacher dedicated to sharing the timeless wisdom of the ancient yogic tradition in a way that is accessible and meaningful for modern life. Deeply grounded in meditation, Vedic knowledge, and the inner sciences of yoga, he guides seekers from all backgrounds toward greater peace, clarity, and self-understanding.
                 </p>
                 <p>
-                  These timeless meditation practices, transmitted through direct lineage from the high Himalayas, offer a pathway to inner peace, profound healing, and self-realization. The teachings carry the warmth of a welcoming teacher and the power of unbroken sacred tradition.
+                  Rooted in an unbroken Himalayan lineage, his teachings combine profound spiritual depth with warmth, humility, and practical insight. Through Himalayan Siddha Mahayog meditation, discourse, and personal guidance, he continues to inspire individuals and communities around the world on the path of inner transformation.
                 </p>
               </div>
             </motion.div>
