@@ -261,8 +261,8 @@ export default function Home() {
             variants={staggerContainer}
             className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8"
           >
-            {/* Program Card */}
-            <motion.div variants={fadeInUp} className="bg-background rounded-2xl p-6 md:p-10 shadow-sm border border-border text-left flex flex-col gap-5">
+            {/* Program */}
+            <motion.div variants={fadeInUp} className="text-left flex flex-col gap-5">
               <div>
                 <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-3">Himalayan Siddha Mahayog Meditation</h3>
                 <div className="inline-block bg-secondary/10 text-secondary px-4 py-1 rounded-full text-sm font-medium mb-4">
@@ -291,17 +291,6 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-3 text-sm font-medium text-primary pt-2 border-t border-border mt-auto">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-secondary shrink-0" />
-                  <span>Dates: Coming Soon</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-secondary shrink-0" />
-                  <span>Venues: Coming Soon</span>
-                </div>
               </div>
             </motion.div>
 
