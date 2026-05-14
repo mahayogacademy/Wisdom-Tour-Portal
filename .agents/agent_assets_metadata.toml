@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "_1eEj2MnSu1pgkVcUMpjS"
@@ -78,3 +77,33 @@ id = "cRQIYJTl0ISXW1PivyScL"
 uri = "file://artifacts/meditation-tour/src/assets/images/city-toronto.png"
 type = "image"
 title = "generated_image"
+
+[[outputs]]
+id = "IoYU73C4qm5mEUgn5DXiO"
+uri = "file://attached_assets/stock_images/city-edmonton.jpg"
+type = "image"
+title = "Edmonton Alberta Canada downtown skyline river valley aerial view"
+
+[[outputs]]
+id = "47G-TJ1BqsBp2PF5VlsyR"
+uri = "file://attached_assets/stock_images/city-calgary.jpg"
+type = "image"
+title = "Calgary Alberta Canada downtown skyline Rocky Mountains Bow River"
+
+[[outputs]]
+id = "F59Tk84iMEV25IXuPO-lk"
+uri = "file://attached_assets/stock_images/city-vancouver.jpg"
+type = "image"
+title = "Vancouver British Columbia Canada skyline mountains ocean harbour"
+
+[[outputs]]
+id = "mxT7bwuqHy1JkbI7cF2tn"
+uri = "file://attached_assets/stock_images/city-ottawa.jpg"
+type = "image"
+title = "Ottawa Ontario Canada Parliament Hill Rideau Canal cityscape"
+
+[[outputs]]
+id = "qF_kjSrCQ-0GmuGrvamfh"
+uri = "file://attached_assets/stock_images/city-toronto.jpg"
+type = "image"
+title = "Toronto Ontario Canada CN Tower skyline Lake Ontario aerial"
