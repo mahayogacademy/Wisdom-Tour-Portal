@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { MapPin, Calendar, Clock } from "lucide-react";
+import { MapPin, Calendar, Clock, Heart } from "lucide-react";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ReservationForm } from "@/components/ReservationForm";
@@ -148,6 +148,20 @@ export default function CityPage({ city }: CityPageProps) {
                   </li>
                 </ul>
               </div>
+
+              {cityKey === "calgary" && (
+                <div className="mt-5 p-5 md:p-6 bg-secondary/10 border border-secondary/30 rounded-xl flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center shrink-0 mt-0.5">
+                    <Heart className="w-5 h-5 text-secondary" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-lg font-bold text-primary mb-1">Open to All — No Admission Fee</h4>
+                    <p className="text-muted-foreground font-light text-sm leading-relaxed">
+                      This program is offered freely as a gift of wisdom. Those who wish to support the mission of spreading these teachings may offer a voluntary donation — every contribution, large or small, is received with deep gratitude.
+                    </p>
+                  </div>
+                </div>
+              )}
             </motion.div>
 
           </div>
