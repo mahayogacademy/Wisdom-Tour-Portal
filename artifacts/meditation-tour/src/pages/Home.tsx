@@ -55,17 +55,17 @@ export default function Home() {
             variants={staggerContainer}
             className="max-w-4xl mx-auto"
           >
-            <motion.span variants={fadeInUp} className="inline-block text-secondary font-medium tracking-widest uppercase mb-6 text-sm md:text-base">
-              A Sacred Canadian Pilgrimage
-            </motion.span>
-            <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 leading-tight drop-shadow-lg">
+            <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-4 leading-tight drop-shadow-lg">
               Himalayan Meditation <span className="text-secondary">&amp;</span> Wisdom Tour
             </motion.h1>
-            <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-secondary font-serif font-semibold mb-4 drop-shadow">
-              His Holiness Jagadguru Mahayogi Siddhababa
+            <motion.p variants={fadeInUp} className="text-2xl md:text-3xl text-secondary font-serif italic font-medium mb-4 drop-shadow">
+              Ancient Wisdom for Modern Life
+            </motion.p>
+            <motion.p variants={fadeInUp} className="text-base md:text-lg text-primary-foreground/80 font-medium tracking-wide mb-6 uppercase">
+              With His Holiness Jagadguru Mahayogi Siddhababa
             </motion.p>
             <motion.p variants={fadeInUp} className="text-base md:text-xl text-primary-foreground/85 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-              Meet an Enlightened Spiritual Teacher and learn the powerful inner science of Himalayan Siddha Mahayog Meditation — for inner peace, clarity, and transformation.
+              Experience guided meditation, timeless spiritual teachings, and the living tradition of Himalayan Siddha Mahayog for inner peace, clarity, and transformation.
             </motion.p>
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-primary-foreground text-lg px-8 h-14 w-full sm:w-auto" data-testid="button-reserve-spot">
