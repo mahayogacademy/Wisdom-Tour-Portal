@@ -286,7 +286,7 @@ export default function Home() {
                 {
                   Icon: Flame,
                   title: "Vedic Ceremonies",
-                  desc: "Sacred fire rituals and traditional Vedic practices that purify the space and invoke divine blessings.",
+                  desc: "Powerful Vedic practices that purify the environment, invoke inner energy and help remove obstacles.",
                   iconColor: "text-orange-500",
                   ringColor: "border-orange-300",
                   bgColor: "bg-orange-50",
