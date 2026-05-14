@@ -189,6 +189,21 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
+
+                {/* E-Book download — inline below What to Expect */}
+                <div className="mt-8 pt-7 border-t border-border">
+                  <a
+                    href="/hidden-science-within-you.pdf"
+                    download="The-Hidden-Science-Within-You.pdf"
+                    className="inline-flex items-center gap-2.5 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-7 py-3 rounded-xl transition-colors"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download Free E-Book
+                  </a>
+                  <p className="text-sm text-muted-foreground font-light mt-3 leading-relaxed">
+                    This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
+                  </p>
+                </div>
               </motion.div>
 
               {/* Right — Photo */}
@@ -204,22 +219,6 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Bottom — compact e-book strip */}
-            <motion.div variants={fadeInUp} className="bg-background rounded-xl border border-border shadow-sm px-5 py-4 flex flex-col sm:flex-row items-center gap-4">
-              <BookOpen className="w-5 h-5 text-secondary shrink-0" />
-              <p className="text-sm text-muted-foreground font-light flex-1 text-center sm:text-left">
-                <span className="font-medium text-primary">Free E-Book — </span>
-                This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
-              </p>
-              <a
-                href="/hidden-science-within-you.pdf"
-                download="The-Hidden-Science-Within-You.pdf"
-                className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap shrink-0"
-              >
-                <Download className="w-4 h-4" />
-                Download Free E-Book
-              </a>
-            </motion.div>
           </motion.div>
         </div>
       </section>
