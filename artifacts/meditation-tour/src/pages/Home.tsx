@@ -114,7 +114,7 @@ export default function Home() {
               className="w-full lg:w-1/2"
             >
               <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">
-                The Master
+                Enlightened Himalayan Yogi
               </h2>
               <div className="space-y-5 text-base md:text-lg text-muted-foreground font-light leading-relaxed">
                 <p>
