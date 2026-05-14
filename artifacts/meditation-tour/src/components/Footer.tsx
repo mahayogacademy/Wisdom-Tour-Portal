@@ -53,7 +53,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 md:mt-16 pt-6 md:pt-8 border-t border-primary-foreground/10 text-center text-xs md:text-sm text-primary-foreground/50 font-light">
-          <p>&copy; {new Date().getFullYear()} Mahayogi Siddhababa Spiritual Academy, Canada</p>
+          <p>&copy; {new Date().getFullYear()} Mahayogi Siddhababa Spiritual Academy, Canada. All rights reserved.</p>
         </div>
       </div>
     </footer>
