@@ -181,7 +181,7 @@ export default function Home() {
                   3 Session Special
                 </div>
                 <p className="text-muted-foreground font-light text-base leading-relaxed mb-7">
-                  Over the course of three transformative sessions, you will be guided through ancient meditation techniques designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
+                  Over the course of three transformative sessions, you will be guided through an ancient meditation technique designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
                 </p>
                 <h4 className="font-serif text-lg font-semibold text-primary mb-4">What to Expect</h4>
                 <ul className="flex flex-col gap-3">
