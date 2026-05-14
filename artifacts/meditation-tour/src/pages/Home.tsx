@@ -219,7 +219,7 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="mt-auto pt-1">
-                        <div className="w-full bg-secondary hover:bg-secondary/90 text-white text-sm font-semibold font-serif text-center py-2.5 rounded-xl transition-colors duration-200">
+                        <div className="inline-block bg-secondary hover:bg-secondary/90 text-white text-sm font-semibold font-serif px-5 py-2.5 rounded-xl transition-colors duration-200">
                           Reserve Spot
                         </div>
                       </div>
