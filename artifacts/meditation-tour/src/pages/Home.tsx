@@ -156,19 +156,9 @@ export default function Home() {
             variants={staggerContainer}
             className="flex flex-col gap-10 md:gap-14"
           >
-            {/* Top row — Photo + Content */}
+            {/* Top row — Content + Photo */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-              {/* Left — Photo */}
-              <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] max-w-sm mx-auto lg:mx-0 w-full">
-                <img
-                  src={hiddenScienceImg}
-                  alt="Ancient Himalayan wisdom and meditation"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
-              </motion.div>
-
-              {/* Right — Content */}
+              {/* Left — Content */}
               <motion.div variants={fadeInUp} className="flex flex-col gap-6">
                 <div>
                   <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">
@@ -205,38 +195,34 @@ export default function Home() {
                   </ul>
                 </div>
               </motion.div>
+
+              {/* Right — Photo */}
+              <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] max-w-sm mx-auto lg:mx-0 w-full">
+                <img
+                  src={hiddenScienceImg}
+                  alt="Chakra and kundalini meditation energy"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+              </motion.div>
             </div>
 
-            {/* Bottom — E-Book card */}
-            <motion.div variants={fadeInUp} className="bg-background rounded-2xl p-6 md:p-8 border border-border shadow-sm flex flex-col sm:flex-row gap-6 items-start relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-secondary/8 rounded-full blur-3xl pointer-events-none -mr-12 -mt-12" />
-              <div className="relative z-10 shrink-0">
-                <div className="w-11 h-11 rounded-xl bg-secondary/15 flex items-center justify-center">
-                  <BookOpen className="w-5 h-5 text-secondary" />
-                </div>
-              </div>
-              <div className="relative z-10 flex-1">
-                <div className="inline-block bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-medium mb-2 border border-primary/20">
-                  Free E-Book
-                </div>
-                <h4 className="font-serif text-xl md:text-2xl font-bold text-primary mb-1">
-                  The Hidden Science Within You
-                </h4>
-                <p className="text-muted-foreground font-light text-sm leading-relaxed mt-2">
-                  This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
-                </p>
-              </div>
-              <div className="relative z-10 shrink-0 flex flex-col items-center gap-2 w-full sm:w-auto">
-                <a
-                  href="/hidden-science-within-you.pdf"
-                  download="The-Hidden-Science-Within-You.pdf"
-                  className="inline-flex items-center gap-2.5 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-7 py-3 rounded-xl transition-colors whitespace-nowrap"
-                >
-                  <Download className="w-4 h-4" />
-                  Download Free E-Book
-                </a>
-                <p className="text-xs text-muted-foreground font-light">Free — no sign-up required.</p>
-              </div>
+            {/* Bottom — E-Book strip */}
+            <motion.div variants={fadeInUp} className="bg-background rounded-xl px-5 py-4 border border-border shadow-sm flex flex-col sm:flex-row items-center gap-4 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/8 rounded-full blur-2xl pointer-events-none" />
+              <BookOpen className="w-5 h-5 text-secondary shrink-0 relative z-10" />
+              <p className="relative z-10 text-sm text-muted-foreground font-light flex-1 text-center sm:text-left">
+                <span className="font-medium text-primary">Free E-Book — </span>
+                Receive your copy of <span className="italic">The Hidden Science Within You</span> — no sign-up required.
+              </p>
+              <a
+                href="/hidden-science-within-you.pdf"
+                download="The-Hidden-Science-Within-You.pdf"
+                className="relative z-10 inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap shrink-0"
+              >
+                <Download className="w-4 h-4" />
+                Download Free E-Book
+              </a>
             </motion.div>
           </motion.div>
         </div>
