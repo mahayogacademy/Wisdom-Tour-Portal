@@ -88,7 +88,7 @@ export default function Home() {
       </section>
 
       {/* Teacher Section */}
-      <section className="py-14 md:py-28 bg-background">
+      <section className="py-14 md:pt-28 md:pb-10 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12">
             <motion.div
@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* Hidden Science / Mahayog Section */}
-      <section className="py-14 md:py-28 bg-card">
+      <section className="py-14 md:pt-10 md:pb-28 bg-card">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="hidden"
