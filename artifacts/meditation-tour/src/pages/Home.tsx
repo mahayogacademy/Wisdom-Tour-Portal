@@ -86,7 +86,7 @@ export default function Home() {
       {/* Teacher Section */}
       <section className="py-14 md:py-28 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-6">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -94,7 +94,7 @@ export default function Home() {
               variants={fadeInUp}
               className="w-full lg:w-1/2"
             >
-              <div className="flex flex-row gap-3 max-w-lg mx-auto lg:mx-0">
+              <div className="flex flex-row gap-3 w-full">
                 {/* Main portrait — wider left column */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl flex-[3]">
                   <img
