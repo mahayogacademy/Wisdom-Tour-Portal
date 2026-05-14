@@ -59,21 +59,12 @@ export default function Home() {
               A Sacred Canadian Pilgrimage
             </motion.span>
             <motion.h1 variants={fadeInUp} className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-4 leading-tight drop-shadow-lg">
-              Himalayan Meditation <span className="text-secondary">&amp;</span> Wisdom Tour
+              <span className="whitespace-nowrap">Himalayan Meditation</span>{" "}
+              <span className="text-secondary">&amp;</span> Wisdom Tour
             </motion.h1>
-            <motion.p variants={fadeInUp} className="text-lg md:text-2xl text-secondary font-serif font-semibold mb-5 drop-shadow">
-              His Holiness Jagadguru Mahayogi Siddhababa
+            <motion.p variants={fadeInUp} className="font-sans text-base md:text-lg text-primary-foreground/80 font-light tracking-wide mb-8 drop-shadow">
+              With His Holiness Jagadguru Mahayogi Siddhababa
             </motion.p>
-
-            {/* Tagline — stacked on mobile, inline on sm+ */}
-            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-0 text-primary-foreground/70 font-medium tracking-wider uppercase text-xs mb-4">
-              <span>Guided Meditation</span>
-              <span className="hidden sm:inline mx-3 text-secondary">·</span>
-              <span>Timeless Spiritual Teachings</span>
-              <span className="hidden sm:inline mx-3 text-secondary">·</span>
-              <span>With Enlightened Himalayan Yogi &amp; Meditation Master</span>
-            </motion.div>
-
             <motion.p variants={fadeInUp} className="text-base md:text-lg text-primary-foreground/85 font-light italic mb-10 max-w-md mx-auto leading-relaxed">
               For inner peace, clarity, and transformation.
             </motion.p>
