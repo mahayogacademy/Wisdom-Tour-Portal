@@ -5,7 +5,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { ReservationForm } from "@/components/ReservationForm";
 
-import teacherImg from "@assets/IMG_2389_1778725702179.JPG";
+import teacherImg from "@assets/IMG_9838_1778799314514.JPG";
 import edmontonImg from "@/assets/images/edmonton.png";
 import calgaryImg from "@/assets/images/calgary.png";
 import vancouverImg from "@/assets/images/vancouver.png";

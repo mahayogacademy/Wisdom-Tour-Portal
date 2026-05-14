@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
 import heroImg from "@/assets/images/hero-home.png";
-import teacherImg from "@assets/IMG_2389_1778725702179.JPG";
+import teacherImg from "@assets/IMG_9838_1778799314514.JPG";
 import lotusImg from "@/assets/images/lotus.png";
 import cityEdmonton from "@/assets/images/city-edmonton.png";
 import cityCalgary from "@/assets/images/city-calgary.png";
