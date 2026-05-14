@@ -320,9 +320,12 @@ export default function Home() {
       </section>
 
       {/* What to Expect / Program */}
-      <section className="py-14 md:py-28 bg-card relative overflow-hidden">
-        <div className="absolute top-0 right-0 -mr-32 -mt-32 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+      <section className="py-14 md:py-28 relative overflow-hidden">
+        {/* Background image with dark overlay */}
+        <div className="absolute inset-0 z-0">
+          <img src={heroImg} alt="" className="w-full h-full object-cover object-center" aria-hidden="true" />
+          <div className="absolute inset-0 bg-primary/85" />
+        </div>
 
         <div className="container relative z-10 mx-auto px-4 lg:px-8 max-w-5xl">
           <motion.div
@@ -332,11 +335,11 @@ export default function Home() {
             variants={staggerContainer}
             className="text-center"
           >
-            <motion.h2 variants={fadeInUp} className="font-serif text-3xl md:text-5xl font-bold text-primary mb-4">
+            <motion.h2 variants={fadeInUp} className="font-serif text-3xl md:text-5xl font-bold text-white mb-4">
               The Journey
             </motion.h2>
-            <motion.p variants={fadeInUp} className="text-base md:text-xl text-muted-foreground font-light mb-10 md:mb-16">
-              A meticulously crafted program designed for deep transformation.
+            <motion.p variants={fadeInUp} className="text-base md:text-xl text-white/70 font-light mb-10 md:mb-16">
+              Programs across Canada designed for deep transformation.
             </motion.p>
           </motion.div>
 
@@ -348,34 +351,34 @@ export default function Home() {
             variants={staggerContainer}
             className="mb-14 md:mb-20"
           >
-            <div className="relative flex flex-col sm:flex-row items-start sm:items-start justify-between gap-10 sm:gap-0">
+            <div className="relative flex flex-col sm:flex-row items-start justify-between gap-10 sm:gap-0">
               {/* Connecting line (desktop only) */}
-              <div className="hidden sm:block absolute top-9 left-[16.5%] right-[16.5%] h-px bg-gradient-to-r from-secondary/30 via-secondary/60 to-secondary/30" />
+              <div className="hidden sm:block absolute top-9 left-[16.5%] right-[16.5%] h-px bg-gradient-to-r from-white/10 via-secondary/60 to-white/10" />
 
               {[
                 {
                   Icon: Brain,
                   title: "Mahayog Meditation",
                   desc: "Ancient Himalayan techniques to awaken dormant energy, still the mind, and experience the depths of inner silence.",
-                  iconColor: "text-violet-500",
-                  ringColor: "border-violet-300",
-                  bgColor: "bg-violet-50",
+                  iconColor: "text-violet-300",
+                  ringColor: "border-violet-400/50",
+                  bgColor: "bg-violet-900/40",
                 },
                 {
                   Icon: MessageCircle,
                   title: "Wisdom Talks (Satsang)",
                   desc: "Sit in the presence of a living master and receive profound teachings on consciousness, the Self, and reality.",
-                  iconColor: "text-teal-600",
-                  ringColor: "border-teal-300",
-                  bgColor: "bg-teal-50",
+                  iconColor: "text-teal-300",
+                  ringColor: "border-teal-400/50",
+                  bgColor: "bg-teal-900/40",
                 },
                 {
                   Icon: Flame,
                   title: "Vedic Ceremonies",
                   desc: "Powerful Vedic practices that purify the environment, invoke inner energy and help remove obstacles.",
-                  iconColor: "text-orange-500",
-                  ringColor: "border-orange-300",
-                  bgColor: "bg-orange-50",
+                  iconColor: "text-secondary",
+                  ringColor: "border-secondary/50",
+                  bgColor: "bg-secondary/10",
                 },
               ].map(({ Icon, title, desc, iconColor, ringColor, bgColor }) => (
                 <motion.div
@@ -383,18 +386,15 @@ export default function Home() {
                   variants={fadeInUp}
                   className="relative flex flex-col items-center text-center flex-1 px-4"
                 >
-                  {/* Icon circle */}
-                  <div className={`relative z-10 w-[72px] h-[72px] rounded-full ${bgColor} border-2 ${ringColor} shadow-md flex items-center justify-center mb-5`}>
+                  <div className={`relative z-10 w-[72px] h-[72px] rounded-full ${bgColor} border ${ringColor} shadow-lg backdrop-blur-sm flex items-center justify-center mb-5`}>
                     <Icon className={`w-7 h-7 ${iconColor}`} strokeWidth={1.5} />
                   </div>
-                  <h4 className="font-serif text-lg md:text-xl font-bold text-primary mb-2">{title}</h4>
-                  <p className="text-muted-foreground font-light text-sm leading-relaxed max-w-[220px] mx-auto">{desc}</p>
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mb-2">{title}</h4>
+                  <p className="text-white/60 font-light text-sm leading-relaxed max-w-[220px] mx-auto">{desc}</p>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-
-          
         </div>
       </section>
 
