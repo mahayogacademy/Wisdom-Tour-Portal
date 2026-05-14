@@ -358,8 +358,8 @@ export default function Home() {
               {[
                 {
                   Icon: Brain,
-                  title: "Mahayog Meditation",
-                  desc: "Ancient Himalayan techniques to awaken dormant energy, still the mind, and experience the depths of the inner self.",
+                  title: "Himalayan Siddha Mahayog Meditation",
+                  desc: "Awaken dormant energy, still the mind, and experience the depths of the inner self.",
                   iconColor: "text-violet-300",
                   ringColor: "border-violet-400/50",
                   bgColor: "bg-violet-900/40",
