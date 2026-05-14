@@ -146,7 +146,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5 md:gap-8">
             {cities.map((city, idx) => (
               <motion.div
                 key={city.name}
@@ -157,6 +157,13 @@ export default function Home() {
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.08 } }
                 }}
+                className={
+                  idx < 3
+                    ? "lg:col-span-2"
+                    : idx === 3
+                    ? "lg:col-span-2 lg:col-start-2"
+                    : "lg:col-span-2"
+                }
               >
                 <Link href={city.path} className="group block h-full" data-testid={`link-city-${city.name.toLowerCase()}`}>
                   <div className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border h-full transition-all duration-300 hover:shadow-xl active:scale-[0.98]">
