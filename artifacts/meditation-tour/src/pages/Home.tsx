@@ -102,10 +102,10 @@ export default function Home() {
                     alt="His Holiness Jagadguru Mahayogi Siddhababa"
                     className="w-full h-full object-cover object-top"
                   />
-                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, hsl(var(--primary) / 0.85) 0%, hsl(var(--primary) / 0.25) 30%, transparent 52%)' }} />
+                  <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.45) 35%, transparent 60%)' }} />
                   <div className="absolute bottom-0 left-0 p-4 md:p-5">
-                    <p className="text-secondary font-serif text-sm md:text-lg">Jagadguru Mahayogi Siddhababa</p>
-                    <p className="text-primary-foreground/80 text-[10px] tracking-wider uppercase mt-0.5">Himalayan Siddha Master</p>
+                    <p className="text-white font-serif text-sm md:text-lg font-semibold drop-shadow-md">Jagadguru Mahayogi Siddhababa</p>
+                    <p className="text-white/80 text-[10px] tracking-wider uppercase mt-0.5 drop-shadow-md">Himalayan Siddha Master</p>
                   </div>
                 </div>
                 {/* Two smaller images stacked on the right */}
