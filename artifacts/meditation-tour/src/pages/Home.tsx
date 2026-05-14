@@ -269,31 +269,37 @@ export default function Home() {
               {[
                 {
                   Icon: Brain,
-                  label: "01",
                   title: "Mahayog Meditation",
                   desc: "Ancient Himalayan techniques to awaken dormant energy, still the mind, and experience the depths of inner silence.",
+                  iconColor: "text-violet-500",
+                  ringColor: "border-violet-300",
+                  bgColor: "bg-violet-50",
                 },
                 {
                   Icon: MessageCircle,
-                  label: "02",
                   title: "Wisdom Talks (Satsang)",
                   desc: "Sit in the presence of a living master and receive profound teachings on consciousness, the Self, and reality.",
+                  iconColor: "text-teal-600",
+                  ringColor: "border-teal-300",
+                  bgColor: "bg-teal-50",
                 },
                 {
                   Icon: Flame,
-                  label: "03",
                   title: "Vedic Ceremonies",
                   desc: "Sacred fire rituals and traditional Vedic practices that purify the space and invoke divine blessings.",
+                  iconColor: "text-orange-500",
+                  ringColor: "border-orange-300",
+                  bgColor: "bg-orange-50",
                 },
-              ].map(({ Icon, label, title, desc }) => (
+              ].map(({ Icon, title, desc, iconColor, ringColor, bgColor }) => (
                 <motion.div
                   key={title}
                   variants={fadeInUp}
                   className="relative flex flex-col items-center text-center flex-1 px-4"
                 >
                   {/* Icon circle */}
-                  <div className="relative z-10 w-[72px] h-[72px] rounded-full bg-background border-2 border-secondary/40 shadow-md flex items-center justify-center mb-5">
-                    <Icon className="w-7 h-7 text-secondary" strokeWidth={1.5} />
+                  <div className={`relative z-10 w-[72px] h-[72px] rounded-full ${bgColor} border-2 ${ringColor} shadow-md flex items-center justify-center mb-5`}>
+                    <Icon className={`w-7 h-7 ${iconColor}`} strokeWidth={1.5} />
                   </div>
                   <h4 className="font-serif text-lg md:text-xl font-bold text-primary mb-2">{title}</h4>
                   <p className="text-muted-foreground font-light text-sm leading-relaxed max-w-[220px] mx-auto">{desc}</p>
