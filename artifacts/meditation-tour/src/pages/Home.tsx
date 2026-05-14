@@ -254,6 +254,47 @@ export default function Home() {
             </motion.p>
           </motion.div>
 
+          {/* Three Pillars */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={staggerContainer}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10 mb-14 md:mb-20"
+          >
+            {[
+              {
+                icon: "🧘",
+                title: "Mahayog Meditation",
+                desc: "Ancient Himalayan techniques to awaken dormant energy, still the mind, and experience the depths of inner silence.",
+              },
+              {
+                icon: "🪔",
+                title: "Wisdom Talks (Satsang)",
+                desc: "Sit in the presence of a living master and receive profound teachings on consciousness, the Self, and the nature of reality.",
+              },
+              {
+                icon: "🕉️",
+                title: "Vedic Ceremonies",
+                desc: "Sacred fire rituals and traditional Vedic practices that purify the environment and invoke divine blessings.",
+              },
+            ].map((pillar) => (
+              <motion.div
+                key={pillar.title}
+                variants={fadeInUp}
+                className="flex flex-col items-center text-center gap-4"
+              >
+                <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-secondary/10 border-2 border-secondary/20 flex items-center justify-center text-4xl md:text-5xl shadow-sm">
+                  {pillar.icon}
+                </div>
+                <div>
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-primary mb-2">{pillar.title}</h4>
+                  <p className="text-muted-foreground font-light text-sm leading-relaxed max-w-xs mx-auto">{pillar.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
           <motion.div
             initial="hidden"
             whileInView="visible"
