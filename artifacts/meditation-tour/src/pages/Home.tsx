@@ -359,7 +359,7 @@ export default function Home() {
                 {
                   Icon: Brain,
                   title: "Mahayog Meditation",
-                  desc: "Ancient Himalayan techniques to awaken dormant energy, still the mind, and experience the depths of inner silence.",
+                  desc: "Ancient Himalayan techniques to awaken dormant energy, still the mind, and experience the depths of the inner self.",
                   iconColor: "text-violet-300",
                   ringColor: "border-violet-400/50",
                   bgColor: "bg-violet-900/40",
@@ -390,7 +390,7 @@ export default function Home() {
                     <Icon className={`w-7 h-7 ${iconColor}`} strokeWidth={1.5} />
                   </div>
                   <h4 className="font-serif text-lg md:text-xl font-bold text-white mb-2">{title}</h4>
-                  <p className="text-white/60 font-light text-sm leading-relaxed max-w-[220px] mx-auto">{desc}</p>
+                  <p className="text-white/60 font-light text-base leading-relaxed max-w-[220px] mx-auto">{desc}</p>
                 </motion.div>
               ))}
             </div>
