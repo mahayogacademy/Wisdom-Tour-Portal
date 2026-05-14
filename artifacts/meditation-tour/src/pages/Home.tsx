@@ -125,7 +125,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 mt-8">
-                {["Meditation Master", "Chakra & Kundalini Expert", "Ayurveda Acharya"].map((label) => (
+                {["Meditation Master", "Chakra & Kundalini Expert", "Ayurveda Acharya", "Samadhi Siddha"].map((label) => (
                   <span
                     key={label}
                     className="px-4 py-1.5 rounded-full border border-primary/30 text-sm text-primary font-medium tracking-wide"
