@@ -124,6 +124,16 @@ export default function Home() {
                   Rooted in an unbroken Himalayan lineage, his teachings combine profound spiritual depth with warmth, humility, and practical insight. Through Himalayan Siddha Mahayog meditation, discourse, and personal guidance, he continues to inspire individuals and communities around the world on the path of inner transformation.
                 </p>
               </div>
+              <div className="flex flex-wrap gap-3 mt-8">
+                {["Meditation Master", "Chakra & Kundalini Expert", "Ayurveda Acharya"].map((label) => (
+                  <span
+                    key={label}
+                    className="px-4 py-1.5 rounded-full border border-primary/30 text-sm text-primary font-medium tracking-wide"
+                  >
+                    {label}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>
