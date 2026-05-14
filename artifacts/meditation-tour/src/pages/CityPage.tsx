@@ -167,91 +167,99 @@ export default function CityPage({ city }: CityPageProps) {
               </div>
 
               {cityKey === "calgary" && (
-                <>
-                  {/* Free admission */}
-                  <div className="mt-5 p-5 md:p-6 bg-secondary/10 border border-secondary/30 rounded-xl flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center shrink-0 mt-0.5">
-                      <Heart className="w-5 h-5 text-secondary" strokeWidth={1.5} />
-                    </div>
-                    <div>
-                      <h4 className="font-serif text-lg font-bold text-primary mb-1">Open to All — No Admission Fee</h4>
-                      <p className="text-muted-foreground font-light text-sm leading-relaxed">
-                        This program is offered freely as a gift of wisdom. Those who wish to support the mission of spreading these teachings may offer a voluntary donation — every contribution, large or small, is received with deep gratitude.
-                      </p>
-                    </div>
+                <div className="mt-5 p-5 md:p-6 bg-secondary/10 border border-secondary/30 rounded-xl flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center shrink-0 mt-0.5">
+                    <Heart className="w-5 h-5 text-secondary" strokeWidth={1.5} />
                   </div>
-
-                  {/* Who is this for? */}
-                  <div className="mt-5 p-5 md:p-6 bg-card border border-border rounded-xl flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                      <Users className="w-5 h-5 text-primary" strokeWidth={1.5} />
-                    </div>
-                    <div>
-                      <h4 className="font-serif text-lg font-bold text-primary mb-1">Who Is This For?</h4>
-                      <p className="text-muted-foreground font-light text-sm leading-relaxed">
-                        Everyone is welcome — no prior experience needed. Whether you have never meditated before or have been on a spiritual path for years, these sessions meet you exactly where you are. People of all ages, faiths, and backgrounds attend.
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="font-serif text-lg font-bold text-primary mb-1">Open to All — No Admission Fee</h4>
+                    <p className="text-muted-foreground font-light text-sm leading-relaxed">
+                      This program is offered freely as a gift of wisdom. Those who wish to support the mission of spreading these teachings may offer a voluntary donation — every contribution, large or small, is received with deep gratitude.
+                    </p>
                   </div>
-
-                  {/* Teacher snapshot */}
-                  <div className="mt-5 p-5 md:p-6 bg-card border border-border rounded-xl">
-                    <h4 className="font-serif text-lg font-bold text-primary mb-4">Your Guide</h4>
-                    <div className="flex items-start gap-4">
-                      <img
-                        src={teacherImg}
-                        alt="Jagadguru Mahayogi Siddhababa"
-                        className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover object-top shrink-0 shadow-md border-2 border-secondary/30"
-                      />
-                      <div>
-                        <p className="font-serif font-semibold text-primary text-base md:text-lg leading-tight">Jagadguru Mahayogi Siddhababa</p>
-                        <p className="text-xs text-secondary font-medium tracking-wide uppercase mt-0.5 mb-2">Himalayan Siddha Master</p>
-                        <p className="text-muted-foreground font-light text-sm leading-relaxed">
-                          A living master rooted in an unbroken Himalayan lineage, Siddhababa has guided seekers from all backgrounds toward greater peace, clarity, and self-understanding. His teachings blend profound spiritual depth with warmth and practical insight.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* FAQ */}
-                  <div className="mt-5">
-                    <h4 className="font-serif text-lg font-bold text-primary mb-3">Frequently Asked Questions</h4>
-                    <div className="space-y-2">
-                      {calgaryFaqs.map((faq, i) => (
-                        <div key={i} className="border border-border rounded-xl overflow-hidden">
-                          <button
-                            onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                            className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-card hover:bg-card/80 transition-colors"
-                          >
-                            <span className="font-medium text-sm md:text-base text-primary">{faq.q}</span>
-                            <ChevronDown
-                              className={`w-4 h-4 text-secondary shrink-0 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}
-                            />
-                          </button>
-                          <AnimatePresence initial={false}>
-                            {openFaq === i && (
-                              <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: "auto", opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.25, ease: "easeInOut" }}
-                                className="overflow-hidden"
-                              >
-                                <p className="px-5 pb-4 text-sm text-muted-foreground font-light leading-relaxed">
-                                  {faq.a}
-                                </p>
-                              </motion.div>
-                            )}
-                          </AnimatePresence>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </>
+                </div>
               )}
             </motion.div>
 
           </div>
+
+          {/* Calgary-only: full-width sections below the two-column row */}
+          {cityKey === "calgary" && (
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              className="mt-12 md:mt-16 space-y-6"
+            >
+              {/* Who is this for? + Your Guide — side by side on desktop */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="p-6 md:p-8 bg-card border border-border rounded-xl flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <Users className="w-5 h-5 text-primary" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h4 className="font-serif text-xl font-bold text-primary mb-2">Who Is This For?</h4>
+                    <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed">
+                      Everyone is welcome — no prior experience needed. Whether you have never meditated before or have been on a spiritual path for years, these sessions meet you exactly where you are. People of all ages, faiths, and backgrounds attend.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-6 md:p-8 bg-card border border-border rounded-xl">
+                  <h4 className="font-serif text-xl font-bold text-primary mb-4">Your Guide</h4>
+                  <div className="flex items-start gap-4">
+                    <img
+                      src={teacherImg}
+                      alt="Jagadguru Mahayogi Siddhababa"
+                      className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover object-top shrink-0 shadow-md border-2 border-secondary/30"
+                    />
+                    <div>
+                      <p className="font-serif font-semibold text-primary text-base md:text-lg leading-tight">Jagadguru Mahayogi Siddhababa</p>
+                      <p className="text-xs text-secondary font-medium tracking-wide uppercase mt-0.5 mb-2">Himalayan Siddha Master</p>
+                      <p className="text-muted-foreground font-light text-sm leading-relaxed">
+                        A living master rooted in an unbroken Himalayan lineage, Siddhababa has guided seekers from all backgrounds toward greater peace, clarity, and self-understanding. His teachings blend profound spiritual depth with warmth and practical insight.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* FAQ — full width */}
+              <div className="p-6 md:p-8 bg-card border border-border rounded-xl">
+                <h4 className="font-serif text-xl font-bold text-primary mb-5">Frequently Asked Questions</h4>
+                <div className="space-y-2">
+                  {calgaryFaqs.map((faq, i) => (
+                    <div key={i} className="border border-border rounded-xl overflow-hidden">
+                      <button
+                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                        className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-background hover:bg-card/60 transition-colors"
+                      >
+                        <span className="font-medium text-sm md:text-base text-primary">{faq.q}</span>
+                        <ChevronDown
+                          className={`w-4 h-4 text-secondary shrink-0 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}
+                        />
+                      </button>
+                      <AnimatePresence initial={false}>
+                        {openFaq === i && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.25, ease: "easeInOut" }}
+                            className="overflow-hidden"
+                          >
+                            <p className="px-5 pb-4 text-sm md:text-base text-muted-foreground font-light leading-relaxed">
+                              {faq.a}
+                            </p>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          )}
         </div>
       </section>
 
