@@ -19,8 +19,7 @@ export function Footer() {
               Himalayan Meditation<br />&amp; Wisdom Tour
             </h2>
             <p className="text-primary-foreground/75 leading-relaxed font-light text-sm md:text-base">
-              A sacred Canadian tour led by Jagadguru Mahayogi Siddhababa.
-              Experience ancient Himalayan wisdom transmitted through direct lineage.
+              A rare experience to meet and meditate with Enlightened Master His Holiness Jagadguru Mahayogi Siddhababa. Explore consciousness, meditation and timeless spiritual wisdom.
             </p>
           </div>
 
@@ -43,8 +42,8 @@ export function Footer() {
           <div>
             <h3 className="font-serif text-lg md:text-xl font-semibold mb-4 md:mb-6">Contact &amp; Info</h3>
             <ul className="flex flex-col gap-3 text-primary-foreground/75 font-light text-sm md:text-base">
-              <li>tour@meditationandwisdom.ca</li>
-              <li>+1 (800) 555-0199</li>
+              <li>canada@siddhamahayog.org</li>
+              <li>+1 (613) 879-1825</li>
               <li className="mt-2 text-xs md:text-sm text-primary-foreground/55 leading-relaxed">
                 All dates and venues are subject to change. Reserving a spot ensures you receive updates.
               </li>
