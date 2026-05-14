@@ -67,9 +67,12 @@ export default function Home() {
             <motion.p variants={fadeInUp} className="text-base md:text-xl text-primary-foreground/85 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
               Meet an Enlightened Spiritual Teacher and learn the powerful inner science of Himalayan Siddha Mahayog Meditation — for inner peace, clarity, and transformation.
             </motion.p>
-            <motion.div variants={fadeInUp}>
-              <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-primary-foreground text-lg px-8 h-14">
-                <Link href="/toronto">Join the Journey</Link>
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-primary-foreground text-lg px-8 h-14 w-full sm:w-auto" data-testid="button-reserve-spot">
+                <Link href="/edmonton">Reserve Spot</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="border-primary-foreground/60 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 h-14 w-full sm:w-auto" data-testid="button-view-cities">
+                <a href="#cities">View Cities</a>
               </Button>
             </motion.div>
           </motion.div>
@@ -167,7 +170,7 @@ export default function Home() {
       </section>
 
       {/* Cities Grid */}
-      <section className="py-24 md:py-32 bg-background">
+      <section id="cities" className="py-24 md:py-32 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="hidden"
