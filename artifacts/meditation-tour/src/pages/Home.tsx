@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 import heroImg from "@/assets/images/hero-home.png";
 import teacherImg from "@assets/IMG_2389_1778725702179.JPG";
-import teacherImg2 from "@assets/IMG_3562_1778726775680.JPG";
+import teacherImg2 from "@assets/IMG_3562_1778726957242.JPG";
 import teacherImg3 from "@assets/Gurudev_in_Satsang_Objects_removed_1778726784134.jpg";
 import lotusImg from "@/assets/images/lotus.png";
 
@@ -94,30 +94,30 @@ export default function Home() {
               variants={fadeInUp}
               className="w-full lg:w-1/2"
             >
-              <div className="flex flex-col gap-3 max-w-sm sm:max-w-md mx-auto lg:mx-0">
-                {/* Main portrait */}
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3]">
+              <div className="flex flex-row gap-3 max-w-lg mx-auto lg:mx-0">
+                {/* Main portrait — wider left column */}
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl flex-[3]">
                   <img
                     src={teacherImg}
                     alt="His Holiness Jagadguru Mahayogi Siddhababa"
                     className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, hsl(var(--primary) / 0.85) 0%, hsl(var(--primary) / 0.25) 30%, transparent 52%)' }} />
-                  <div className="absolute bottom-0 left-0 p-4 md:p-6">
-                    <p className="text-secondary font-serif text-base md:text-xl">Jagadguru Mahayogi Siddhababa</p>
-                    <p className="text-primary-foreground/80 text-xs tracking-wider uppercase mt-0.5">Himalayan Siddha Master</p>
+                  <div className="absolute bottom-0 left-0 p-4 md:p-5">
+                    <p className="text-secondary font-serif text-sm md:text-lg">Jagadguru Mahayogi Siddhababa</p>
+                    <p className="text-primary-foreground/80 text-[10px] tracking-wider uppercase mt-0.5">Himalayan Siddha Master</p>
                   </div>
                 </div>
-                {/* Two smaller images */}
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="relative rounded-xl overflow-hidden shadow-lg aspect-[4/3]">
+                {/* Two smaller images stacked on the right */}
+                <div className="flex flex-col gap-3 flex-[2]">
+                  <div className="relative rounded-xl overflow-hidden shadow-lg flex-1">
                     <img
                       src={teacherImg2}
                       alt="Siddhababa offering blessings at a ceremony"
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="relative rounded-xl overflow-hidden shadow-lg aspect-[4/3]">
+                  <div className="relative rounded-xl overflow-hidden shadow-lg flex-1">
                     <img
                       src={teacherImg3}
                       alt="Siddhababa conducting a satsang with devotees"
