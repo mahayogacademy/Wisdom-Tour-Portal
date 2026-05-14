@@ -111,7 +111,7 @@ export default function Home() {
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
               variants={fadeInUp}
-              className="w-full lg:w-auto lg:max-w-md"
+              className="w-full lg:w-1/2"
             >
               <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">
                 Meet Enlightened Himalayan Yogi
