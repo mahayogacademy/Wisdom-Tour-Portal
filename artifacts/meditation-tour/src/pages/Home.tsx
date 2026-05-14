@@ -140,6 +140,17 @@ export default function Home() {
       </section>
 
       {/* What to Expect / Program */}
+      {/* Decorative divider */}
+      <div className="flex items-center justify-center gap-4 py-2 px-8">
+        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-primary/40" />
+        <div className="flex items-center gap-2 text-secondary/60">
+          <span className="text-lg">✦</span>
+          <span className="text-2xl">✦</span>
+          <span className="text-lg">✦</span>
+        </div>
+        <div className="h-px flex-1 bg-gradient-to-l from-transparent via-primary/20 to-primary/40" />
+      </div>
+
       {/* Cities Grid */}
       <section id="cities" className="py-14 md:py-28 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
