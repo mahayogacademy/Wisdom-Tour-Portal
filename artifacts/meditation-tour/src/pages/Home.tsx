@@ -165,7 +165,7 @@ export default function Home() {
                 <div className="space-y-5 text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
                   <p>Discover the ancient wisdom that has guided seekers for thousands of years.</p>
                 </div>
-                <h3 className="font-sans text-xl md:text-2xl font-bold text-secondary mb-2">
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-secondary mb-2">
                   Himalayan Siddha Mahayog Meditation
                 </h3>
                 <div className="inline-block bg-foreground/10 text-foreground px-4 py-1 rounded-full text-sm font-medium mb-5">
