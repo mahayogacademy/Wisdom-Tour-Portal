@@ -146,79 +146,75 @@ export default function Home() {
       </section>
 
       {/* Hidden Science / Mahayog Section */}
-      <section className="py-14 md:py-24 bg-card relative overflow-hidden">
-        <div className="absolute top-0 right-0 -mr-32 -mt-32 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+      <section className="py-14 md:py-28 bg-card">
+        <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={staggerContainer}
-            className="flex flex-col gap-10 md:gap-14"
+            className="flex flex-col gap-12 md:gap-16"
           >
-            {/* Top row — Content + Photo */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-              {/* Left — Content */}
-              <motion.div variants={fadeInUp} className="flex flex-col gap-6">
-                <div>
-                  <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">
-                    Discover the Hidden Science Within You
-                  </h2>
-                  <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed mb-6">
-                    Discover the ancient wisdom that has guided seekers for thousands of years.
-                  </p>
-                  <h3 className="font-serif text-lg md:text-xl font-bold text-secondary mb-2">
-                    Himalayan Siddha Mahayog Meditation
-                  </h3>
-                  <div className="inline-block bg-foreground/10 text-foreground px-4 py-1 rounded-full text-sm font-medium mb-4">
-                    3 Session Special
-                  </div>
-                  <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed">
-                    Over the course of three transformative sessions, you will be guided through ancient meditation techniques designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
-                  </p>
+            {/* Top — Content + Photo (mirrors teacher layout) */}
+            <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12">
+              {/* Left — Text */}
+              <motion.div variants={fadeInUp} className="w-full lg:w-1/2">
+                <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-6">
+                  Discover the Hidden Science Within You
+                </h2>
+                <div className="space-y-5 text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
+                  <p>Discover the ancient wisdom that has guided seekers for thousands of years.</p>
                 </div>
-                <div>
-                  <h4 className="font-serif text-base md:text-lg font-semibold text-primary mb-4">What to Expect</h4>
-                  <ul className="flex flex-col gap-3">
-                    {[
-                      "Live guided meditation with a Himalayan Siddha master",
-                      "Activation of dormant kundalini energy & chakras",
-                      "Yogic exercises & breathing techniques for clarity and calm",
-                      "Personal guidance on your spiritual path",
-                      "A profound experience of inner discovery and awakening",
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground font-light">
-                        <CheckCircle className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <h3 className="font-serif text-xl md:text-2xl font-bold text-secondary mb-2">
+                  Himalayan Siddha Mahayog Meditation
+                </h3>
+                <div className="inline-block bg-foreground/10 text-foreground px-4 py-1 rounded-full text-sm font-medium mb-5">
+                  3 Session Special
                 </div>
+                <p className="text-muted-foreground font-light text-base leading-relaxed mb-7">
+                  Over the course of three transformative sessions, you will be guided through ancient meditation techniques designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
+                </p>
+                <h4 className="font-serif text-lg font-semibold text-primary mb-4">What to Expect</h4>
+                <ul className="flex flex-col gap-3">
+                  {[
+                    "Live guided meditation with a Himalayan Siddha master",
+                    "Activation of dormant kundalini energy & chakras",
+                    "Yogic exercises & breathing techniques for clarity and calm",
+                    "Personal guidance on your spiritual path",
+                    "A profound experience of inner discovery and awakening",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm md:text-base text-muted-foreground font-light">
+                      <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
 
               {/* Right — Photo */}
-              <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] max-w-sm mx-auto lg:mx-0 w-full">
-                <img
-                  src={hiddenScienceImg}
-                  alt="Chakra and kundalini meditation energy"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+              <motion.div variants={fadeInUp} className="w-full lg:w-auto lg:flex-shrink-0">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-w-xs sm:max-w-sm mx-auto lg:mx-0">
+                  <img
+                    src={hiddenScienceImg}
+                    alt="Person meditating — chakra and kundalini awakening"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
+                </div>
               </motion.div>
             </div>
 
-            {/* Bottom — E-Book strip */}
-            <motion.div variants={fadeInUp} className="bg-background rounded-xl px-5 py-4 border border-border shadow-sm flex flex-col sm:flex-row items-center gap-4 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/8 rounded-full blur-2xl pointer-events-none" />
-              <BookOpen className="w-5 h-5 text-secondary shrink-0 relative z-10" />
-              <p className="relative z-10 text-sm text-muted-foreground font-light flex-1 text-center sm:text-left">
+            {/* Bottom — compact e-book strip */}
+            <motion.div variants={fadeInUp} className="bg-background rounded-xl border border-border shadow-sm px-5 py-4 flex flex-col sm:flex-row items-center gap-4">
+              <BookOpen className="w-5 h-5 text-secondary shrink-0" />
+              <p className="text-sm text-muted-foreground font-light flex-1 text-center sm:text-left">
                 <span className="font-medium text-primary">Free E-Book — </span>
-                Receive your copy of <span className="italic">The Hidden Science Within You</span> — no sign-up required.
+                This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
               </p>
               <a
                 href="/hidden-science-within-you.pdf"
                 download="The-Hidden-Science-Within-You.pdf"
-                className="relative z-10 inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap shrink-0"
+                className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-5 py-2.5 rounded-lg transition-colors whitespace-nowrap shrink-0"
               >
                 <Download className="w-4 h-4" />
                 Download Free E-Book
