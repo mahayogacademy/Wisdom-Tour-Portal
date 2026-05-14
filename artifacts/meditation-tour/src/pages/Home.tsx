@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
 import heroImg from "@/assets/images/hero-home.png";
-import teacherImg from "@/assets/images/teacher.png";
+import teacherImg from "@assets/IMG_2389_1778725702179.JPG";
 import lotusImg from "@/assets/images/lotus.png";
 
 const fadeInUp = {
