@@ -62,7 +62,7 @@ export default function Home() {
               <span className="whitespace-nowrap">Himalayan Meditation</span>{" "}
               <span className="text-secondary">&amp;</span> Wisdom Tour
             </motion.h1>
-            <motion.p variants={fadeInUp} className="font-sans text-base md:text-lg text-primary-foreground/80 font-light tracking-wide mb-8 drop-shadow">
+            <motion.p variants={fadeInUp} className="font-sans text-lg md:text-xl text-primary-foreground font-semibold tracking-wide mb-8 drop-shadow">
               With His Holiness Jagadguru Mahayogi Siddhababa
             </motion.p>
             <motion.p variants={fadeInUp} className="text-base md:text-lg text-primary-foreground/85 font-light italic mb-10 max-w-md mx-auto leading-relaxed">
