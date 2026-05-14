@@ -335,7 +335,7 @@ export default function Home() {
             variants={staggerContainer}
             className="text-center"
           >
-            <motion.h2 variants={fadeInUp} className="font-serif text-3xl md:text-5xl font-bold text-white mb-4">
+            <motion.h2 variants={fadeInUp} className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               The Journey
             </motion.h2>
             <motion.p variants={fadeInUp} className="text-base md:text-xl text-white/70 font-light mb-10 md:mb-16">
@@ -398,28 +398,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Divider */}
-      <section className="relative py-20 md:py-32 flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-primary/80 mix-blend-multiply z-10" />
-          <img
-            src={lotusImg}
-            alt="Glowing golden lotus"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="relative z-20 text-center px-4 max-w-2xl mx-auto">
-          <h2 className="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-5 md:mb-8">
-            Begin Your Pilgrimage
-          </h2>
-          <p className="text-base md:text-xl text-primary-foreground/90 font-light mb-8 md:mb-10">
-            A rare opportunity to sit with a master and experience the profound depths of Himalayan meditation.
-          </p>
-          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-primary-foreground text-base md:text-lg px-8 md:px-10 h-12 md:h-16 font-serif w-full sm:w-auto">
-            <Link href="/edmonton">Reserve Your Spot</Link>
-          </Button>
-        </div>
-      </section>
 
       <Footer />
     </div>
