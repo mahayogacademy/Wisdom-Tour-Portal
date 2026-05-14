@@ -130,6 +130,55 @@ export default function Home() {
       </section>
 
       {/* What to Expect / Program */}
+      {/* Cities Grid */}
+      <section id="cities" className="py-14 md:py-28 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={fadeInUp}
+            className="text-center mb-10 md:mb-16"
+          >
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-4">Tour Destinations</h2>
+            <p className="text-base md:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
+              Gatherings will be held across five major cities. Register early as spaces are limited.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
+            {cities.map((city, idx) => (
+              <motion.div
+                key={city.name}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-40px" }}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.08 } }
+                }}
+              >
+                <Link href={city.path} className="group block h-full" data-testid={`link-city-${city.name.toLowerCase()}`}>
+                  <div className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border h-full transition-all duration-300 hover:shadow-xl active:scale-[0.98]">
+                    <div className="aspect-[16/9] relative overflow-hidden bg-muted">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/60 group-hover:scale-105 transition-transform duration-700" />
+                    </div>
+                    <div className="p-5 md:p-7">
+                      <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-1 flex items-center justify-between">
+                        {city.name}
+                        <ArrowRight className="w-5 h-5 text-secondary opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                      </h3>
+                      <p className="text-sm md:text-base text-muted-foreground font-light">{city.desc}</p>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What to Expect / Program */}
       <section className="py-14 md:py-28 bg-card relative overflow-hidden">
         <div className="absolute top-0 right-0 -mr-32 -mt-32 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
@@ -168,54 +217,6 @@ export default function Home() {
               </div>
             </motion.div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Cities Grid */}
-      <section id="cities" className="py-14 md:py-28 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            variants={fadeInUp}
-            className="text-center mb-10 md:mb-16"
-          >
-            <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary mb-4">Tour Destinations</h2>
-            <p className="text-base md:text-lg text-muted-foreground font-light max-w-2xl mx-auto">
-              Select your city to view local program details and reserve your spot. Space is highly limited.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8">
-            {cities.map((city, idx) => (
-              <motion.div
-                key={city.name}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-40px" }}
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: idx * 0.08 } }
-                }}
-              >
-                <Link href={city.path} className="group block h-full" data-testid={`link-city-${city.name.toLowerCase()}`}>
-                  <div className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border h-full transition-all duration-300 hover:shadow-xl active:scale-[0.98]">
-                    <div className="aspect-[16/9] relative overflow-hidden bg-muted">
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/60 group-hover:scale-105 transition-transform duration-700" />
-                    </div>
-                    <div className="p-5 md:p-7">
-                      <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-1 flex items-center justify-between">
-                        {city.name}
-                        <ArrowRight className="w-5 h-5 text-secondary opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
-                      </h3>
-                      <p className="text-sm md:text-base text-muted-foreground font-light">{city.desc}</p>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
