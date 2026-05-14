@@ -107,3 +107,9 @@ id = "qF_kjSrCQ-0GmuGrvamfh"
 uri = "file://attached_assets/stock_images/city-toronto.jpg"
 type = "image"
 title = "Toronto Ontario Canada CN Tower skyline Lake Ontario aerial"
+
+[[outputs]]
+id = "nExR75wCwxLRt1b8tg-Fj"
+uri = "file://attached_assets/stock_images/city-edmonton-2.jpg"
+type = "image"
+title = "Edmonton Alberta skyline North Saskatchewan River bridge sunset"

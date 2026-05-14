@@ -199,7 +199,7 @@ export default function Home() {
                         alt={`${city.name} spiritual meditation gathering`}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-orange-500/30 via-orange-400/10 to-transparent" />
                     </div>
                     <div className="p-5 md:p-7 flex flex-col gap-4">
                       <div>
