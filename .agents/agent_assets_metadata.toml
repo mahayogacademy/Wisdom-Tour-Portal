@@ -1,0 +1,50 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "_1eEj2MnSu1pgkVcUMpjS"
+uri = "file://artifacts/meditation-tour/src/assets/images/hero-home.png"
+type = "image"
+title = "Himalayan mountains sunrise"
+
+[[generated]]
+id = "nsKze0g9gtmwvaxRzprTc"
+uri = "file://artifacts/meditation-tour/src/assets/images/edmonton.png"
+type = "image"
+title = "Edmonton spiritual skyline"
+
+[[generated]]
+id = "-N_D1Jwj_B5GCbAnWBIgH"
+uri = "file://artifacts/meditation-tour/src/assets/images/calgary.png"
+type = "image"
+title = "Calgary spiritual mountains"
+
+[[generated]]
+id = "kHyBGnDSi2LssuwYV2ZvJ"
+uri = "file://artifacts/meditation-tour/src/assets/images/vancouver.png"
+type = "image"
+title = "Vancouver coastal spiritual"
+
+[[generated]]
+id = "e-3lkDeX86gmC384Xb3lK"
+uri = "file://artifacts/meditation-tour/src/assets/images/ottawa.png"
+type = "image"
+title = "Ottawa serene landscape"
+
+[[generated]]
+id = "iJRmKd4y_Cz0ffgoTLzUI"
+uri = "file://artifacts/meditation-tour/src/assets/images/toronto.png"
+type = "image"
+title = "Toronto misty sunrise"
+
+[[generated]]
+id = "XBsm9DQkn6zghTBmAYRVL"
+uri = "file://artifacts/meditation-tour/src/assets/images/teacher.png"
+type = "image"
+title = "Candle and ancient texts"
+
+[[generated]]
+id = "FMfJy8y9CDHrfbaq4Ei0N"
+uri = "file://artifacts/meditation-tour/src/assets/images/lotus.png"
+type = "image"
+title = "Glowing golden lotus"
