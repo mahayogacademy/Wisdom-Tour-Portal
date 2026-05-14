@@ -84,7 +84,7 @@ export default function Home() {
       {/* Teacher Section */}
       <section className="py-14 md:py-28 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-24">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -92,7 +92,7 @@ export default function Home() {
               variants={fadeInUp}
               className="w-full lg:w-1/2"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4]">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-w-xs sm:max-w-sm mx-auto lg:mx-0">
                 <img
                   src={teacherImg}
                   alt="His Holiness Jagadguru Mahayogi Siddhababa"
