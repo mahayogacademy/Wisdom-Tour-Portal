@@ -172,7 +172,7 @@ export default function Home() {
                   Discover the Hidden Science Within You
                 </h2>
                 <div className="space-y-5 text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
-                  <p>Discover the ancient wisdom that has guided seekers for thousands of years.</p>
+                  <p>Ancient wisdom that has guided seekers for thousands of years.</p>
                 </div>
                 <h3 className="font-serif text-xl md:text-2xl font-bold text-secondary mb-2">
                   Himalayan Siddha Mahayog Meditation
