@@ -167,10 +167,8 @@ export default function CityPage({ city }: CityPageProps) {
               </div>
 
               {cityKey === "calgary" && (
-                <div className="mt-5 p-5 md:p-6 bg-secondary/10 border border-secondary/30 rounded-xl flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center shrink-0 mt-0.5">
-                    <Heart className="w-5 h-5 text-secondary" strokeWidth={1.5} />
-                  </div>
+                <div className="mt-6 flex items-start gap-4">
+                  <Heart className="w-5 h-5 text-secondary shrink-0 mt-0.5" strokeWidth={1.5} />
                   <div>
                     <h4 className="font-serif text-lg font-bold text-primary mb-1">Open to All — No Admission Fee</h4>
                     <p className="text-muted-foreground font-light text-sm leading-relaxed">
@@ -192,11 +190,9 @@ export default function CityPage({ city }: CityPageProps) {
               className="mt-12 md:mt-16 space-y-6"
             >
               {/* Who is this for? + Your Guide — side by side on desktop */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="p-6 md:p-8 bg-card border border-border rounded-xl flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <Users className="w-5 h-5 text-primary" strokeWidth={1.5} />
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div className="flex items-start gap-4">
+                  <Users className="w-5 h-5 text-primary shrink-0 mt-1" strokeWidth={1.5} />
                   <div>
                     <h4 className="font-serif text-xl font-bold text-primary mb-2">Who Is This For?</h4>
                     <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed">
@@ -205,7 +201,7 @@ export default function CityPage({ city }: CityPageProps) {
                   </div>
                 </div>
 
-                <div className="p-6 md:p-8 bg-card border border-border rounded-xl">
+                <div>
                   <h4 className="font-serif text-xl font-bold text-primary mb-4">Your Guide</h4>
                   <div className="flex items-start gap-4">
                     <img
