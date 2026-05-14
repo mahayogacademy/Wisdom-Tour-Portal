@@ -39,8 +39,8 @@ export default function CityPage({ city }: CityPageProps) {
       {/* City Hero */}
       <section className="relative pt-20 pb-12 md:pt-44 md:pb-24 min-h-[45vh] md:min-h-[55vh] flex items-end">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-primary/60 mix-blend-multiply z-10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10" />
+          <div className="absolute inset-0 bg-primary/75 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent z-10" />
           <img
             src={heroImg}
             alt={`${city} spiritual landscape`}
@@ -55,13 +55,13 @@ export default function CityPage({ city }: CityPageProps) {
             variants={fadeInUp}
             className="max-w-3xl"
           >
-            <span className="inline-block text-secondary font-medium tracking-widest uppercase mb-3 text-xs md:text-sm">
+            <span className="inline-block text-secondary font-medium tracking-widest uppercase mb-3 text-xs md:text-sm drop-shadow">
               Meditation &amp; Wisdom Tour
             </span>
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold text-primary mb-3 drop-shadow-sm">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-3 drop-shadow-md">
               {city}
             </h1>
-            <p className="text-base md:text-xl text-primary/80 font-light max-w-xl">
+            <p className="text-base md:text-xl text-white/80 font-light max-w-xl drop-shadow">
               Join Jagadguru Mahayogi Siddhababa for a transformative 3-session special program.
             </p>
           </motion.div>
