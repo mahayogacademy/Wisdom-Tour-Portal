@@ -145,6 +145,43 @@ export default function Home() {
         </div>
       </section>
 
+      {/* E-Book Section */}
+      <section className="py-10 md:py-16 bg-card">
+        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={fadeInUp}
+            className="bg-background rounded-2xl p-6 md:p-10 shadow-sm border border-border text-left flex flex-col gap-5 relative overflow-hidden"
+          >
+            <div className="absolute top-0 right-0 w-48 h-48 bg-secondary/10 rounded-full blur-3xl pointer-events-none -mr-12 -mt-12" />
+            <div className="relative z-10 flex flex-col md:flex-row md:items-start gap-6">
+              <div className="flex-1">
+                <div className="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center mb-4">
+                  <BookOpen className="w-6 h-6 text-secondary" />
+                </div>
+                <div className="inline-block bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-medium mb-3 border border-primary/20">
+                  Free Download
+                </div>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-1 leading-snug">
+                  The Hidden Science Within You
+                </h3>
+                <p className="text-secondary font-medium text-sm mb-4">
+                  Understanding Himalayan Siddha Mahayog
+                </p>
+                <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed">
+                  Discover the ancient wisdom that has guided seekers for thousands of years. This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
+                </p>
+              </div>
+            </div>
+            <div className="relative z-10 border-t border-border pt-5">
+              <EbookForm />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Decorative divider before The Journey */}
       <div className="flex items-center justify-center gap-4 py-2 px-8">
         <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-primary/40" />
@@ -312,7 +349,6 @@ export default function Home() {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={staggerContainer}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8"
           >
             {/* Program */}
             <motion.div variants={fadeInUp} className="text-left flex flex-col gap-5">
@@ -347,33 +383,6 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* E-Book Download Card */}
-            <motion.div variants={fadeInUp} className="bg-background rounded-2xl p-6 md:p-10 shadow-sm border border-border text-left flex flex-col gap-5 relative overflow-hidden">
-              {/* Decorative glow */}
-              <div className="absolute top-0 right-0 w-48 h-48 bg-secondary/10 rounded-full blur-3xl pointer-events-none -mr-12 -mt-12" />
-
-              <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-secondary/15 flex items-center justify-center mb-5">
-                  <BookOpen className="w-6 h-6 text-secondary" />
-                </div>
-                <div className="inline-block bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-medium mb-4 border border-primary/20">
-                  Free Download
-                </div>
-                <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-2 leading-snug">
-                  The Hidden Science Within You
-                </h3>
-                <p className="text-secondary font-medium text-sm mb-5">
-                  Understanding Himalayan Siddha Mahayog
-                </p>
-                <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed mb-8">
-                  Discover the ancient wisdom that has guided seekers for thousands of years. This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
-                </p>
-              </div>
-
-              <div className="relative z-10 border-t border-border pt-5 mt-auto">
-                <EbookForm />
-              </div>
-            </motion.div>
           </motion.div>
         </div>
       </section>
