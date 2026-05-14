@@ -159,6 +159,11 @@ export default function Home() {
             <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12">
               {/* Left — Text */}
               <motion.div variants={fadeInUp} className="w-full lg:w-1/2">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="h-px w-8 bg-secondary" />
+                  <div className="h-1.5 w-1.5 rounded-full bg-secondary" />
+                  <div className="h-px w-8 bg-secondary" />
+                </div>
                 <h2 className="font-serif text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-6 lg:whitespace-nowrap">
                   Discover the Hidden Science Within You
                 </h2>
