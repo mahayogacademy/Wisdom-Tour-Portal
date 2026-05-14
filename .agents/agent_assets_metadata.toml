@@ -48,3 +48,33 @@ id = "FMfJy8y9CDHrfbaq4Ei0N"
 uri = "file://artifacts/meditation-tour/src/assets/images/lotus.png"
 type = "image"
 title = "Glowing golden lotus"
+
+[[generated]]
+id = "SXZVuE5lk7jesV29peGVD"
+uri = "file://artifacts/meditation-tour/src/assets/images/city-edmonton.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "-_qYRH2RDlI0k_4HVWa8J"
+uri = "file://artifacts/meditation-tour/src/assets/images/city-calgary.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "3oitlw1k_ab9xnV9aCGL7"
+uri = "file://artifacts/meditation-tour/src/assets/images/city-vancouver.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "rpqtax7nFsZYBYqDlJaxv"
+uri = "file://artifacts/meditation-tour/src/assets/images/city-ottawa.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "cRQIYJTl0ISXW1PivyScL"
+uri = "file://artifacts/meditation-tour/src/assets/images/city-toronto.png"
+type = "image"
+title = "generated_image"

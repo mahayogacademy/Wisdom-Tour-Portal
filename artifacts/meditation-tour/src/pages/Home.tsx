@@ -9,6 +9,11 @@ import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/images/hero-home.png";
 import teacherImg from "@assets/IMG_2389_1778725702179.JPG";
 import lotusImg from "@/assets/images/lotus.png";
+import cityEdmonton from "@/assets/images/city-edmonton.png";
+import cityCalgary from "@/assets/images/city-calgary.png";
+import cityVancouver from "@/assets/images/city-vancouver.png";
+import cityOttawa from "@/assets/images/city-ottawa.png";
+import cityToronto from "@/assets/images/city-toronto.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -25,11 +30,11 @@ const staggerContainer = {
 
 export default function Home() {
   const cities = [
-    { name: "Edmonton", path: "/edmonton", desc: "Gateway to the north" },
-    { name: "Calgary", path: "/calgary", desc: "Foothills of wisdom" },
-    { name: "Vancouver", path: "/vancouver", desc: "Coastal serenity" },
-    { name: "Ottawa", path: "/ottawa", desc: "Capital reflection" },
-    { name: "Toronto", path: "/toronto", desc: "Heart of the journey" },
+    { name: "Edmonton", path: "/edmonton", desc: "Gateway to the north", img: cityEdmonton },
+    { name: "Calgary", path: "/calgary", desc: "Foothills of wisdom", img: cityCalgary },
+    { name: "Vancouver", path: "/vancouver", desc: "Coastal serenity", img: cityVancouver },
+    { name: "Ottawa", path: "/ottawa", desc: "Capital reflection", img: cityOttawa },
+    { name: "Toronto", path: "/toronto", desc: "Heart of the journey", img: cityToronto },
   ];
 
   return (
@@ -189,7 +194,12 @@ export default function Home() {
                 <Link href={city.path} className="group block h-full" data-testid={`link-city-${city.name.toLowerCase()}`}>
                   <div className="bg-card rounded-2xl overflow-hidden shadow-sm border border-border h-full transition-all duration-300 hover:shadow-xl active:scale-[0.98]">
                     <div className="aspect-[16/9] relative overflow-hidden bg-muted">
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/60 group-hover:scale-105 transition-transform duration-700" />
+                      <img
+                        src={city.img}
+                        alt={`${city.name} spiritual meditation gathering`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
                     </div>
                     <div className="p-5 md:p-7">
                       <h3 className="font-serif text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-3 flex items-center justify-between">
