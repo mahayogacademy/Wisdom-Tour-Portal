@@ -181,17 +181,17 @@ export default function Home() {
                       <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/60 group-hover:scale-105 transition-transform duration-700" />
                     </div>
                     <div className="p-5 md:p-7">
-                      <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-3 flex items-center justify-between">
+                      <h3 className="font-serif text-xl md:text-2xl lg:text-3xl font-bold text-primary mb-3 flex items-center justify-between">
                         {city.name}
                         <ArrowRight className="w-5 h-5 text-secondary opacity-0 -translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
                       </h3>
                       <div className="space-y-1.5 mb-3">
-                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                          <Calendar className="w-3.5 h-3.5 text-secondary shrink-0" />
+                        <div className="flex items-center gap-2 text-xs lg:text-sm text-muted-foreground">
+                          <Calendar className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-secondary shrink-0" />
                           <span>Date: To Be Announced</span>
                         </div>
-                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                          <MapPin className="w-3.5 h-3.5 text-secondary shrink-0" />
+                        <div className="flex items-center gap-2 text-xs lg:text-sm text-muted-foreground">
+                          <MapPin className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-secondary shrink-0" />
                           <span>Venue: To Be Announced</span>
                         </div>
                       </div>
