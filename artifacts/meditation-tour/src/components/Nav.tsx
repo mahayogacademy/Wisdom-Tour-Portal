@@ -21,7 +21,7 @@ export function Nav() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="font-serif text-2xl font-bold text-primary tracking-wide">
-            Meditation <span className="text-secondary">&</span> Wisdom
+            Himalayan Meditation <span className="text-secondary">&</span> Wisdom Tour
           </Link>
 
           {/* Desktop Nav */}

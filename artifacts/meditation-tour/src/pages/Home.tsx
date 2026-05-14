@@ -58,11 +58,14 @@ export default function Home() {
             <motion.span variants={fadeInUp} className="inline-block text-secondary font-medium tracking-widest uppercase mb-6 text-sm md:text-base">
               A Sacred Canadian Pilgrimage
             </motion.span>
-            <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-8 leading-tight drop-shadow-lg">
-              Meditation <span className="text-secondary">&amp;</span> Wisdom Tour
+            <motion.h1 variants={fadeInUp} className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 leading-tight drop-shadow-lg">
+              Himalayan Meditation <span className="text-secondary">&amp;</span> Wisdom Tour
             </motion.h1>
-            <motion.p variants={fadeInUp} className="text-lg md:text-2xl text-primary-foreground/90 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-              Led by Jagadguru Mahayogi Siddhababa. Step into a space between two worlds and experience ancient Himalayan lineage.
+            <motion.p variants={fadeInUp} className="text-xl md:text-2xl text-secondary font-serif font-semibold mb-4 drop-shadow">
+              His Holiness Jagadguru Mahayogi Siddhababa
+            </motion.p>
+            <motion.p variants={fadeInUp} className="text-base md:text-xl text-primary-foreground/85 font-light mb-12 max-w-2xl mx-auto leading-relaxed">
+              Meet an Enlightened Spiritual Teacher and learn the powerful inner science of Himalayan Siddha Mahayog Meditation — for inner peace, clarity, and transformation.
             </motion.p>
             <motion.div variants={fadeInUp}>
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-primary-foreground text-lg px-8 h-14">
