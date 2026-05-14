@@ -92,7 +92,7 @@ export default function Home() {
               variants={fadeInUp}
               className="w-full lg:w-1/2"
             >
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-w-sm sm:max-w-md mx-auto lg:mx-0">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4]">
                 <img
                   src={teacherImg}
                   alt="His Holiness Jagadguru Mahayogi Siddhababa"
