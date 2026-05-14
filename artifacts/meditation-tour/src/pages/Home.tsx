@@ -56,7 +56,7 @@ export default function Home() {
             className="max-w-3xl mx-auto"
           >
             <motion.span variants={fadeInUp} className="inline-block text-secondary font-medium tracking-widest uppercase mb-4 text-xs md:text-sm">
-              A Sacred Canadian Pilgrimage
+              Canada 2026
             </motion.span>
             <motion.h1 variants={fadeInUp} className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-4 leading-tight drop-shadow-lg">
               <span className="whitespace-nowrap">Himalayan Meditation</span>{" "}
