@@ -291,8 +291,6 @@ export default function Home() {
                   variants={fadeInUp}
                   className="relative flex flex-col items-center text-center flex-1 px-4"
                 >
-                  {/* Step number */}
-                  <span className="text-[10px] font-sans font-semibold tracking-widest text-secondary/70 uppercase mb-2">{label}</span>
                   {/* Icon circle */}
                   <div className="relative z-10 w-[72px] h-[72px] rounded-full bg-background border-2 border-secondary/40 shadow-md flex items-center justify-center mb-5">
                     <Icon className="w-7 h-7 text-secondary" strokeWidth={1.5} />
