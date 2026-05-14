@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { MapPin, Calendar, ArrowRight, CheckCircle, BookOpen, Download } from "lucide-react";
+import { MapPin, Calendar, ArrowRight, CheckCircle, BookOpen, Download, Brain, MessageCircle, Flame } from "lucide-react";
 import { Nav } from "@/components/Nav";
 import { EbookForm } from "@/components/EbookForm";
 import { Footer } from "@/components/Footer";
@@ -254,45 +254,54 @@ export default function Home() {
             </motion.p>
           </motion.div>
 
-          {/* Three Pillars */}
+          {/* Three Pillars — Horizontal Timeline */}
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={staggerContainer}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-10 mb-14 md:mb-20"
+            className="mb-14 md:mb-20"
           >
-            {[
-              {
-                icon: "🧘",
-                title: "Mahayog Meditation",
-                desc: "Ancient Himalayan techniques to awaken dormant energy, still the mind, and experience the depths of inner silence.",
-              },
-              {
-                icon: "🪔",
-                title: "Wisdom Talks (Satsang)",
-                desc: "Sit in the presence of a living master and receive profound teachings on consciousness, the Self, and the nature of reality.",
-              },
-              {
-                icon: "🕉️",
-                title: "Vedic Ceremonies",
-                desc: "Sacred fire rituals and traditional Vedic practices that purify the environment and invoke divine blessings.",
-              },
-            ].map((pillar) => (
-              <motion.div
-                key={pillar.title}
-                variants={fadeInUp}
-                className="flex flex-col items-center text-center gap-4"
-              >
-                <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-secondary/10 border-2 border-secondary/20 flex items-center justify-center text-4xl md:text-5xl shadow-sm">
-                  {pillar.icon}
-                </div>
-                <div>
-                  <h4 className="font-serif text-lg md:text-xl font-bold text-primary mb-2">{pillar.title}</h4>
-                  <p className="text-muted-foreground font-light text-sm leading-relaxed max-w-xs mx-auto">{pillar.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+            <div className="relative flex flex-col sm:flex-row items-start sm:items-start justify-between gap-10 sm:gap-0">
+              {/* Connecting line (desktop only) */}
+              <div className="hidden sm:block absolute top-9 left-[16.5%] right-[16.5%] h-px bg-gradient-to-r from-secondary/30 via-secondary/60 to-secondary/30" />
+
+              {[
+                {
+                  Icon: Brain,
+                  label: "01",
+                  title: "Mahayog Meditation",
+                  desc: "Ancient Himalayan techniques to awaken dormant energy, still the mind, and experience the depths of inner silence.",
+                },
+                {
+                  Icon: MessageCircle,
+                  label: "02",
+                  title: "Wisdom Talks (Satsang)",
+                  desc: "Sit in the presence of a living master and receive profound teachings on consciousness, the Self, and reality.",
+                },
+                {
+                  Icon: Flame,
+                  label: "03",
+                  title: "Vedic Ceremonies",
+                  desc: "Sacred fire rituals and traditional Vedic practices that purify the space and invoke divine blessings.",
+                },
+              ].map(({ Icon, label, title, desc }) => (
+                <motion.div
+                  key={title}
+                  variants={fadeInUp}
+                  className="relative flex flex-col items-center text-center flex-1 px-4"
+                >
+                  {/* Step number */}
+                  <span className="text-[10px] font-sans font-semibold tracking-widest text-secondary/70 uppercase mb-2">{label}</span>
+                  {/* Icon circle */}
+                  <div className="relative z-10 w-[72px] h-[72px] rounded-full bg-background border-2 border-secondary/40 shadow-md flex items-center justify-center mb-5">
+                    <Icon className="w-7 h-7 text-secondary" strokeWidth={1.5} />
+                  </div>
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-primary mb-2">{title}</h4>
+                  <p className="text-muted-foreground font-light text-sm leading-relaxed max-w-[220px] mx-auto">{desc}</p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
           <motion.div
