@@ -3,7 +3,6 @@ import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { MapPin, Calendar, ArrowRight, CheckCircle, BookOpen, Download, Brain, MessageCircle, Flame } from "lucide-react";
 import { Nav } from "@/components/Nav";
-import { EbookForm } from "@/components/EbookForm";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
@@ -176,7 +175,15 @@ export default function Home() {
               </div>
             </div>
             <div className="relative z-10 border-t border-border pt-5">
-              <EbookForm />
+              <a
+                href="/hidden-science-within-you.pdf"
+                download="The-Hidden-Science-Within-You.pdf"
+                className="inline-flex items-center gap-2.5 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-7 py-3 rounded-xl transition-colors"
+              >
+                <Download className="w-4 h-4" />
+                Download Free E-Book
+              </a>
+              <p className="text-xs text-muted-foreground mt-3 font-light">Free — no sign-up required.</p>
             </div>
           </motion.div>
         </div>
