@@ -84,7 +84,7 @@ export default function Home() {
       {/* Teacher Section */}
       <section className="py-14 md:py-28 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-10">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-6">
             <motion.div
               initial="hidden"
               whileInView="visible"
