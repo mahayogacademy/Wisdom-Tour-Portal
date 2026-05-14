@@ -148,92 +148,94 @@ export default function Home() {
       {/* Hidden Science / Mahayog Section */}
       <section className="py-14 md:py-24 bg-card relative overflow-hidden">
         <div className="absolute top-0 right-0 -mr-32 -mt-32 w-[400px] h-[400px] bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
+        <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={staggerContainer}
-            className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr_1fr] gap-10 lg:gap-12 items-start"
+            className="flex flex-col gap-10 md:gap-14"
           >
-            {/* Left — Photo */}
-            <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] max-w-xs mx-auto lg:mx-0 w-full">
-              <img
-                src={hiddenScienceImg}
-                alt="Ancient Himalayan wisdom and meditation"
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
-            </motion.div>
+            {/* Top row — Photo + Content */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+              {/* Left — Photo */}
+              <motion.div variants={fadeInUp} className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4] max-w-sm mx-auto lg:mx-0 w-full">
+                <img
+                  src={hiddenScienceImg}
+                  alt="Ancient Himalayan wisdom and meditation"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+              </motion.div>
 
-            {/* Middle — Mahayog content */}
-            <motion.div variants={fadeInUp} className="flex flex-col gap-6">
-              <div>
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-2">
-                  The Hidden Science Within You
-                </h2>
-                <p className="text-secondary font-medium text-sm md:text-base mb-5">
-                  Understanding Himalayan Siddha Mahayog
-                </p>
-                <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed mb-6">
-                  Discover the ancient wisdom that has guided seekers for thousands of years.
-                </p>
-                <h3 className="font-serif text-lg md:text-xl font-bold text-primary mb-2">Himalayan Siddha Mahayog Meditation</h3>
-                <div className="inline-block bg-secondary/10 text-secondary px-4 py-1 rounded-full text-sm font-medium mb-4">
-                  3 Session Special
+              {/* Right — Content */}
+              <motion.div variants={fadeInUp} className="flex flex-col gap-6">
+                <div>
+                  <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-4">
+                    Discover the Hidden Science Within You
+                  </h2>
+                  <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed mb-6">
+                    Discover the ancient wisdom that has guided seekers for thousands of years.
+                  </p>
+                  <h3 className="font-serif text-lg md:text-xl font-bold text-secondary mb-2">
+                    Himalayan Siddha Mahayog Meditation
+                  </h3>
+                  <div className="inline-block bg-foreground/10 text-foreground px-4 py-1 rounded-full text-sm font-medium mb-4">
+                    3 Session Special
+                  </div>
+                  <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed">
+                    Over the course of three transformative sessions, you will be guided through ancient meditation techniques designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
+                  </p>
                 </div>
-                <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed">
-                  Over the course of three transformative sessions, you will be guided through ancient meditation techniques designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
-                </p>
-              </div>
-              <div>
-                <h4 className="font-serif text-base md:text-lg font-semibold text-primary mb-4">What to Expect</h4>
-                <ul className="flex flex-col gap-3">
-                  {[
-                    "Live guided meditation with a Himalayan Siddha master",
-                    "Activation of dormant chakra & kundalini energy",
-                    "Ancient breathing techniques (pranayama) for clarity and calm",
-                    "Personal guidance on your spiritual path",
-                    "A profound experience of inner stillness and awakening",
-                    "Community of sincere seekers from across Canada",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground font-light">
-                      <CheckCircle className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
+                <div>
+                  <h4 className="font-serif text-base md:text-lg font-semibold text-primary mb-4">What to Expect</h4>
+                  <ul className="flex flex-col gap-3">
+                    {[
+                      "Live guided meditation with a Himalayan Siddha master",
+                      "Activation of dormant kundalini energy & chakras",
+                      "Yogic exercises & breathing techniques for clarity and calm",
+                      "Personal guidance on your spiritual path",
+                      "A profound experience of inner discovery and awakening",
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground font-light">
+                        <CheckCircle className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            </div>
 
-            {/* Right — E-Book card */}
-            <motion.div variants={fadeInUp} className="bg-background rounded-2xl p-6 md:p-8 border border-border shadow-sm flex flex-col gap-5 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-secondary/8 rounded-full blur-3xl pointer-events-none -mr-10 -mt-10" />
-              <div className="relative z-10">
-                <div className="w-11 h-11 rounded-xl bg-secondary/15 flex items-center justify-center mb-4">
+            {/* Bottom — E-Book card */}
+            <motion.div variants={fadeInUp} className="bg-background rounded-2xl p-6 md:p-8 border border-border shadow-sm flex flex-col sm:flex-row gap-6 items-start relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-secondary/8 rounded-full blur-3xl pointer-events-none -mr-12 -mt-12" />
+              <div className="relative z-10 shrink-0">
+                <div className="w-11 h-11 rounded-xl bg-secondary/15 flex items-center justify-center">
                   <BookOpen className="w-5 h-5 text-secondary" />
                 </div>
-                <div className="inline-block bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-medium mb-3 border border-primary/20">
+              </div>
+              <div className="relative z-10 flex-1">
+                <div className="inline-block bg-primary/8 text-primary px-3 py-1 rounded-full text-xs font-medium mb-2 border border-primary/20">
                   Free E-Book
                 </div>
                 <h4 className="font-serif text-xl md:text-2xl font-bold text-primary mb-1">
                   The Hidden Science Within You
                 </h4>
-                <p className="text-secondary font-medium text-xs mb-4">Understanding Himalayan Siddha Mahayog</p>
-                <p className="text-muted-foreground font-light text-sm leading-relaxed mb-6">
+                <p className="text-muted-foreground font-light text-sm leading-relaxed mt-2">
                   This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
                 </p>
               </div>
-              <div className="relative z-10 border-t border-border pt-5 mt-auto">
+              <div className="relative z-10 shrink-0 flex flex-col items-center gap-2 w-full sm:w-auto">
                 <a
                   href="/hidden-science-within-you.pdf"
                   download="The-Hidden-Science-Within-You.pdf"
-                  className="inline-flex items-center gap-2.5 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-7 py-3 rounded-xl transition-colors w-full justify-center"
+                  className="inline-flex items-center gap-2.5 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-7 py-3 rounded-xl transition-colors whitespace-nowrap"
                 >
                   <Download className="w-4 h-4" />
                   Download Free E-Book
                 </a>
-                <p className="text-xs text-muted-foreground text-center mt-3 font-light">Free — no sign-up required.</p>
+                <p className="text-xs text-muted-foreground font-light">Free — no sign-up required.</p>
               </div>
             </motion.div>
           </motion.div>
