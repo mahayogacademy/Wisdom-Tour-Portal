@@ -98,7 +98,7 @@ export default function Home() {
                   alt="Ancient texts in candle light representing the teacher's lineage"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent" />
+                <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, hsl(var(--primary) / 0.85) 0%, hsl(var(--primary) / 0.25) 30%, transparent 52%)' }} />
                 <div className="absolute bottom-0 left-0 p-5 md:p-8">
                   <p className="text-secondary font-serif text-lg md:text-2xl">Jagadguru Mahayogi Siddhababa</p>
                   <p className="text-primary-foreground/80 text-xs md:text-sm mt-1 md:mt-2 tracking-wider uppercase">Himalayan Siddha Master</p>
