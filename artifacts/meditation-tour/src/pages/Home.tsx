@@ -239,7 +239,7 @@ export default function Home() {
                       Download Free E-Book
                     </a>
                     <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                      This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
+                      This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi.
                     </p>
                   </div>
                 </div>
