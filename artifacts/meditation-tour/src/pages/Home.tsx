@@ -198,8 +198,8 @@ export default function Home() {
                 <p className="text-muted-foreground font-light text-base leading-relaxed mb-7">
                   Over the course of three transformative sessions, you will be guided through an ancient meditation technique designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
                 </p>
-                <h4 className="font-serif text-lg font-semibold text-primary mb-4">What to Expect</h4>
-                <ul className="flex flex-col gap-3">
+                <h4 className="font-serif text-xl md:text-2xl font-semibold text-primary mb-5">What to Expect</h4>
+                <ul className="flex flex-col gap-4">
                   {[
                     "Live guided meditation with a Himalayan Siddha master",
                     "Activation of dormant kundalini energy & chakras",
@@ -207,8 +207,8 @@ export default function Home() {
                     "Personal guidance on your spiritual path",
                     "A profound experience of inner discovery and awakening",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm md:text-base text-muted-foreground font-light">
-                      <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                    <li key={item} className="flex items-start gap-3 text-base md:text-lg text-muted-foreground font-light">
+                      <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-1" />
                       <span>{item}</span>
                     </li>
                   ))}
