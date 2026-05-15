@@ -214,30 +214,9 @@ export default function Home() {
                   ))}
                 </ul>
 
-                {/* E-Book download — card style with chakra/lotus thumbnail */}
-                <div className="mt-8 pt-7 border-t border-border">
-                  <div className="flex items-start gap-4 bg-background rounded-2xl p-4 border border-border shadow-sm">
-                    <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-secondary/10 flex items-center justify-center">
-                      <img src={lotusImg} alt="Chakra lotus symbol" className="w-full h-full object-contain p-1" />
-                    </div>
-                    <div className="flex flex-col gap-1.5">
-                      <a
-                        href="/hidden-science-within-you.pdf"
-                        download="The-Hidden-Science-Within-You.pdf"
-                        className="inline-flex items-center gap-2 text-secondary font-semibold text-sm hover:text-secondary/80 transition-colors"
-                      >
-                        <Download className="w-4 h-4 shrink-0" />
-                        Download Free E-Book
-                      </a>
-                      <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                        This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </motion.div>
 
-              {/* Right — Photo + Feature Bar */}
+              {/* Right — Photo + E-Book */}
               <motion.div variants={fadeInUp} className="w-full min-w-0 flex flex-col gap-4 max-w-sm mx-auto lg:max-w-none lg:mx-0">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-w-xs sm:max-w-sm mx-auto lg:mx-0">
                   <img
@@ -248,6 +227,25 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
                 </div>
 
+                {/* E-Book download card */}
+                <div className="flex items-start gap-4 bg-background rounded-2xl p-4 border border-border shadow-sm max-w-xs sm:max-w-sm mx-auto lg:mx-0 w-full">
+                  <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-secondary/10 flex items-center justify-center">
+                    <img src={lotusImg} alt="Chakra lotus symbol" className="w-full h-full object-contain p-1" />
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    <a
+                      href="/hidden-science-within-you.pdf"
+                      download="The-Hidden-Science-Within-You.pdf"
+                      className="inline-flex items-center gap-2 text-secondary font-semibold text-sm hover:text-secondary/80 transition-colors"
+                    >
+                      <Download className="w-4 h-4 shrink-0" />
+                      Download Free E-Book
+                    </a>
+                    <p className="text-sm text-muted-foreground font-light leading-relaxed">
+                      This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
+                    </p>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </motion.div>
