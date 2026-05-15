@@ -95,6 +95,11 @@ export default function Home() {
               Awaken &nbsp;•&nbsp; Transform &nbsp;•&nbsp; Realize
             </motion.p>
 
+            {/* Canada badge */}
+            <motion.p variants={fadeInUp} className="text-white/70 text-xs font-medium tracking-[0.25em] uppercase mb-2">
+              🍁 Canada Tour &nbsp;·&nbsp; 2026
+            </motion.p>
+
             {/* CTA buttons */}
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-start gap-3">
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white text-sm md:text-base font-sans font-semibold tracking-[0.12em] uppercase px-8 h-12 md:h-14 rounded-full w-full sm:w-auto" data-testid="button-reserve-spot">
