@@ -15,6 +15,7 @@ import cityVancouver from "@/assets/images/city-vancouver.png";
 import cityOttawa from "@/assets/images/city-ottawa.png";
 import cityToronto from "@/assets/images/city-toronto.png";
 import hiddenScienceImg from "@/assets/images/hidden-science.png";
+import featureBarImg from "@assets/ChatGPT_Image_May_14,_2026,_08_41_38_PM_1778805736984.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -246,55 +247,13 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
                 </div>
 
-                {/* Dark teal feature bar */}
-                <div className="bg-primary rounded-2xl p-5 flex items-stretch divide-x divide-primary-foreground/20">
-                  {[
-                    {
-                      label: "Awaken", sub: "Your Energy",
-                      icon: (
-                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.4" className="w-9 h-9 text-secondary mx-auto mb-2">
-                          <path d="M20 8 C14 8 9 13 9 19 C9 24 12 27 16 29 L16 32 L24 32 L24 29 C28 27 31 24 31 19 C31 13 26 8 20 8Z" />
-                          <path d="M16 32 L24 32" />
-                          <circle cx="20" cy="19" r="3" />
-                          <path d="M20 5 L20 8" strokeLinecap="round" />
-                          <path d="M20 32 L20 35" strokeLinecap="round" />
-                        </svg>
-                      ),
-                    },
-                    {
-                      label: "Activate", sub: "Your Potential",
-                      icon: (
-                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.4" className="w-9 h-9 text-secondary mx-auto mb-2">
-                          <circle cx="20" cy="10" r="4" />
-                          <path d="M20 14 C20 14 14 18 14 24 C14 27 17 30 20 30 C23 30 26 27 26 24 C26 18 20 14 20 14Z" />
-                          <path d="M16 22 Q20 19 24 22" strokeLinecap="round" />
-                          <path d="M15 26 Q20 23 25 26" strokeLinecap="round" />
-                        </svg>
-                      ),
-                    },
-                    {
-                      label: "Transform", sub: "Your Life",
-                      icon: (
-                        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.4" className="w-9 h-9 text-secondary mx-auto mb-2">
-                          <circle cx="20" cy="20" r="6" />
-                          <path d="M20 6 L20 10" strokeLinecap="round" />
-                          <path d="M20 30 L20 34" strokeLinecap="round" />
-                          <path d="M6 20 L10 20" strokeLinecap="round" />
-                          <path d="M30 20 L34 20" strokeLinecap="round" />
-                          <path d="M9.4 9.4 L12.2 12.2" strokeLinecap="round" />
-                          <path d="M27.8 27.8 L30.6 30.6" strokeLinecap="round" />
-                          <path d="M30.6 9.4 L27.8 12.2" strokeLinecap="round" />
-                          <path d="M12.2 27.8 L9.4 30.6" strokeLinecap="round" />
-                        </svg>
-                      ),
-                    },
-                  ].map((f, i) => (
-                    <div key={f.label} className={`flex-1 flex flex-col items-center text-center px-3 ${i === 0 ? "pl-0" : ""} ${i === 2 ? "pr-0" : ""}`}>
-                      {f.icon}
-                      <span className="font-serif font-semibold text-primary-foreground text-sm leading-tight">{f.label}</span>
-                      <span className="text-primary-foreground/65 text-xs mt-0.5">{f.sub}</span>
-                    </div>
-                  ))}
+                {/* Feature bar image */}
+                <div className="rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={featureBarImg}
+                    alt="Awaken Your Energy · Activate Your Potential · Transform Your Life"
+                    className="w-full h-auto block"
+                  />
                 </div>
               </motion.div>
             </div>
