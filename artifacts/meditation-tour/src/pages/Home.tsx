@@ -186,9 +186,6 @@ export default function Home() {
                 <h2 className="font-serif text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-6">
                   Discover the Hidden Science Within You
                 </h2>
-                <div className="space-y-5 text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
-                  <p>Ancient wisdom that has guided seekers for thousands of years.</p>
-                </div>
                 <h3 className="font-serif text-xl md:text-2xl font-bold text-secondary mb-2">
                   Himalayan Siddha Mahayog Meditation
                 </h3>
@@ -207,7 +204,7 @@ export default function Home() {
                     "Personal guidance on your spiritual path",
                     "A profound experience of inner discovery and awakening",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-base md:text-lg text-muted-foreground font-light">
+                    <li key={item} className="flex items-start gap-3 text-base text-muted-foreground font-light leading-relaxed">
                       <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-1" />
                       <span>{item}</span>
                     </li>
