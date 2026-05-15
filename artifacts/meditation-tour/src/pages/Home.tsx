@@ -43,43 +43,57 @@ export default function Home() {
       <Nav />
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 md:pt-48 md:pb-32 min-h-[85vh] md:min-h-[90vh] flex items-center">
+      <section className="relative pt-24 pb-16 md:pt-36 md:pb-28 min-h-[85vh] md:min-h-[95vh] flex items-center">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-primary/70 mix-blend-multiply z-10" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background z-10" />
+          {/* Left-side fade so text is readable; right side shows Siddhababa clearly */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-primary/10 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background z-10" />
           <img
             src={heroImg}
-            alt="Himalayan mountains sunrise"
-            className="w-full h-full object-cover"
+            alt="Jagadguru Mahayogi Siddhababa meditating in the Himalayas"
+            className="w-full h-full object-cover object-right"
           />
         </div>
 
-        <div className="container relative z-20 mx-auto px-4 lg:px-8 text-center">
+        <div className="container relative z-20 mx-auto px-4 lg:px-8">
           <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="max-w-3xl mx-auto"
+            className="max-w-xl"
           >
-            <motion.span variants={fadeInUp} className="inline-block text-secondary font-medium tracking-widest uppercase mb-4 text-xs md:text-sm">
-              Canada 2026
-            </motion.span>
-            <motion.h1 variants={fadeInUp} className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-4 leading-tight drop-shadow-lg">
-              <span className="whitespace-nowrap">Himalayan Meditation</span>{" "}
-              <span className="text-secondary">&amp;</span> Wisdom Tour
-            </motion.h1>
-            <motion.p variants={fadeInUp} className="font-sans text-lg md:text-xl text-primary-foreground font-semibold tracking-wide mb-8 drop-shadow">
-              With His Holiness Jagadguru Mahayogi Siddhababa
-            </motion.p>
-            <motion.p variants={fadeInUp} className="text-base md:text-lg text-primary-foreground/85 font-light italic mb-10 max-w-md mx-auto leading-relaxed">
-              For inner peace, clarity, and transformation.
+            {/* Subtitle — small caps */}
+            <motion.p variants={fadeInUp} className="text-white/75 text-xs md:text-sm font-medium tracking-[0.28em] uppercase mb-4 drop-shadow">
+              Jagadguru Mahayogi Siddha Baba
             </motion.p>
 
-            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-3">
-              <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-primary-foreground text-base md:text-lg px-8 h-12 md:h-14 w-full sm:w-auto" data-testid="button-reserve-spot">
-                <Link href="/edmonton">Reserve Spot</Link>
+            {/* Main title — stacked large serif */}
+            <motion.h1 variants={fadeInUp} className="font-serif font-bold text-white leading-[0.9] drop-shadow-lg mb-3">
+              <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tight">Himalayan</span>
+              <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl uppercase tracking-tight">Meditation</span>
+              <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl italic text-secondary mt-1">
+                &amp; Wisdom Tour
+              </span>
+            </motion.h1>
+
+            {/* Lotus divider */}
+            <motion.div variants={fadeInUp} className="flex items-center gap-3 my-5 max-w-xs">
+              <div className="h-px flex-1 bg-white/35" />
+              <span className="text-white/60 text-base">🪷</span>
+              <div className="h-px flex-1 bg-white/35" />
+            </motion.div>
+
+            {/* Tagline */}
+            <motion.p variants={fadeInUp} className="text-white/80 text-xs md:text-sm font-medium tracking-[0.22em] uppercase mb-8 drop-shadow">
+              Awaken &nbsp;•&nbsp; Transform &nbsp;•&nbsp; Realize
+            </motion.p>
+
+            {/* CTA buttons */}
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-start gap-3">
+              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground text-sm md:text-base font-sans font-semibold tracking-[0.15em] uppercase px-8 h-12 md:h-14 rounded-full w-full sm:w-auto" data-testid="button-reserve-spot">
+                <Link href="/edmonton">Canada Tour 🍁</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/60 text-primary-foreground hover:bg-primary-foreground/10 text-base md:text-lg px-8 h-12 md:h-14 w-full sm:w-auto" data-testid="button-view-cities">
+              <Button asChild size="lg" variant="outline" className="border-white/50 text-white hover:bg-white/10 text-sm md:text-base px-8 h-12 md:h-14 rounded-full w-full sm:w-auto" data-testid="button-view-cities">
                 <a href="#cities">View Cities</a>
               </Button>
             </motion.div>
