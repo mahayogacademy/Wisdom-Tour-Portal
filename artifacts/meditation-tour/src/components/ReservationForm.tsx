@@ -1,5 +1,5 @@
 import React from "react";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
@@ -17,12 +17,16 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+
+const LANGUAGES = ["English", "Hindi", "Nepali"] as const;
 
 const reservationSchema = z.object({
   fullName: z.string().min(2, "Full name is required"),
   email: z.string().email("Valid email is required"),
   phone: z.string().optional(),
   attendees: z.string().min(1, "Please select number of attendees"),
+  languages: z.array(z.string()).min(1, "Please select at least one language"),
   message: z.string().optional(),
 });
 
@@ -42,6 +46,7 @@ export function ReservationForm({ city }: ReservationFormProps) {
       email: "",
       phone: "",
       attendees: "1",
+      languages: [],
       message: "",
     },
   });
@@ -53,7 +58,7 @@ export function ReservationForm({ city }: ReservationFormProps) {
 
   if (isSubmitted) {
     return (
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="bg-card border border-border p-8 rounded-xl shadow-sm text-center"
@@ -66,8 +71,8 @@ export function ReservationForm({ city }: ReservationFormProps) {
         <p className="text-muted-foreground font-light text-lg mb-6">
           Thank you for reserving your place for the {city} program. We will send you an email with venue and date details as soon as they are confirmed.
         </p>
-        <Button 
-          variant="outline" 
+        <Button
+          variant="outline"
           onClick={() => setIsSubmitted(false)}
           className="border-primary text-primary hover:bg-primary/5"
         >
@@ -151,6 +156,53 @@ export function ReservationForm({ city }: ReservationFormProps) {
             )}
           />
 
+          {/* Languages Spoken — multi-select checkboxes */}
+          <FormField
+            control={form.control}
+            name="languages"
+            render={() => (
+              <FormItem>
+                <FormLabel className="text-primary font-medium">Languages Spoken</FormLabel>
+                <div className="flex flex-wrap gap-3 mt-2">
+                  {LANGUAGES.map((lang) => (
+                    <Controller
+                      key={lang}
+                      control={form.control}
+                      name="languages"
+                      render={({ field }) => {
+                        const checked = field.value.includes(lang);
+                        return (
+                          <label
+                            className={`flex items-center gap-2 cursor-pointer px-4 py-2 rounded-full border text-sm font-medium transition-colors duration-200 ${
+                              checked
+                                ? "bg-primary text-primary-foreground border-primary"
+                                : "bg-background border-border text-foreground hover:border-primary/50"
+                            }`}
+                          >
+                            <Checkbox
+                              checked={checked}
+                              onCheckedChange={(val) => {
+                                if (val) {
+                                  field.onChange([...field.value, lang]);
+                                } else {
+                                  field.onChange(field.value.filter((v: string) => v !== lang));
+                                }
+                              }}
+                              className="hidden"
+                            />
+                            {checked && <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />}
+                            {lang}
+                          </label>
+                        );
+                      }}
+                    />
+                  ))}
+                </div>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
           <FormField
             control={form.control}
             name="message"
@@ -158,10 +210,10 @@ export function ReservationForm({ city }: ReservationFormProps) {
               <FormItem>
                 <FormLabel className="text-primary font-medium">Message / Special Requests (Optional)</FormLabel>
                 <FormControl>
-                  <Textarea 
-                    placeholder="Any questions or requirements..." 
-                    className="resize-none min-h-[100px] bg-background focus-visible:ring-secondary" 
-                    {...field} 
+                  <Textarea
+                    placeholder="Any questions or requirements..."
+                    className="resize-none min-h-[100px] bg-background focus-visible:ring-secondary"
+                    {...field}
                     data-testid="input-message"
                   />
                 </FormControl>
