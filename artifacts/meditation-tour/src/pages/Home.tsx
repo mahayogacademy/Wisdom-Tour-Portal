@@ -238,7 +238,7 @@ export default function Home() {
 
               {/* Right — Photo + Feature Bar */}
               <motion.div variants={fadeInUp} className="w-full min-w-0 flex flex-col gap-4 max-w-sm mx-auto lg:max-w-none lg:mx-0">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] w-full lg:max-h-72">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] w-full">
                   <img
                     src={hiddenScienceImg}
                     alt="Person meditating — chakra and kundalini awakening"
