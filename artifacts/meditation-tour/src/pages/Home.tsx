@@ -247,14 +247,6 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
                 </div>
 
-                {/* Feature bar image */}
-                <div className="rounded-2xl overflow-hidden shadow-lg">
-                  <img
-                    src={featureBarImg}
-                    alt="Awaken Your Energy · Activate Your Potential · Transform Your Life"
-                    className="w-full h-auto block"
-                  />
-                </div>
               </motion.div>
             </div>
           </motion.div>
