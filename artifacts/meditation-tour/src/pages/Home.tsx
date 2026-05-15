@@ -170,9 +170,9 @@ export default function Home() {
             variants={staggerContainer}
             className="flex flex-col gap-12 md:gap-16"
           >
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start">
               {/* Left — Text */}
-              <motion.div variants={fadeInUp} className="w-full lg:w-1/2">
+              <motion.div variants={fadeInUp} className="w-full min-w-0">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-primary/40" />
                   <div className="flex items-center gap-2 text-secondary/60">
@@ -182,7 +182,7 @@ export default function Home() {
                   </div>
                   <div className="h-px flex-1 bg-gradient-to-l from-transparent via-primary/20 to-primary/40" />
                 </div>
-                <h2 className="font-serif text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-6 lg:whitespace-nowrap">
+                <h2 className="font-serif text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-6">
                   Discover the Hidden Science Within You
                 </h2>
                 <div className="space-y-5 text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
@@ -237,7 +237,7 @@ export default function Home() {
               </motion.div>
 
               {/* Right — Photo + Feature Bar */}
-              <motion.div variants={fadeInUp} className="w-full lg:w-auto lg:flex-shrink-0 flex flex-col gap-4 max-w-xs sm:max-w-sm mx-auto lg:mx-0">
+              <motion.div variants={fadeInUp} className="w-full min-w-0 flex flex-col gap-4 max-w-sm mx-auto lg:max-w-none lg:mx-0">
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] w-full">
                   <img
                     src={hiddenScienceImg}
