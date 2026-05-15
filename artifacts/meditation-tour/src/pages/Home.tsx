@@ -160,44 +160,107 @@ export default function Home() {
       </section>
 
       {/* Hidden Science / Mahayog Section */}
-      <section className="py-14 md:pt-10 md:pb-28 bg-card">
+      <section className="py-14 md:pt-16 md:pb-24 bg-card overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
             variants={staggerContainer}
-            className="flex flex-col gap-12 md:gap-16"
+            className="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start"
           >
-            {/* Top — Content + Photo (mirrors teacher layout) */}
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12">
-              {/* Left — Text */}
-              <motion.div variants={fadeInUp} className="w-full lg:w-1/2">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-primary/40" />
-                  <div className="flex items-center gap-2 text-secondary/60">
-                    <span className="text-lg">✦</span>
-                    <span className="text-2xl">✦</span>
-                    <span className="text-lg">✦</span>
+            {/* ── Left Column ── */}
+            <motion.div variants={fadeInUp} className="w-full lg:w-[52%] flex flex-col">
+
+              {/* Lotus icon */}
+              <div className="text-secondary/70 text-2xl mb-5">🪷</div>
+
+              {/* Heading */}
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold leading-tight mb-4">
+                <span className="text-foreground font-normal">Discover the</span><br />
+                <span className="text-secondary">Hidden Science</span><br />
+                <span className="text-secondary">Within You</span>
+              </h2>
+              <p className="text-muted-foreground font-light text-base leading-relaxed mb-7 max-w-md">
+                Ancient wisdom that has guided seekers for thousands of years.
+              </p>
+
+              {/* Dark feature bar — 3 icons */}
+              <div className="bg-primary rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-around gap-5 sm:gap-3 mb-8 text-primary-foreground">
+                {[
+                  { icon: "⚡", label: "Awaken", sub: "Your Energy" },
+                  { icon: "🔮", label: "Activate", sub: "Your Potential" },
+                  { icon: "☀️", label: "Transform", sub: "Your Life" },
+                ].map((f) => (
+                  <div key={f.label} className="flex flex-col items-center gap-1 text-center">
+                    <span className="text-2xl mb-1">{f.icon}</span>
+                    <span className="font-serif font-semibold text-sm leading-tight">{f.label}</span>
+                    <span className="text-primary-foreground/70 text-xs">{f.sub}</span>
                   </div>
-                  <div className="h-px flex-1 bg-gradient-to-l from-transparent via-primary/20 to-primary/40" />
-                </div>
-                <h2 className="font-serif text-3xl lg:text-4xl xl:text-5xl font-bold text-primary mb-6 lg:whitespace-nowrap">
-                  Discover the Hidden Science Within You
-                </h2>
-                <div className="space-y-5 text-base md:text-lg text-muted-foreground font-light leading-relaxed mb-8">
-                  <p>Ancient wisdom that has guided seekers for thousands of years.</p>
-                </div>
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-secondary mb-2">
+                ))}
+              </div>
+
+              {/* Session label */}
+              <div className="flex items-center gap-3 mb-3">
+                <div className="h-px flex-1 bg-secondary/30" />
+                <p className="font-sans text-[10px] font-semibold tracking-[0.2em] uppercase text-secondary/80">
                   Himalayan Siddha Mahayog Meditation
-                </h3>
-                <div className="inline-block bg-foreground/10 text-foreground px-4 py-1 rounded-full text-sm font-medium mb-5">
-                  3 Session Special
-                </div>
-                <p className="text-muted-foreground font-light text-base leading-relaxed mb-7">
-                  Over the course of three transformative sessions, you will be guided through an ancient meditation technique designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
                 </p>
-                <h4 className="font-serif text-lg font-semibold text-primary mb-4">What to Expect</h4>
+                <div className="h-px flex-1 bg-secondary/30" />
+              </div>
+              <div className="flex justify-center mb-5">
+                <span className="border border-secondary/50 text-secondary text-xs font-medium px-4 py-1 rounded-full tracking-wide">
+                  3 Session Special
+                </span>
+              </div>
+
+              <p className="text-muted-foreground font-light text-sm leading-relaxed mb-8 max-w-md">
+                Over the course of three transformative sessions, you will be guided through an ancient meditation technique designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
+              </p>
+
+              {/* E-Book */}
+              <div className="flex items-start gap-4 bg-background rounded-xl p-4 border border-border shadow-sm">
+                <div className="w-14 h-20 rounded-md overflow-hidden shrink-0 shadow">
+                  <img src={hiddenScienceImg} alt="The Inner Science e-book" className="w-full h-full object-cover" />
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  <a
+                    href="/hidden-science-within-you.pdf"
+                    download="The-Hidden-Science-Within-You.pdf"
+                    className="inline-flex items-center gap-2 text-secondary font-semibold text-sm hover:text-secondary/80 transition-colors"
+                  >
+                    <Download className="w-4 h-4 shrink-0" />
+                    Download Free E-Book
+                  </a>
+                  <p className="text-xs text-muted-foreground font-light leading-relaxed">
+                    This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* ── Right Column — Photo + What to Expect card ── */}
+            <motion.div variants={fadeInUp} className="w-full lg:w-[48%] relative flex flex-col gap-5">
+
+              {/* Meditator photo */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] w-full max-w-sm mx-auto lg:mx-0 lg:max-w-none">
+                <img
+                  src={hiddenScienceImg}
+                  alt="Person meditating — kundalini awakening"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent" />
+              </div>
+
+              {/* What to Expect card — below the photo on mobile, visually anchored */}
+              <div className="bg-card border border-border rounded-2xl shadow-lg p-5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-px flex-1 bg-secondary/25" />
+                  <p className="font-sans text-[10px] font-bold tracking-[0.2em] uppercase text-foreground/70">
+                    What to Expect
+                  </p>
+                  <div className="h-px flex-1 bg-secondary/25" />
+                </div>
                 <ul className="flex flex-col gap-3">
                   {[
                     "Live guided meditation with a Himalayan Siddha master",
@@ -206,42 +269,14 @@ export default function Home() {
                     "Personal guidance on your spiritual path",
                     "A profound experience of inner discovery and awakening",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm md:text-base text-muted-foreground font-light">
-                      <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                    <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground font-light">
+                      <CheckCircle className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
-
-                {/* E-Book download — inline below What to Expect */}
-                <div className="mt-8 pt-7 border-t border-border">
-                  <a
-                    href="/hidden-science-within-you.pdf"
-                    download="The-Hidden-Science-Within-You.pdf"
-                    className="inline-flex items-center gap-2.5 bg-secondary hover:bg-secondary/90 text-primary-foreground font-sans font-medium text-sm px-7 py-3 rounded-xl transition-colors"
-                  >
-                    <Download className="w-4 h-4" />
-                    Download Free E-Book
-                  </a>
-                  <p className="text-sm text-muted-foreground font-light mt-3 leading-relaxed">
-                    This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi — as taught by the living Siddha masters of the Himalayas.
-                  </p>
-                </div>
-              </motion.div>
-
-              {/* Right — Photo */}
-              <motion.div variants={fadeInUp} className="w-full lg:w-auto lg:flex-shrink-0">
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4] max-w-xs sm:max-w-sm mx-auto lg:mx-0">
-                  <img
-                    src={hiddenScienceImg}
-                    alt="Person meditating — chakra and kundalini awakening"
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
-                </div>
-              </motion.div>
-            </div>
-
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
