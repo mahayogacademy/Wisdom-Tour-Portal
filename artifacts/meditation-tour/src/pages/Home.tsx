@@ -83,8 +83,8 @@ export default function Home() {
     {
       name: "Edmonton", path: "/edmonton", img: cityEdmonton,
       events: [
-        { dates: "July 27", venue: "Grand Opening · Italian Cultural Centre" },
-        { dates: "July 28", venue: "Introductory Session & Satsang" },
+        { dates: "July 27–29", venue: "Italian Cultural Centre" },
+        { dates: "July 4 & 5", venue: "Council of India Societies of Edmonton" },
       ],
     },
     {
