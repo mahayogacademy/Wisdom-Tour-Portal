@@ -231,9 +231,6 @@ export default function Home() {
 
                 {/* E-Book download card */}
                 <div className="flex items-start gap-4 bg-background rounded-2xl p-4 border border-border shadow-sm max-w-xs sm:max-w-sm mx-auto lg:mx-0 w-full">
-                  <div className="w-16 h-16 rounded-xl overflow-hidden shrink-0 bg-secondary/10 flex items-center justify-center">
-                    <img src={lotusImg} alt="Chakra lotus symbol" className="w-full h-full object-contain p-1" />
-                  </div>
                   <div className="flex flex-col gap-1.5">
                     <a
                       href="/what-is-mahayog.pdf"
