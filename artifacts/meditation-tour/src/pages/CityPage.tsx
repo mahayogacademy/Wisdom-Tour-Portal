@@ -211,7 +211,7 @@ export default function CityPage({ city }: CityPageProps) {
                               </div>
                             )}
                             <div className="flex flex-wrap items-center gap-3 mb-2">
-                              <h3 className={`font-serif font-bold text-primary ${group.featured ? "text-xl md:text-2xl" : "text-lg md:text-xl"}`}>{group.label}</h3>
+                              <h3 className={`font-serif font-bold text-primary ${group.featured ? "text-2xl md:text-3xl" : "text-xl md:text-2xl"}`}>{group.label}</h3>
                               {group.link ? (
                                 <a
                                   href={group.link}
