@@ -72,7 +72,6 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
         },
         {
           dates: "July 28",
-          hideDate: true,
           time: "11 AM – 1 PM",
           title: "Satsang with His Holiness Jagadguru Mahayogi Siddhababa",
           venue: "Hindu Society of Alberta",
