@@ -84,7 +84,7 @@ export function ReservationForm({ city }: ReservationFormProps) {
 
   return (
     <div className="bg-card border border-border p-6 md:p-10 rounded-xl shadow-sm">
-      <h3 className="text-2xl font-serif font-bold text-primary mb-8">Reserve Your Spot in {city}</h3>
+      <h3 className="text-2xl font-serif font-bold text-primary mb-8">Register for {city}</h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="reservation-form">
           <FormField
@@ -223,7 +223,7 @@ export function ReservationForm({ city }: ReservationFormProps) {
           />
 
           <Button type="submit" className="w-full bg-secondary hover:bg-secondary/90 text-primary-foreground text-lg h-14 font-serif" data-testid="button-submit">
-            Reserve My Spot
+            Register
           </Button>
         </form>
       </Form>

@@ -37,7 +37,7 @@ export function Nav() {
               </Link>
             ))}
             <Button asChild className="bg-secondary hover:bg-secondary/90 text-primary-foreground font-medium px-5">
-              <Link href="/edmonton">Reserve Spot</Link>
+              <Link href="/edmonton">Register</Link>
             </Button>
           </nav>
 
@@ -79,7 +79,7 @@ export function Nav() {
                 </Link>
               ))}
               <Button asChild className="bg-secondary hover:bg-secondary/90 text-primary-foreground mt-4 w-full h-12 text-base">
-                <Link href="/edmonton" onClick={() => setIsOpen(false)}>Reserve Your Spot</Link>
+                <Link href="/edmonton" onClick={() => setIsOpen(false)}>Register</Link>
               </Button>
             </div>
           </motion.div>

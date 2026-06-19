@@ -165,7 +165,7 @@ export default function Home() {
             {/* CTA buttons */}
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-start gap-3">
               <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-white text-sm md:text-base font-sans font-semibold tracking-[0.12em] uppercase px-8 h-12 md:h-14 rounded-full w-full sm:w-auto" data-testid="button-reserve-spot">
-                <a href="#register">Reserve Your Spot</a>
+                <a href="#register">Register</a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/50 text-white hover:bg-white/10 text-sm md:text-base px-8 h-12 md:h-14 rounded-full w-full sm:w-auto" data-testid="button-view-cities">
                 <a href="#cities">View Cities</a>
@@ -414,7 +414,7 @@ export default function Home() {
                       </div>
                       <div className="mt-auto pt-1">
                         <div className="inline-block bg-secondary hover:bg-secondary/90 text-white text-sm font-semibold font-sans px-5 py-2.5 rounded-xl transition-colors duration-200">
-                          Reserve Spot
+                          Register
                         </div>
                       </div>
                     </div>
