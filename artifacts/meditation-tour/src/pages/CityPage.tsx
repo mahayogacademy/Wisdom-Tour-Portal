@@ -236,7 +236,7 @@ export default function CityPage({ city }: CityPageProps) {
                               )}
                             </div>
                             {group.description && (
-                              <p className={`text-sm md:text-base font-light italic mb-5 ${group.featured ? "text-secondary/80" : "text-muted-foreground"}`}>
+                              <p className="text-sm md:text-base font-light italic mb-5 text-muted-foreground">
                                 {group.description}
                               </p>
                             )}
