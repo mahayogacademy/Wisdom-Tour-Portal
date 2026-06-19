@@ -49,6 +49,49 @@ interface CityEventGroup {
 }
 
 const cityEventGroups: Record<string, CityEventGroup[]> = {
+  calgary: [
+    {
+      label: "Open Sessions",
+      badge: "Free Admission",
+      badgeStyle: "teal",
+      events: [
+        {
+          dates: "July 9",
+          time: "5 – 8 PM",
+          title: "Inauguration Program",
+          venue: "Shri Sitaram Mandir Society of Calgary",
+          address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
+        },
+        {
+          dates: "July 11",
+          time: "4 – 7 PM",
+          title: "Special Spiritual Discourse (Satsang)",
+          venue: "Shri Sitaram Mandir Society of Calgary",
+          address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
+        },
+      ],
+    },
+    {
+      label: "Himalayan Siddha Mahayog Meditation",
+      badge: "By Registration",
+      badgeStyle: "amber",
+      description: "Sessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to settle in. This is a 2-day program package — attendance on both days is required.",
+      events: [
+        {
+          dates: "July 11",
+          time: "7 – 11 AM",
+          venue: "Shri Sitaram Mandir Society of Calgary",
+          address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
+        },
+        {
+          dates: "July 12",
+          time: "7 – 11 AM",
+          venue: "Shri Sitaram Mandir Society of Calgary",
+          address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
+        },
+      ],
+    },
+  ],
   edmonton: [
     {
       label: "Open Sessions",
@@ -113,7 +156,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
 const cityEvents: Record<string, CityEvent[]> = {
   calgary: [
     { dates: "July 11–12", venue: "Shri Sitaram Mandir Society of Calgary", address: "3219 34 Ave SE, Calgary, AB T2B 2M6" },
-  ],
+  ], // superseded by cityEventGroups below
   vancouver: [
     { dates: "July 17–19", venue: "Hindu Buddhist Foundation of Canada", address: "12351 Winram Rd, Surrey, BC V3V 3Y4" },
   ],
@@ -123,20 +166,6 @@ const cityEvents: Record<string, CityEvent[]> = {
   toronto: [],
 };
 
-const calgaryFaqs = [
-  {
-    q: "Do I need any prior meditation experience?",
-    a: "Not at all. These sessions are designed to be accessible to complete beginners as well as seasoned practitioners. No prior knowledge or preparation is required — just an open mind and a willingness to experience.",
-  },
-  {
-    q: "How long is each session?",
-    a: "Each session runs approximately 2 hours, including guided meditation, a wisdom talk (satsang), and time for questions. You are welcome to stay afterward to speak with the teacher.",
-  },
-  {
-    q: "Is this suitable for all ages and backgrounds?",
-    a: "Yes — people of all ages, spiritual backgrounds, and walks of life are warmly welcome. The teachings are universal and carry meaning whether you are new to spirituality or have been on a path for many years.",
-  },
-];
 
 const faqGroups = [
   {
@@ -188,7 +217,6 @@ export default function CityPage({ city }: CityPageProps) {
   const [openFaqItem, setOpenFaqItem] = useState<string | null>(null);
   const cityKey = city.toLowerCase();
   const heroImg = cityImages[cityKey] || torontoImg;
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col font-sans">
@@ -394,17 +422,6 @@ export default function CityPage({ city }: CityPageProps) {
                 </ul>
               </div>
 
-              {cityKey === "calgary" && (
-                <div className="mt-6 flex items-start gap-4">
-                  <Heart className="w-5 h-5 text-secondary shrink-0 mt-0.5" strokeWidth={1.5} />
-                  <div>
-                    <h4 className="font-serif text-lg font-bold text-primary mb-1">Open to All — No Admission Fee</h4>
-                    <p className="text-muted-foreground font-light text-sm leading-relaxed">
-                      This program is offered freely as a gift of wisdom. Those who wish to support the mission of spreading these teachings may offer a voluntary donation — every contribution, large or small, is received with deep gratitude.
-                    </p>
-                  </div>
-                </div>
-              )}
 
               {/* Register Button */}
               <div className="mt-8">
@@ -418,81 +435,6 @@ export default function CityPage({ city }: CityPageProps) {
 
           </div>
 
-          {/* Calgary-only: full-width sections below */}
-          {cityKey === "calgary" && (
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp}
-              className="mt-12 md:mt-16 space-y-6"
-            >
-              {/* Who is this for? + Your Guide — side by side on desktop */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                <div className="flex items-start gap-4">
-                  <Users className="w-5 h-5 text-primary shrink-0 mt-1" strokeWidth={1.5} />
-                  <div>
-                    <h4 className="font-serif text-xl font-bold text-primary mb-2">Who Is This For?</h4>
-                    <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed">
-                      Everyone is welcome — no prior experience needed. Whether you have never meditated before or have been on a spiritual path for years, these sessions meet you exactly where you are. People of all ages, faiths, and backgrounds attend.
-                    </p>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-serif text-xl font-bold text-primary mb-4">Your Guide</h4>
-                  <div className="flex items-start gap-4">
-                    <img
-                      src={teacherImg}
-                      alt="Jagadguru Mahayogi Siddhababa"
-                      className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover object-top shrink-0 shadow-md border-2 border-secondary/30"
-                    />
-                    <div>
-                      <p className="font-serif font-semibold text-primary text-base md:text-lg leading-tight">Jagadguru Mahayogi Siddhababa</p>
-                      <p className="text-xs text-secondary font-medium tracking-wide uppercase mt-0.5 mb-2">Himalayan Siddha Master</p>
-                      <p className="text-muted-foreground font-light text-sm leading-relaxed">
-                        A living master rooted in an unbroken Himalayan lineage, Siddhababa has guided seekers from all backgrounds toward greater peace, clarity, and self-understanding. His teachings blend profound spiritual depth with warmth and practical insight.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* FAQ — full width */}
-              <div className="p-6 md:p-8 bg-card border border-border rounded-xl">
-                <h4 className="font-serif text-xl font-bold text-primary mb-5">Frequently Asked Questions</h4>
-                <div className="space-y-2">
-                  {calgaryFaqs.map((faq, i) => (
-                    <div key={i} className="border border-border rounded-xl overflow-hidden">
-                      <button
-                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                        className="w-full flex items-center justify-between gap-4 px-5 py-4 text-left bg-background hover:bg-card/60 transition-colors"
-                      >
-                        <span className="font-medium text-sm md:text-base text-primary">{faq.q}</span>
-                        <ChevronDown
-                          className={`w-4 h-4 text-secondary shrink-0 transition-transform duration-300 ${openFaq === i ? "rotate-180" : ""}`}
-                        />
-                      </button>
-                      <AnimatePresence initial={false}>
-                        {openFaq === i && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.25, ease: "easeInOut" }}
-                            className="overflow-hidden"
-                          >
-                            <p className="px-5 pb-4 text-sm md:text-base text-muted-foreground font-light leading-relaxed">
-                              {faq.a}
-                            </p>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          )}
         </div>
       </section>
 
