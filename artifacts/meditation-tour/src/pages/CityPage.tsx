@@ -288,16 +288,6 @@ export default function CityPage({ city }: CityPageProps) {
                   );
                 })()}
 
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
-                    <Clock className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-serif font-bold text-lg md:text-xl text-primary mb-1">Schedule</h4>
-                    <p className="text-muted-foreground font-light text-sm md:text-base">Himalayan Siddha Mahayog Meditation</p>
-                    <p className="text-xs md:text-sm text-secondary font-medium mt-1">2 Day Retreat</p>
-                  </div>
-                </div>
               </div>
             </motion.div>
 
