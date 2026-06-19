@@ -358,7 +358,7 @@ export default function Home() {
                               <div key={i} className="grid grid-cols-[20px_1fr] gap-x-2 gap-y-0.5 items-start">
                                 <Calendar className="w-4 h-4 lg:w-5 lg:h-5 text-secondary mt-0.5" />
                                 <span className="text-sm lg:text-base font-semibold text-primary">{ev.dates}</span>
-                                <MapPin className="w-3.5 h-3.5 text-secondary/60 mt-0.5" />
+                                <span />
                                 <span className="text-sm text-muted-foreground">{ev.venue}</span>
                               </div>
                             ))}
