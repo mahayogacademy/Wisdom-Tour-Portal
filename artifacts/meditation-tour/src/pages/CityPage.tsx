@@ -220,7 +220,7 @@ export default function CityPage({ city }: CityPageProps) {
               {city}
             </h1>
             <p className="text-base md:text-xl text-white/80 font-light max-w-xl drop-shadow">
-              Join Jagadguru Mahayogi Siddhababa for a transformative 3-session special program.
+              Join Jagadguru Mahayogi Siddhababa for a transformative program.
             </p>
           </motion.div>
         </div>
