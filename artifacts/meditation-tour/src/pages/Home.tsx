@@ -236,15 +236,15 @@ export default function Home() {
                   </div>
                   <div className="flex flex-col gap-1.5">
                     <a
-                      href="/hidden-science-within-you.pdf"
-                      download="The-Hidden-Science-Within-You.pdf"
+                      href="/what-is-mahayog.pdf"
+                      download="What-is-Mahayog.pdf"
                       className="inline-flex items-center gap-2 text-secondary font-semibold text-sm hover:text-secondary/80 transition-colors"
                     >
                       <Download className="w-4 h-4 shrink-0" />
                       Download Free E-Book
                     </a>
                     <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                      This e-book reveals the profound science of the inner world — chakras, prana, and the path to samadhi.
+                      Mahayog reveals the profound science of the inner world — chakras, prana, and the path to samadhi.
                     </p>
                   </div>
                 </div>
