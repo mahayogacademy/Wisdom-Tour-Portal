@@ -195,10 +195,10 @@ export default function Home() {
                   Himalayan Siddha Mahayog Meditation
                 </h3>
                 <div className="inline-block bg-foreground/10 text-foreground px-4 py-1 rounded-full text-sm font-medium mb-5">
-                  3 Session Special
+                  2 Day Retreat
                 </div>
                 <p className="text-muted-foreground font-light text-base leading-relaxed mb-7">
-                  Over the course of three transformative sessions, you will be guided through an ancient meditation technique designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
+                  Over the course of two days, you will be guided through an ancient meditation technique designed to awaken dormant energy, clear mental blocks, and establish a profound connection with your inner self.
                 </p>
                 <h4 className="font-serif text-xl md:text-2xl font-semibold text-primary mb-5">What to Expect</h4>
                 <ul className="flex flex-col gap-4">
