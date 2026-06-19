@@ -166,21 +166,21 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       description: "Cultural performances, special guests, and a wisdom talk from His Holiness Jagadguru Mahayogi Siddhababa.",
       events: [
         {
-          dates: "Sun, Aug 17",
+          dates: "Fri, July 17",
           time: "5 – 8 PM",
           title: "Grand Welcoming",
           venue: "Hindu Buddhist Foundation of Canada",
           address: "12351 Winram Rd, Surrey, BC V3V 3Y4",
         },
         {
-          dates: "Mon, Aug 18",
+          dates: "Sat, July 18",
           time: "5 – 8 PM",
           title: "Wisdom Talk & Q and A Session (Satsang) with His Holiness",
           venue: "Hindu Buddhist Foundation of Canada",
           address: "12351 Winram Rd, Surrey, BC V3V 3Y4",
         },
         {
-          dates: "Tue, Aug 19",
+          dates: "Sun, July 19",
           time: "5 – 8 PM",
           title: "Wisdom Talk & Q and A Session (Satsang) with His Holiness",
           venue: "Hindu Buddhist Foundation of Canada",
@@ -195,13 +195,13 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       description: "Sessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to settle in. This is a 2-day program package — attendance on both days is required. Lunch will be served.",
       events: [
         {
-          dates: "Mon, Aug 18",
+          dates: "Sat, July 18",
           time: "7 – 11 AM",
           venue: "Hindu Buddhist Foundation of Canada",
           address: "12351 Winram Rd, Surrey, BC V3V 3Y4",
         },
         {
-          dates: "Tue, Aug 19",
+          dates: "Sun, July 19",
           time: "7 – 11 AM",
           venue: "Hindu Buddhist Foundation of Canada",
           address: "12351 Winram Rd, Surrey, BC V3V 3Y4",
