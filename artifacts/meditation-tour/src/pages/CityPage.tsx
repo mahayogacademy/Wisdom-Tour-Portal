@@ -31,15 +31,35 @@ const fadeInUp = {
 
 interface CityEvent {
   dates: string;
+  time?: string;
+  title?: string;
   venue: string;
   address: string;
 }
 
 const cityEvents: Record<string, CityEvent[]> = {
   edmonton: [
-    { dates: "June 27 & 28", venue: "Italian Cultural Centre", address: "14230 133 Ave NW, Edmonton, AB T5L 4W4" },
-    { dates: "July 4 & 5", venue: "Council of India Societies of Edmonton", address: "9504 37 Ave NW, Edmonton, AB T6E 5N2" },
-    { dates: "July 25–29", venue: "Vishnu Mandir (Fiji Sanatan Society of Alberta)", address: "12629 69 St NW, Edmonton, AB T5C 0G7" },
+    {
+      dates: "July 27",
+      time: "4 – 7 PM",
+      title: "Grand Opening",
+      venue: "Italian Cultural Centre",
+      address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
+    },
+    {
+      dates: "July 28",
+      time: "8 – 10 AM",
+      title: "Introductory Session: Himalayan Siddha Mahayog",
+      venue: "Italian Cultural Centre",
+      address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
+    },
+    {
+      dates: "July 28",
+      time: "11 AM – 1 PM",
+      title: "Satsang with His Holiness Jagadguru Mahayogi Siddhababa",
+      venue: "Hindu Society of Alberta",
+      address: "14225 133 Ave NW, Edmonton, AB T5L 4W3",
+    },
   ],
   calgary: [
     { dates: "July 11–12", venue: "Shri Sitaram Mandir Society of Calgary", address: "3219 34 Ave SE, Calgary, AB T2B 2M6" },
@@ -158,8 +178,11 @@ export default function CityPage({ city }: CityPageProps) {
                             <Calendar className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
                           </div>
                           <div>
-                            <p className="font-serif font-bold text-base md:text-lg text-primary">{ev.dates}</p>
-                            <p className="text-muted-foreground font-medium text-sm md:text-base mt-0.5">{ev.venue}</p>
+                            <p className="font-serif font-bold text-base md:text-lg text-primary">
+                              {ev.dates}{ev.time && <span className="font-sans font-normal text-secondary text-sm md:text-base ml-2">· {ev.time}</span>}
+                            </p>
+                            {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
+                            <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
                             <p className="text-xs md:text-sm text-muted-foreground/70 mt-0.5">{ev.address}</p>
                           </div>
                         </div>
