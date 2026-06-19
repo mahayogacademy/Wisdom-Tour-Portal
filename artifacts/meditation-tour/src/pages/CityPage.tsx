@@ -317,9 +317,10 @@ export default function CityPage({ city }: CityPageProps) {
               variants={fadeInUp}
               className="w-full lg:w-5/12"
             >
+              <h3 className="font-serif font-bold text-xl md:text-2xl text-primary mb-6">Himalayan Siddha Mahayog Meditation</h3>
+
               <div className="p-5 md:p-8 bg-card border border-border rounded-xl">
-                <p className="text-xs font-semibold uppercase tracking-widest text-secondary mb-2">Himalayan Siddha Mahayog Meditation</p>
-                <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-4">What to Expect</h3>
+                <h4 className="font-serif text-xl md:text-2xl font-bold text-primary mb-4">What to Expect</h4>
                 <p className="text-muted-foreground font-light text-base md:text-lg leading-relaxed mb-5">
                   Himalayan Siddha Mahayog is an ancient science of meditation transmitted through an unbroken Himalayan lineage. These sessions guide you into deep states of inner stillness and self-realization — accessible to complete beginners and experienced seekers alike.
                 </p>
