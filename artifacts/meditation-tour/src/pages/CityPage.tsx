@@ -42,7 +42,7 @@ const cityEvents: Record<string, CityEvent[]> = {
     { dates: "July 25–29", venue: "Vishnu Mandir (Fiji Sanatan Society of Alberta)", address: "12629 69 St NW, Edmonton, AB T5C 0G7" },
   ],
   calgary: [
-    { dates: "July 11 & 12", venue: "Shri Sitaram Mandir Society of Calgary", address: "3219 34 Ave SE, Calgary, AB T2B 2M6" },
+    { dates: "July 11–12", venue: "Shri Sitaram Mandir Society of Calgary", address: "3219 34 Ave SE, Calgary, AB T2B 2M6" },
   ],
   vancouver: [
     { dates: "July 17–19", venue: "Hindu Buddhist Foundation of Canada", address: "12351 Winram Rd, Surrey, BC V3V 3Y4" },

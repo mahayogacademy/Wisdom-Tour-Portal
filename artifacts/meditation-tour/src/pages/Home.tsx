@@ -44,7 +44,7 @@ export default function Home() {
     {
       name: "Calgary", path: "/calgary", img: cityCalgary,
       events: [
-        { dates: "July 11 & 12", venue: "Shri Sitaram Mandir Society of Calgary" },
+        { dates: "July 11–12", venue: "Shri Sitaram Mandir Society of Calgary" },
       ],
     },
     {
