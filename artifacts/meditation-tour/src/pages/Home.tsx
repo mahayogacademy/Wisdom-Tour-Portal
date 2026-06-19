@@ -136,10 +136,14 @@ export default function Home() {
             variants={staggerContainer}
             className="max-w-xl"
           >
-            {/* Canada maple leaf */}
-            <motion.p variants={fadeInUp} className="text-2xl md:text-3xl mb-3 drop-shadow">
-              🍁
-            </motion.p>
+            {/* Canadian flag */}
+            <motion.div variants={fadeInUp} className="flex items-center mb-4 w-14 h-8 rounded-sm overflow-hidden shadow-md">
+              <div className="bg-red-600 w-[25%] h-full" />
+              <div className="bg-white flex-1 h-full flex items-center justify-center">
+                <span className="text-red-600 text-xl leading-none">🍁</span>
+              </div>
+              <div className="bg-red-600 w-[25%] h-full" />
+            </motion.div>
 
             {/* Subtitle — small caps */}
             <motion.p variants={fadeInUp} className="text-white/75 text-sm md:text-xl font-medium tracking-[0.28em] uppercase mb-4 drop-shadow">
@@ -169,7 +173,7 @@ export default function Home() {
 
             {/* Mission */}
             <motion.p variants={fadeInUp} className="text-white/85 text-base md:text-2xl font-serif italic mb-8 drop-shadow">
-              From the Himalayas of Nepal — A Mission of Peace, Meditation and Universal Harmony
+              From the Himalayas of Nepal to Canada
             </motion.p>
 
             {/* CTA buttons */}
