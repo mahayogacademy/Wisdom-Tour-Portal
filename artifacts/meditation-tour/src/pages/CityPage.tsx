@@ -245,8 +245,8 @@ export default function CityPage({ city }: CityPageProps) {
                               {group.events.map((ev, i) => (
                                 <div key={i} className="relative">
                                   <div className="absolute -left-[25px] top-1.5 w-2.5 h-2.5 rounded-full bg-secondary/40 border-2 border-background" />
-                                  <p className="font-sans font-normal text-base md:text-lg text-secondary">
-                                    {ev.dates}{ev.time && <span className="ml-2">· {ev.time}</span>}
+                                  <p className="font-sans text-base md:text-lg text-secondary">
+                                    <span className="font-bold">{ev.dates}</span>{ev.time && <span className="font-normal ml-2">· {ev.time}</span>}
                                   </p>
                                   {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
                                   <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
@@ -295,8 +295,8 @@ export default function CityPage({ city }: CityPageProps) {
                             <Calendar className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
                           </div>
                           <div>
-                            <p className="font-sans font-normal text-base md:text-lg text-secondary">
-                              {ev.dates}{ev.time && <span className="ml-2">· {ev.time}</span>}
+                            <p className="font-sans text-base md:text-lg text-secondary">
+                              <span className="font-bold">{ev.dates}</span>{ev.time && <span className="font-normal ml-2">· {ev.time}</span>}
                             </p>
                             {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
                             <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
