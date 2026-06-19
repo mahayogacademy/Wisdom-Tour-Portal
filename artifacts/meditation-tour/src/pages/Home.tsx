@@ -137,7 +137,7 @@ export default function Home() {
             className="max-w-xl"
           >
             {/* Subtitle — small caps */}
-            <motion.p variants={fadeInUp} className="text-white/75 text-xs md:text-sm font-medium tracking-[0.28em] uppercase mb-4 drop-shadow">
+            <motion.p variants={fadeInUp} className="text-white/75 text-sm md:text-xl font-medium tracking-[0.28em] uppercase mb-4 drop-shadow">
               Jagadguru Mahayogi Siddha Baba
             </motion.p>
 
