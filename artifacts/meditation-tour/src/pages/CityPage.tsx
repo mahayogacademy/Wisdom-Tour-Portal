@@ -173,13 +173,15 @@ export default function CityPage({ city }: CityPageProps) {
 
       {/* Content Section */}
       <section className="py-12 md:py-20 bg-background">
-        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
-            {/* Program Details — full width */}
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
+
+            {/* LEFT — Program Details */}
             <motion.div
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
-              className="w-full"
+              className="w-full lg:w-7/12"
             >
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6 md:mb-8">Program Details</h2>
 
@@ -290,8 +292,16 @@ export default function CityPage({ city }: CityPageProps) {
                   </div>
                 </div>
               </div>
+            </motion.div>
 
-              <div className="mt-8 md:mt-12 p-5 md:p-8 bg-card border border-border rounded-xl">
+            {/* RIGHT — What to Expect + Register */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp}
+              className="w-full lg:w-5/12"
+            >
+              <div className="p-5 md:p-8 bg-card border border-border rounded-xl">
                 <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">What to Expect</h3>
                 <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed mb-4">
                   Experience ancient meditation practices transmitted through an unbroken Himalayan lineage. These sessions are designed for deep inner peace and self-realization, suitable for both beginners and experienced seekers.
@@ -323,15 +333,18 @@ export default function CityPage({ city }: CityPageProps) {
                   </div>
                 </div>
               )}
+
               {/* Register Button */}
-              <div className="mt-10 md:mt-14">
+              <div className="mt-8">
                 <a href={`mailto:canada@siddhamahayog.org?subject=Registration - ${city}`}>
-                  <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white font-sans font-semibold tracking-[0.12em] uppercase px-10 h-13 rounded-full text-base">
+                  <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white font-sans font-semibold tracking-[0.12em] uppercase px-10 h-13 rounded-full text-base w-full sm:w-auto">
                     Register for {city}
                   </Button>
                 </a>
               </div>
             </motion.div>
+
+          </div>
 
           {/* Calgary-only: full-width sections below */}
           {cityKey === "calgary" && (
