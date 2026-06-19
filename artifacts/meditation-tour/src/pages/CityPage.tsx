@@ -284,9 +284,9 @@ const faqGroups = [
     ],
   },
   {
-    title: "The Retreat",
+    title: "Meditation Program",
     items: [
-      { q: "What happens during the retreat?", a: "The retreat is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa. Each day includes guided meditation sessions, teachings on Kundalini and the subtle body, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness." },
+      { q: "What happens during the meditation program?", a: "The meditation program is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa. Each day includes guided meditation sessions, teachings on Kundalini and the subtle body, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness." },
       { q: "Can I join if I miss a day?", a: "Full attendance is required for program completion and to receive initiation. If you are unable to commit to all days, we encourage you to register for a future intake. Regular workshops are held monthly, typically beginning on the first Saturday." },
     ],
   },
@@ -300,7 +300,7 @@ const faqGroups = [
   {
     title: "After Initiation",
     items: [
-      { q: "What happens after I receive initiation?", a: "Initiation is a beginning, not an end. Once Kundalini is awakened, the energy continues to purify and unfold naturally through your daily meditation practice. After the retreat you will receive guidance on how to maintain and deepen your practice independently." },
+      { q: "What happens after I receive initiation?", a: "Initiation is a beginning, not an end. Once Kundalini is awakened, the energy continues to purify and unfold naturally through your daily meditation practice. After the program you will receive guidance on how to maintain and deepen your practice independently." },
       { q: "How do I continue my practice?", a: "Participants receive instruction in Mahayog self-practice, which can be maintained at home. Ongoing resources — teachings, group sittings (satsang), and access to the broader Mahayog community — are available through your online student learning portal after registration." },
       { q: "Is there ongoing support after initiation?", a: "Yes. Mahayog is not a one-time event — it is a living practice. Your local center provides regular satsang and access to meditation teachings under the guidance of His Holiness Jagadguru Mahayogi Siddhababa." },
     ],
