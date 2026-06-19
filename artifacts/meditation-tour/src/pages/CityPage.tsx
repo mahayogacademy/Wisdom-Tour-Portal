@@ -44,7 +44,6 @@ interface CityEventGroup {
   description?: string;
   featured?: boolean;
   link?: string;
-  column?: "left" | "right";
   events: CityEvent[];
 }
 
@@ -83,7 +82,6 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       label: "Himalayan Siddha Mahayog Meditation",
       badge: "By Registration",
       badgeStyle: "amber",
-      column: "right",
       description: "Sessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to complete registration and settle in before we begin.",
       events: [
         {
@@ -197,10 +195,9 @@ export default function CityPage({ city }: CityPageProps) {
                 {(() => {
                   const groups = cityEventGroups[cityKey];
                   if (groups) {
-                    const leftGroups = groups.filter(g => g.column !== "right");
                     return (
                       <div className="space-y-5">
-                        {leftGroups.map((group, gi) => (
+                        {groups.map((group, gi) => (
                           <div key={gi} className={`${gi > 0 ? "pt-8 border-t border-border/50" : ""}`}>
                             {/* Group header */}
                             {group.featured && (
@@ -320,43 +317,7 @@ export default function CityPage({ city }: CityPageProps) {
               variants={fadeInUp}
               className="w-full lg:w-5/12"
             >
-              {(() => {
-                const groups = cityEventGroups[cityKey];
-                const rightGroups = groups?.filter(g => g.column === "right") ?? [];
-                if (rightGroups.length === 0) return null;
-                return (
-                  <div className="mb-8 space-y-5">
-                    {rightGroups.map((group, gi) => (
-                      <div key={gi} className={gi > 0 ? "pt-6 border-t border-border/50" : ""}>
-                        <div className="flex flex-wrap items-center gap-3 mb-2">
-                          <h3 className="font-serif font-bold text-xl md:text-2xl text-primary">{group.label}</h3>
-                          <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ${
-                            group.badgeStyle === "amber"
-                              ? "bg-secondary/15 text-secondary"
-                              : "bg-primary/10 text-primary/70"
-                          }`}>{group.badge}</span>
-                        </div>
-                        {group.description && (
-                          <p className="text-sm md:text-base font-light italic mb-5 text-muted-foreground">{group.description}</p>
-                        )}
-                        <div className="ml-1 border-l-2 border-secondary/25 pl-5 space-y-5">
-                          {group.events.map((ev, i) => (
-                            <div key={i} className="relative">
-                              <div className="absolute -left-[25px] top-1.5 w-2.5 h-2.5 rounded-full bg-secondary/40 border-2 border-background" />
-                              <p className="font-sans text-base md:text-lg text-secondary">
-                                <span className="font-bold">{ev.dates}</span>{ev.time && <span className="font-normal ml-2">· {ev.time}</span>}
-                              </p>
-                              {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
-                              <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
-                              <p className="text-sm text-muted-foreground/60 mt-0.5">{ev.address}</p>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                );
-              })()}
+              <h3 className="font-serif font-bold text-xl md:text-2xl text-primary mb-6">Himalayan Siddha Mahayog Meditation</h3>
 
               <div className="p-5 md:p-8 bg-card border border-border rounded-xl">
                 <h4 className="font-serif text-xl md:text-2xl font-bold text-primary mb-4">What to Expect</h4>
