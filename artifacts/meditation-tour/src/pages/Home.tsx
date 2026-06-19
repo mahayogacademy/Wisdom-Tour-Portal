@@ -158,8 +158,13 @@ export default function Home() {
             </motion.div>
 
             {/* Tagline */}
-            <motion.p variants={fadeInUp} className="text-white/80 text-xs md:text-sm font-medium tracking-[0.22em] uppercase mb-8 drop-shadow">
+            <motion.p variants={fadeInUp} className="text-white/80 text-xs md:text-sm font-medium tracking-[0.22em] uppercase mb-3 drop-shadow">
               Awaken &nbsp;•&nbsp; Transform &nbsp;•&nbsp; Realize
+            </motion.p>
+
+            {/* Mission */}
+            <motion.p variants={fadeInUp} className="text-white/60 text-sm md:text-base font-serif italic mb-8 drop-shadow">
+              From the Himalayas of Nepal — A Mission of Peace, Meditation and Universal Harmony
             </motion.p>
 
             {/* CTA buttons */}
