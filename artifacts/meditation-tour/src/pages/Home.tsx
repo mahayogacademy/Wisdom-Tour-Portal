@@ -38,7 +38,7 @@ export default function Home() {
       events: [
         { dates: "July 4 & 5", venue: "Council of India Societies of Edmonton" },
         { dates: "July 25–29", venue: "Vishnu Mandir (Fiji Sanatan Society)" },
-        { dates: "July 27 & 28", venue: "Italian Cultural Centre" },
+        { dates: "June 27 & 28", venue: "Italian Cultural Centre" },
       ],
     },
     {
