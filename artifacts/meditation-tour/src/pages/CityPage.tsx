@@ -56,21 +56,21 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       badgeStyle: "teal",
       events: [
         {
-          dates: "July 9",
+          dates: "Thu, July 9",
           time: "5 – 8 PM",
           title: "Inauguration Program",
           venue: "Shri Sitaram Mandir Society of Calgary",
           address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
         },
         {
-          dates: "July 11",
+          dates: "Sat, July 11",
           time: "4 – 7 PM",
           title: "Special Spiritual Discourse (Satsang)",
           venue: "Shri Sitaram Mandir Society of Calgary",
           address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
         },
         {
-          dates: "July 12",
+          dates: "Sun, July 12",
           time: "4 – 7 PM",
           title: "Special Spiritual Discourse (Satsang)",
           venue: "Shri Sitaram Mandir Society of Calgary",
@@ -85,13 +85,13 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       description: "Sessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to settle in. This is a 2-day program package — attendance on both days is required.",
       events: [
         {
-          dates: "July 11",
+          dates: "Sat, July 11",
           time: "7 – 11 AM",
           venue: "Shri Sitaram Mandir Society of Calgary",
           address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
         },
         {
-          dates: "July 12",
+          dates: "Sun, July 12",
           time: "7 – 11 AM",
           venue: "Shri Sitaram Mandir Society of Calgary",
           address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
@@ -107,21 +107,21 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       link: "https://forms.gle/cbV8VPVZrQnp6Zoo9",
       events: [
         {
-          dates: "July 27",
+          dates: "Mon, July 27",
           time: "4 – 7 PM",
           title: "Grand Opening",
           venue: "Italian Cultural Centre",
           address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
         },
         {
-          dates: "July 28",
+          dates: "Tue, July 28",
           time: "8 – 10 AM",
           title: "Introductory Session: Himalayan Siddha Mahayog",
           venue: "Italian Cultural Centre",
           address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
         },
         {
-          dates: "July 28",
+          dates: "Tue, July 28",
           time: "11 AM – 1 PM",
           title: "Satsang with His Holiness Jagadguru Mahayogi Siddhababa",
           venue: "Hindu Society of Alberta",
@@ -136,7 +136,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       description: "Sessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to complete registration and settle in before we begin.",
       events: [
         {
-          dates: "July 4 & 5",
+          dates: "Sat & Sun, July 4 & 5",
           time: "7 – 11 AM (both days)",
           venue: "Council of India Societies of Edmonton",
           address: "9504 37 Ave NW, Edmonton, AB T6E 5N2",
@@ -151,7 +151,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       description: "A sacred multi-day celebration honouring the Guru on the auspicious full moon of Ashadha. Join us for an extraordinary convergence of devotion, wisdom, and divine grace.",
       events: [
         {
-          dates: "July 25 – 29",
+          dates: "Sat–Wed, July 25–29",
           venue: "Vishnu Mandir (Fiji Sanatan Society of Alberta)",
           address: "12629 69 St NW, Edmonton, AB T5C 0G7",
         },
@@ -217,7 +217,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       description: "Cultural performances, special guests, and a wisdom talk from His Holiness Jagadguru Mahayogi Siddhababa.",
       events: [
         {
-          dates: "Aug 1",
+          dates: "Sat, Aug 1",
           time: "1 – 5 PM",
           title: "Grand Welcoming",
           venue: "Ottawa Masonic Centre",
@@ -232,13 +232,13 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       description: "Sessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to settle in. This is a 2-day program package — attendance on both days is required. Lunch will be served.",
       events: [
         {
-          dates: "Aug 2",
+          dates: "Sun, Aug 2",
           time: "7 AM – 4 PM",
           venue: "Ottawa Masonic Centre",
           address: "2140 Walkley Rd, Ottawa, ON K1G 3V3",
         },
         {
-          dates: "Aug 3",
+          dates: "Mon, Aug 3",
           time: "7 AM – 4 PM",
           venue: "Ottawa Masonic Centre",
           address: "2140 Walkley Rd, Ottawa, ON K1G 3V3",
