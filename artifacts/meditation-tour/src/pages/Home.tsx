@@ -161,6 +161,14 @@ export default function Home() {
                   </span>
                 ))}
               </div>
+              <a
+                href="/who-is-siddhababa.pdf"
+                download="Who-is-Jagadguru-Mahayogi-Siddhababa.pdf"
+                className="inline-flex items-center gap-2 mt-6 text-secondary font-semibold text-sm hover:text-secondary/80 transition-colors"
+              >
+                <Download className="w-4 h-4 shrink-0" />
+                Download Free Guide — Who is His Holiness?
+              </a>
             </motion.div>
           </div>
         </div>
