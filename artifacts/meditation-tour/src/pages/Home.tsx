@@ -173,7 +173,7 @@ export default function Home() {
 
             {/* Mission */}
             <motion.p variants={fadeInUp} className="text-white/85 text-base md:text-2xl font-serif italic mb-8 drop-shadow">
-              From the Himalayas of Nepal to Canada
+              From the Himalayas of Nepal to Canada — A Mission of Peace, Meditation and Universal Harmony
             </motion.p>
 
             {/* CTA buttons */}
