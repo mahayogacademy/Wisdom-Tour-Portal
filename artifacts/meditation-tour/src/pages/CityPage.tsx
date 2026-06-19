@@ -33,6 +33,7 @@ interface CityEvent {
   dates: string;
   time?: string;
   hideDate?: boolean;
+  stackTime?: boolean;
   title?: string;
   venue: string;
   address: string;
@@ -66,6 +67,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
         {
           dates: "July 28",
           time: "8 – 10 AM",
+          stackTime: true,
           title: "Introductory Session: Himalayan Siddha Mahayog",
           venue: "Italian Cultural Centre",
           address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
@@ -247,8 +249,15 @@ export default function CityPage({ city }: CityPageProps) {
                                 <div key={i} className="relative">
                                   <div className="absolute -left-[25px] top-1.5 w-2.5 h-2.5 rounded-full bg-secondary/40 border-2 border-background" />
                                   <div className="font-sans text-base md:text-lg text-secondary">
-                                    {!ev.hideDate && <p className="font-bold leading-snug">{ev.dates}</p>}
-                                    {ev.time && <p className="font-normal leading-snug">· {ev.time}</p>}
+                                    {!ev.hideDate && (
+                                      <p className="leading-snug">
+                                        <span className="font-bold">{ev.dates}</span>
+                                        {ev.time && !ev.stackTime && <span className="font-normal ml-2">· {ev.time}</span>}
+                                      </p>
+                                    )}
+                                    {ev.time && (ev.hideDate || ev.stackTime) && (
+                                      <p className="font-normal leading-snug">· {ev.time}</p>
+                                    )}
                                   </div>
                                   {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
                                   <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
