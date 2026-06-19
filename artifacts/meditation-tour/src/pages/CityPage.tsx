@@ -174,14 +174,14 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
         },
         {
           dates: "Sat, July 18",
-          time: "5 – 8 PM",
+          time: "4 – 7 PM",
           title: "Wisdom Talk & Q and A Session (Satsang) with His Holiness",
           venue: "Hindu Buddhist Foundation of Canada",
           address: "12351 Winram Rd, Surrey, BC V3V 3Y4",
         },
         {
           dates: "Sun, July 19",
-          time: "5 – 8 PM",
+          time: "4 – 7 PM",
           title: "Wisdom Talk & Q and A Session (Satsang) with His Holiness",
           venue: "Hindu Buddhist Foundation of Canada",
           address: "12351 Winram Rd, Surrey, BC V3V 3Y4",
