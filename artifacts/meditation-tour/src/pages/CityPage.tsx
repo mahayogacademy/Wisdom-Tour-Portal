@@ -491,7 +491,7 @@ export default function CityPage({ city }: CityPageProps) {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-14 md:py-24 bg-card">
+      <section className="py-14 md:py-24 bg-secondary/10">
         <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
           <motion.div
             initial="hidden"
