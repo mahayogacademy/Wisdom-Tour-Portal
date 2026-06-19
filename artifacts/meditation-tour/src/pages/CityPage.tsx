@@ -138,7 +138,54 @@ const calgaryFaqs = [
   },
 ];
 
+const faqGroups = [
+  {
+    title: "Understanding Mahayog",
+    items: [
+      { q: "What is Kundalini?", a: "Kundalini is the dormant cosmic energy of transformation that lies at the base of the spine. It is the power of higher consciousness within every individual, waiting to be awakened. Recognized across traditions — as Shakti in Tantra, Qi in Chinese medicine, and through Kabbalah in Western mysticism — awakening this latent energy is universally viewed as the path to one's highest potential." },
+      { q: "What is Kundalini Awakening?", a: "Kundalini awakening refers to the activation of the latent spiritual energy within a person, leading to expanded awareness and inner transformation. Regardless of one's spiritual path, it is the foundation for true inner evolution and self-realization." },
+      { q: "How is Kundalini Awakened Safely?", a: "Through Guru Grace (Shaktipat): Jagadguru Mahayogi Siddhababa can awaken a seeker's Kundalini through touch, sight, mantra, or pure intention. With the guidance of an enlightened Master, Kundalini rises naturally, safely, and in alignment with the seeker's individual journey. Attempting to awaken Kundalini without proper guidance carries significant risks — the energy is potent and can cause imbalances if not properly directed." },
+      { q: "What happens once Kundalini is Awakened?", a: "After awakening, the practitioner becomes the observer during meditation. Experiences unfold across three levels — the physical body (automatic asanas, mudras, mantra), the subtle body (inner visualizations, energy flow through the nāḍīs), and the causal body (deep purification of impressions, growing inner peace). Each individual's experience is unique." },
+      { q: "What is the Chakra System?", a: "Chakras are subtle energy centers formed at the junctions of the three main energy channels. In Mahayog, chakras are not forced or stimulated — through the natural rising of Kundalini, they are engaged as needed. The seven primary chakras range from Muladhara (stability, grounding) at the base of the spine to Sahasrara (stillness, unity) at the crown." },
+    ],
+  },
+  {
+    title: "Eligibility & Preparation",
+    items: [
+      { q: "Who can attend?", a: "The program is open to sincere seekers of all backgrounds, nationalities, and spiritual traditions. No prior experience with yoga or meditation is required — the only prerequisite is genuine openness to inner exploration and commitment to attend the full program." },
+      { q: "Do I need prior meditation experience?", a: "No. The program welcomes complete beginners as well as experienced practitioners. The initiation process is guided entirely by the Guru's transmission and does not depend on prior technique or knowledge. Come as you are." },
+      { q: "Are there health or age requirements?", a: "There is no strict age minimum, though participants under 18 may need parental consent. Those with significant medical or psychiatric conditions are encouraged to consult a healthcare provider before attending and to share relevant details in the health section of the registration form." },
+      { q: "What should I wear or bring?", a: "Comfortable, loose-fitting clothing in natural fabrics is recommended. White or soft neutral tones are traditional, though not required. A shawl or light wrap is useful for seated sessions. You may also bring a personal meditation mat. All other essential materials will be provided." },
+      { q: "What languages are sessions conducted in?", a: "Sessions will be conducted primarily in English, Nepali, or Hindi — whichever best serves the participants present. Please indicate the languages you speak in the registration form so we can accommodate you." },
+    ],
+  },
+  {
+    title: "The Retreat",
+    items: [
+      { q: "What happens during the retreat?", a: "The retreat is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa. Each day includes guided meditation sessions, teachings on Kundalini and the subtle body, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness." },
+      { q: "Can I join if I miss a day?", a: "Full attendance is required for program completion and to receive initiation. If you are unable to commit to all days, we encourage you to register for a future intake. Regular workshops are held monthly, typically beginning on the first Saturday." },
+    ],
+  },
+  {
+    title: "Fees & Registration",
+    items: [
+      { q: "Is there a fee for the program?", a: "There is no fee for the meditation teaching or initiation — the teachings are offered freely as a spiritual gift.\n\nTo help cover the practical costs of organizing the Canada programs, participants are asked to make a one-time $100 Seva Contribution at the time of registration. This supports the volunteer-run, not-for-profit efforts of Mahayogi Siddhababa Spiritual Academy.", bullets: ["Access to the 2-day Himalayan Siddha Mahayog meditation program", "5 guided meditation classes, in person and/or online", "Access to eligible Canada Tour city events", "Online weekend guided group meditation", "Online student learning portal", "Online wisdom and Q&A sessions with His Holiness", "Continued guidance and support in the practice", "Free meditation access at participating Himalayan Siddha Mahayog centres worldwide, where available"], aExtra: "No sincere seeker will be turned away due to financial hardship. If the contribution presents a barrier, please contact the organizing team." },
+      { q: "Can I cancel or reschedule?", a: "If you are unable to attend, please notify the organizing team as soon as possible. Your Seva Contribution can be refunded or transferred to a future intake where space is available. Contact canada@siddhamahayog.org for support." },
+    ],
+  },
+  {
+    title: "After Initiation",
+    items: [
+      { q: "What happens after I receive initiation?", a: "Initiation is a beginning, not an end. Once Kundalini is awakened, the energy continues to purify and unfold naturally through your daily meditation practice. After the retreat you will receive guidance on how to maintain and deepen your practice independently." },
+      { q: "How do I continue my practice?", a: "Participants receive instruction in Mahayog self-practice, which can be maintained at home. Ongoing resources — teachings, group sittings (satsang), and access to the broader Mahayog community — are available through your online student learning portal after registration." },
+      { q: "Is there ongoing support after initiation?", a: "Yes. Mahayog is not a one-time event — it is a living practice. Your local center provides regular satsang and access to meditation teachings under the guidance of His Holiness Jagadguru Mahayogi Siddhababa." },
+    ],
+  },
+];
+
 export default function CityPage({ city }: CityPageProps) {
+  const [openFaqGroup, setOpenFaqGroup] = useState<number | null>(null);
+  const [openFaqItem, setOpenFaqItem] = useState<string | null>(null);
   const cityKey = city.toLowerCase();
   const heroImg = cityImages[cityKey] || torontoImg;
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -440,6 +487,124 @@ export default function CityPage({ city }: CityPageProps) {
               </div>
             </motion.div>
           )}
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-14 md:py-24 bg-card">
+        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={fadeInUp}
+            className="text-center mb-10 md:mb-14"
+          >
+            <p className="text-secondary text-xs font-semibold tracking-[0.3em] uppercase mb-3">Common Questions</p>
+            <h2 className="font-serif text-3xl md:text-5xl font-bold text-primary">Frequently Asked Questions</h2>
+          </motion.div>
+
+          <div className="space-y-4">
+            {faqGroups.map((group, gi) => {
+              const isGroupOpen = openFaqGroup === gi;
+              return (
+                <motion.div
+                  key={gi}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-40px" }}
+                  variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, delay: gi * 0.05 } } }}
+                  className="rounded-2xl border border-border overflow-hidden"
+                >
+                  <button
+                    onClick={() => { setOpenFaqGroup(isGroupOpen ? null : gi); setOpenFaqItem(null); }}
+                    className="w-full flex items-center justify-between gap-4 px-6 py-5 bg-background hover:bg-muted/40 transition-colors text-left"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="text-secondary text-base">◆</span>
+                      <span className="text-sm md:text-base font-semibold tracking-[0.22em] uppercase text-primary">{group.title}</span>
+                    </div>
+                    <motion.svg
+                      animate={{ rotate: isGroupOpen ? 180 : 0 }}
+                      transition={{ duration: 0.25 }}
+                      className="w-4 h-4 text-muted-foreground shrink-0"
+                      fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </motion.svg>
+                  </button>
+                  <AnimatePresence initial={false}>
+                    {isGroupOpen && (
+                      <motion.div
+                        key="content"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="border-t border-border divide-y divide-border">
+                          {group.items.map((item, ii) => {
+                            const key = `${gi}-${ii}`;
+                            const isOpen = openFaqItem === key;
+                            return (
+                              <div key={ii}>
+                                <button
+                                  onClick={() => setOpenFaqItem(isOpen ? null : key)}
+                                  className="w-full flex items-center justify-between gap-4 px-6 py-4 bg-background hover:bg-muted/30 transition-colors text-left"
+                                >
+                                  <span className="font-medium text-primary text-base md:text-lg">{item.q}</span>
+                                  <motion.svg
+                                    animate={{ rotate: isOpen ? 180 : 0 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="w-4 h-4 text-secondary shrink-0"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
+                                  >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                                  </motion.svg>
+                                </button>
+                                <AnimatePresence initial={false}>
+                                  {isOpen && (
+                                    <motion.div
+                                      key="answer"
+                                      initial={{ height: 0, opacity: 0 }}
+                                      animate={{ height: "auto", opacity: 1 }}
+                                      exit={{ height: 0, opacity: 0 }}
+                                      transition={{ duration: 0.25, ease: "easeInOut" }}
+                                      className="overflow-hidden"
+                                    >
+                                      <div className="px-6 pb-5 pt-1 text-base md:text-lg text-muted-foreground font-light leading-relaxed space-y-3">
+                                        {item.a.split("\n\n").map((para, pi) => (
+                                          <p key={pi}>{para}</p>
+                                        ))}
+                                        {"bullets" in item && item.bullets && (
+                                          <ul className="space-y-1.5 pl-1">
+                                            {(item.bullets as string[]).map((b, bi) => (
+                                              <li key={bi} className="flex items-start gap-2">
+                                                <span className="text-secondary mt-1.5 text-xs shrink-0">•</span>
+                                                <span>{b}</span>
+                                              </li>
+                                            ))}
+                                          </ul>
+                                        )}
+                                        {"aExtra" in item && item.aExtra && (
+                                          <p className="italic">{item.aExtra as string}</p>
+                                        )}
+                                      </div>
+                                    </motion.div>
+                                  )}
+                                </AnimatePresence>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
