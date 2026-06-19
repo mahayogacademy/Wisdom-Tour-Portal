@@ -37,40 +37,72 @@ interface CityEvent {
   address: string;
 }
 
-const cityEvents: Record<string, CityEvent[]> = {
+interface CityEventGroup {
+  label: string;
+  badge: string;
+  badgeStyle: "amber" | "teal";
+  description?: string;
+  events: CityEvent[];
+}
+
+const cityEventGroups: Record<string, CityEventGroup[]> = {
   edmonton: [
     {
-      dates: "July 4 & 5",
-      venue: "Council of India Societies of Edmonton",
-      address: "9504 37 Ave NW, Edmonton, AB T6E 5N2",
+      label: "Open Sessions",
+      badge: "RSVP Only",
+      badgeStyle: "teal",
+      events: [
+        {
+          dates: "July 27",
+          time: "4 – 7 PM",
+          title: "Grand Opening",
+          venue: "Italian Cultural Centre",
+          address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
+        },
+        {
+          dates: "July 28",
+          time: "8 – 10 AM",
+          title: "Introductory Session: Himalayan Siddha Mahayog",
+          venue: "Italian Cultural Centre",
+          address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
+        },
+        {
+          dates: "July 28",
+          time: "11 AM – 1 PM",
+          title: "Satsang with His Holiness Jagadguru Mahayogi Siddhababa",
+          venue: "Hindu Society of Alberta",
+          address: "14225 133 Ave NW, Edmonton, AB T5L 4W3",
+        },
+      ],
     },
     {
-      dates: "July 25 – 29",
-      venue: "Vishnu Mandir (Fiji Sanatan Society of Alberta)",
-      address: "12629 69 St NW, Edmonton, AB T5C 0G7",
+      label: "Himalayan Siddha Mahayog Meditation",
+      badge: "By Registration",
+      badgeStyle: "amber",
+      events: [
+        {
+          dates: "July 4 & 5",
+          venue: "Council of India Societies of Edmonton",
+          address: "9504 37 Ave NW, Edmonton, AB T6E 5N2",
+        },
+      ],
     },
     {
-      dates: "July 27",
-      time: "4 – 7 PM",
-      title: "Grand Opening",
-      venue: "Italian Cultural Centre",
-      address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
-    },
-    {
-      dates: "July 28",
-      time: "8 – 10 AM",
-      title: "Introductory Session: Himalayan Siddha Mahayog",
-      venue: "Italian Cultural Centre",
-      address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
-    },
-    {
-      dates: "July 28",
-      time: "11 AM – 1 PM",
-      title: "Satsang with His Holiness Jagadguru Mahayogi Siddhababa",
-      venue: "Hindu Society of Alberta",
-      address: "14225 133 Ave NW, Edmonton, AB T5L 4W3",
+      label: "Upcoming Program",
+      badge: "Details Coming Soon",
+      badgeStyle: "teal",
+      events: [
+        {
+          dates: "July 25 – 29",
+          venue: "Vishnu Mandir (Fiji Sanatan Society of Alberta)",
+          address: "12629 69 St NW, Edmonton, AB T5C 0G7",
+        },
+      ],
     },
   ],
+};
+
+const cityEvents: Record<string, CityEvent[]> = {
   calgary: [
     { dates: "July 11–12", venue: "Shri Sitaram Mandir Society of Calgary", address: "3219 34 Ave SE, Calgary, AB T2B 2M6" },
   ],
@@ -153,6 +185,52 @@ export default function CityPage({ city }: CityPageProps) {
 
               <div className="space-y-6 md:space-y-8">
                 {(() => {
+                  const groups = cityEventGroups[cityKey];
+                  if (groups) {
+                    return (
+                      <div className="space-y-5">
+                        {groups.map((group, gi) => (
+                          <div
+                            key={gi}
+                            className={`rounded-xl border p-5 md:p-6 ${
+                              group.badgeStyle === "amber"
+                                ? "border-secondary/30 bg-secondary/5"
+                                : "border-primary/20 bg-primary/5"
+                            }`}
+                          >
+                            <div className="flex flex-wrap items-center gap-2 mb-4">
+                              <h3 className="font-serif font-bold text-base md:text-lg text-primary">{group.label}</h3>
+                              <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
+                                group.badgeStyle === "amber"
+                                  ? "bg-secondary text-white"
+                                  : "bg-primary/15 text-primary"
+                              }`}>
+                                {group.badge}
+                              </span>
+                            </div>
+                            <div className="space-y-4">
+                              {group.events.map((ev, i) => (
+                                <div key={i} className="flex items-start gap-3">
+                                  <div className="w-8 h-8 rounded-full bg-white/70 border border-border flex items-center justify-center shrink-0 mt-0.5">
+                                    <Calendar className="w-4 h-4 text-secondary" />
+                                  </div>
+                                  <div>
+                                    <p className="font-serif font-bold text-sm md:text-base text-primary">
+                                      {ev.dates}{ev.time && <span className="font-sans font-normal text-secondary text-xs md:text-sm ml-2">· {ev.time}</span>}
+                                    </p>
+                                    {ev.title && <p className="text-primary/80 font-medium text-xs md:text-sm mt-0.5">{ev.title}</p>}
+                                    <p className="text-muted-foreground font-light text-xs md:text-sm mt-0.5">{ev.venue}</p>
+                                    <p className="text-xs text-muted-foreground/60 mt-0.5">{ev.address}</p>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    );
+                  }
+
                   const events = cityEvents[cityKey] ?? [];
                   if (events.length === 0) {
                     return (
