@@ -42,6 +42,7 @@ interface CityEventGroup {
   badge: string;
   badgeStyle: "amber" | "teal";
   description?: string;
+  featured?: boolean;
   events: CityEvent[];
 }
 
@@ -93,6 +94,8 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       label: "5-Day Guru Purnima Celebration",
       badge: "Details Coming Soon",
       badgeStyle: "teal",
+      featured: true,
+      description: "A sacred multi-day celebration honouring the Guru on the auspicious full moon of Ashadha. Join us for an extraordinary convergence of devotion, wisdom, and divine grace.",
       events: [
         {
           dates: "July 25 – 29",
@@ -197,13 +200,24 @@ export default function CityPage({ city }: CityPageProps) {
                           <div
                             key={gi}
                             className={`rounded-xl border p-5 md:p-6 ${
-                              group.badgeStyle === "amber"
+                              group.featured
+                                ? "border-yellow-400/60 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 shadow-md"
+                                : group.badgeStyle === "amber"
                                 ? "border-secondary/30 bg-secondary/5"
                                 : "border-primary/20 bg-primary/5"
                             }`}
                           >
+                            {group.featured && (
+                              <div className="flex items-center gap-2 mb-3">
+                                <span className="text-2xl">🌕</span>
+                                <div className="h-px flex-1 bg-yellow-300/60" />
+                                <span className="text-lg">🪷</span>
+                                <div className="h-px flex-1 bg-yellow-300/60" />
+                                <span className="text-2xl">🌕</span>
+                              </div>
+                            )}
                             <div className="flex flex-wrap items-center gap-2 mb-3">
-                              <h3 className="font-serif font-bold text-lg md:text-xl text-primary">{group.label}</h3>
+                              <h3 className={`font-serif font-bold text-primary ${group.featured ? "text-xl md:text-2xl" : "text-lg md:text-xl"}`}>{group.label}</h3>
                               <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
                                 group.badgeStyle === "amber"
                                   ? "bg-secondary text-white"
