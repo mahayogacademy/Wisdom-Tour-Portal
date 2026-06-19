@@ -53,7 +53,7 @@ const faqGroups = [
     ],
   },
   {
-    title: "The Workshop",
+    title: "The Retreat",
     items: [
       { q: "What happens during the retreat?", a: "The retreat is a structured, immersive introduction to Mahayog Meditation, culminating in the transmission of Shaktipat initiation by Jagadguru Mahayogi Siddhababa. Each day includes guided meditation sessions, teachings on Kundalini and the subtle body, and open time for questions. The program builds progressively, preparing each participant to receive initiation safely and with awareness." },
       { q: "Can I join if I miss a day?", a: "Full attendance is required for program completion and to receive initiation. If you are unable to commit to all days, we encourage you to register for a future intake. Regular workshops are held monthly, typically beginning on the first Saturday." },
