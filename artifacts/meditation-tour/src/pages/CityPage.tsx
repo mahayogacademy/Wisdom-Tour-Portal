@@ -200,8 +200,8 @@ export default function CityPage({ city }: CityPageProps) {
                                 : "border-primary/20 bg-primary/5"
                             }`}
                           >
-                            <div className="flex flex-wrap items-center gap-2 mb-4">
-                              <h3 className="font-serif font-bold text-base md:text-lg text-primary">{group.label}</h3>
+                            <div className="flex flex-wrap items-center gap-2 mb-5">
+                              <h3 className="font-serif font-bold text-lg md:text-xl text-primary">{group.label}</h3>
                               <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
                                 group.badgeStyle === "amber"
                                   ? "bg-secondary text-white"
@@ -210,19 +210,19 @@ export default function CityPage({ city }: CityPageProps) {
                                 {group.badge}
                               </span>
                             </div>
-                            <div className="space-y-4">
+                            <div className="space-y-5">
                               {group.events.map((ev, i) => (
-                                <div key={i} className="flex items-start gap-3">
-                                  <div className="w-8 h-8 rounded-full bg-white/70 border border-border flex items-center justify-center shrink-0 mt-0.5">
+                                <div key={i} className="flex items-start gap-4">
+                                  <div className="w-9 h-9 rounded-full bg-white/70 border border-border flex items-center justify-center shrink-0 mt-0.5">
                                     <Calendar className="w-4 h-4 text-secondary" />
                                   </div>
                                   <div>
-                                    <p className="font-serif font-bold text-sm md:text-base text-primary">
-                                      {ev.dates}{ev.time && <span className="font-sans font-normal text-secondary text-xs md:text-sm ml-2">· {ev.time}</span>}
+                                    <p className="font-serif font-bold text-base md:text-lg text-primary">
+                                      {ev.dates}{ev.time && <span className="font-sans font-normal text-secondary text-sm md:text-base ml-2">· {ev.time}</span>}
                                     </p>
-                                    {ev.title && <p className="text-primary/80 font-medium text-xs md:text-sm mt-0.5">{ev.title}</p>}
-                                    <p className="text-muted-foreground font-light text-xs md:text-sm mt-0.5">{ev.venue}</p>
-                                    <p className="text-xs text-muted-foreground/60 mt-0.5">{ev.address}</p>
+                                    {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
+                                    <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
+                                    <p className="text-sm text-muted-foreground/60 mt-0.5">{ev.address}</p>
                                   </div>
                                 </div>
                               ))}
@@ -302,21 +302,21 @@ export default function CityPage({ city }: CityPageProps) {
               className="w-full lg:w-5/12"
             >
               <div className="p-5 md:p-8 bg-card border border-border rounded-xl">
-                <h3 className="font-serif text-xl md:text-2xl font-bold text-primary mb-3 md:mb-4">What to Expect</h3>
-                <p className="text-muted-foreground font-light text-sm md:text-base leading-relaxed mb-4">
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-4">What to Expect</h3>
+                <p className="text-muted-foreground font-light text-base md:text-lg leading-relaxed mb-5">
                   Experience ancient meditation practices transmitted through an unbroken Himalayan lineage. These sessions are designed for deep inner peace and self-realization, suitable for both beginners and experienced seekers.
                 </p>
-                <ul className="space-y-3 text-sm md:text-base text-muted-foreground font-light">
+                <ul className="space-y-3 text-base md:text-lg text-muted-foreground font-light">
                   <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
                     Guided deep meditation
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
                     Spiritual discourse &amp; wisdom
                   </li>
                   <li className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-secondary shrink-0" />
+                    <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
                     Energy awakening practices
                   </li>
                 </ul>
