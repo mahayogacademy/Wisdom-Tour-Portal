@@ -136,9 +136,9 @@ export default function Home() {
             variants={staggerContainer}
             className="max-w-xl"
           >
-            {/* Canada badge */}
-            <motion.p variants={fadeInUp} className="text-secondary text-xs md:text-sm font-semibold tracking-[0.3em] uppercase mb-3 drop-shadow">
-              Canada &nbsp;·&nbsp; 2026
+            {/* Canada maple leaf */}
+            <motion.p variants={fadeInUp} className="text-2xl md:text-3xl mb-3 drop-shadow">
+              🍁
             </motion.p>
 
             {/* Subtitle — small caps */}
