@@ -43,6 +43,7 @@ interface CityEventGroup {
   badgeStyle: "amber" | "teal";
   description?: string;
   featured?: boolean;
+  link?: string;
   events: CityEvent[];
 }
 
@@ -52,6 +53,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       label: "Open Sessions",
       badge: "RSVP Only",
       badgeStyle: "teal",
+      link: "https://forms.gle/cbV8VPVZrQnp6Zoo9",
       events: [
         {
           dates: "July 27",
@@ -218,13 +220,28 @@ export default function CityPage({ city }: CityPageProps) {
                             )}
                             <div className="flex flex-wrap items-center gap-2 mb-3">
                               <h3 className={`font-serif font-bold text-primary ${group.featured ? "text-xl md:text-2xl" : "text-lg md:text-xl"}`}>{group.label}</h3>
-                              <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
-                                group.badgeStyle === "amber"
-                                  ? "bg-secondary text-white"
-                                  : "bg-primary/15 text-primary"
-                              }`}>
-                                {group.badge}
-                              </span>
+                              {group.link ? (
+                                <a
+                                  href={group.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full underline-offset-2 hover:opacity-80 transition-opacity ${
+                                    group.badgeStyle === "amber"
+                                      ? "bg-secondary text-white"
+                                      : "bg-primary/15 text-primary"
+                                  }`}
+                                >
+                                  {group.badge} ↗
+                                </a>
+                              ) : (
+                                <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
+                                  group.badgeStyle === "amber"
+                                    ? "bg-secondary text-white"
+                                    : "bg-primary/15 text-primary"
+                                }`}>
+                                  {group.badge}
+                                </span>
+                              )}
                             </div>
                             {group.description && (
                               <p className="text-sm md:text-base text-muted-foreground font-light italic mb-4 border-l-2 border-secondary/40 pl-3">
