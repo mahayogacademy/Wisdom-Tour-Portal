@@ -229,7 +229,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       label: "Himalayan Siddha Mahayog Meditation",
       badge: "By Registration",
       badgeStyle: "amber",
-      description: "Sessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to settle in. This is a 2-day program package — attendance on both days is required. Lunch will be served.",
+      description: "This two-day meditation program includes guided meditation practice, spiritual instruction, periods of silent sitting, and opportunities for questions and reflection. Participants will be supported throughout the day in a calm and focused environment suitable for both beginners and experienced practitioners.\n\nSessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to check in and settle in. This is a 2-day program package, and attendance on both days is required. Lunch will be served.",
       events: [
         {
           dates: "Sun, Aug 2",
@@ -412,9 +412,11 @@ export default function CityPage({ city }: CityPageProps) {
                               )}
                             </div>
                             {group.description && (
-                              <p className="text-sm md:text-base font-light italic mb-5 text-muted-foreground">
-                                {group.description}
-                              </p>
+                              <div className="text-sm md:text-base font-light italic mb-5 text-muted-foreground space-y-2">
+                                {group.description.split("\n\n").map((para, i) => (
+                                  <p key={i}>{para}</p>
+                                ))}
+                              </div>
                             )}
                             {/* Events — left accent line */}
                             <div className="ml-1 border-l-2 border-secondary/25 pl-5 space-y-5">
