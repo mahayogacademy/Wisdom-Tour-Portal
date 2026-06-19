@@ -69,6 +69,13 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
           venue: "Shri Sitaram Mandir Society of Calgary",
           address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
         },
+        {
+          dates: "July 12",
+          time: "4 – 7 PM",
+          title: "Special Spiritual Discourse (Satsang)",
+          venue: "Shri Sitaram Mandir Society of Calgary",
+          address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
+        },
       ],
     },
     {
