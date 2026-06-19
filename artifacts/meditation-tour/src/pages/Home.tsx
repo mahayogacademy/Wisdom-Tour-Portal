@@ -463,7 +463,7 @@ export default function Home() {
                   >
                     <div className="flex items-center gap-3">
                       <span className="text-secondary text-base">◆</span>
-                      <span className="text-xs font-semibold tracking-[0.22em] uppercase text-primary">{group.title}</span>
+                      <span className="text-sm md:text-base font-semibold tracking-[0.22em] uppercase text-primary">{group.title}</span>
                     </div>
                     <motion.svg
                       animate={{ rotate: isGroupOpen ? 180 : 0 }}
@@ -496,7 +496,7 @@ export default function Home() {
                                   onClick={() => setOpenFaqItem(isOpen ? null : key)}
                                   className="w-full flex items-center justify-between gap-4 px-6 py-4 bg-background hover:bg-muted/30 transition-colors text-left"
                                 >
-                                  <span className="font-medium text-primary text-sm md:text-base">{item.q}</span>
+                                  <span className="font-medium text-primary text-base md:text-lg">{item.q}</span>
                                   <motion.svg
                                     animate={{ rotate: isOpen ? 180 : 0 }}
                                     transition={{ duration: 0.2 }}
@@ -516,7 +516,7 @@ export default function Home() {
                                       transition={{ duration: 0.25, ease: "easeInOut" }}
                                       className="overflow-hidden"
                                     >
-                                      <p className="px-6 pb-5 pt-1 text-sm md:text-base text-muted-foreground font-light leading-relaxed">
+                                      <p className="px-6 pb-5 pt-1 text-base md:text-lg text-muted-foreground font-light leading-relaxed">
                                         {item.a}
                                       </p>
                                     </motion.div>
