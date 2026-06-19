@@ -229,7 +229,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       label: "Himalayan Siddha Mahayog Meditation",
       badge: "By Registration",
       badgeStyle: "amber",
-      description: "This two-day meditation program includes guided meditation practice, spiritual instruction, periods of silent sitting, and opportunities for questions and reflection. Participants will be supported throughout the day in a calm and focused environment suitable for both beginners and experienced practitioners.\n\nSessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to check in and settle in. This is a 2-day program package, and attendance on both days is required. Lunch will be served.",
+      description: "Sessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to settle in. This is a 2-day program package — attendance on both days is required. Lunch will be served.",
       events: [
         {
           dates: "Sun, Aug 2",
