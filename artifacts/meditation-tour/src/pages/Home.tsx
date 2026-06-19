@@ -145,7 +145,7 @@ export default function Home() {
               </h2>
               <div className="space-y-5 text-base md:text-lg text-muted-foreground font-light leading-relaxed">
                 <p>
-                  His Holiness Jagadguru Mahayogi Siddhababa is a Himalayan yogi and spiritual teacher dedicated to sharing the timeless wisdom of the ancient yogic tradition in a way that is accessible and meaningful for modern life. Deeply grounded in meditation, Vedic knowledge, and the inner sciences of yoga, he guides seekers from all backgrounds toward greater peace, clarity, and self-understanding.
+                  His Holiness Jagadguru Mahayogi Siddhababa is a Himalayan Meditation Master and spiritual teacher dedicated to sharing the timeless wisdom of the ancient yogic tradition in a way that is accessible and meaningful for modern life. Deeply grounded in meditation, Vedic knowledge, and the inner sciences of yoga, he guides seekers from all backgrounds toward greater peace, clarity, and self-understanding.
                 </p>
                 <p>
                   Rooted in an unbroken Himalayan lineage, his teachings combine profound spiritual depth with warmth, humility, and practical insight. Through Himalayan Siddha Mahayog meditation, discourse, and personal guidance, he continues to inspire individuals and communities around the world on the path of inner transformation.
