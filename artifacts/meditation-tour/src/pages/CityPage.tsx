@@ -158,6 +158,43 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       ],
     },
   ],
+  ottawa: [
+    {
+      label: "Open Session",
+      badge: "Free Admission",
+      badgeStyle: "teal",
+      description: "Cultural performances, special guests, and a wisdom talk from His Holiness Jagadguru Mahayogi Siddhababa.",
+      events: [
+        {
+          dates: "Aug 1",
+          time: "1 – 5 PM",
+          title: "Grand Welcoming",
+          venue: "Ottawa Masonic Centre",
+          address: "2140 Walkley Rd, Ottawa, ON K1G 3V3",
+        },
+      ],
+    },
+    {
+      label: "Himalayan Siddha Mahayog Meditation",
+      badge: "By Registration",
+      badgeStyle: "amber",
+      description: "Sessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to settle in. This is a 2-day program package — attendance on both days is required. Lunch will be served.",
+      events: [
+        {
+          dates: "Aug 2",
+          time: "7 AM – 4 PM",
+          venue: "Ottawa Masonic Centre",
+          address: "2140 Walkley Rd, Ottawa, ON K1G 3V3",
+        },
+        {
+          dates: "Aug 3",
+          time: "7 AM – 4 PM",
+          venue: "Ottawa Masonic Centre",
+          address: "2140 Walkley Rd, Ottawa, ON K1G 3V3",
+        },
+      ],
+    },
+  ],
 };
 
 const cityEvents: Record<string, CityEvent[]> = {
