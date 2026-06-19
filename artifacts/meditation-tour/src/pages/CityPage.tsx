@@ -90,7 +90,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       ],
     },
     {
-      label: "Upcoming Program",
+      label: "5-Day Guru Purnima Celebration",
       badge: "Details Coming Soon",
       badgeStyle: "teal",
       events: [
