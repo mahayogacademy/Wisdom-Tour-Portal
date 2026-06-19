@@ -29,6 +29,30 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
 };
 
+interface CityEvent {
+  dates: string;
+  venue: string;
+  address: string;
+}
+
+const cityEvents: Record<string, CityEvent[]> = {
+  edmonton: [
+    { dates: "July 4 & 5", venue: "Council of India Societies of Edmonton", address: "9504 37 Ave NW, Edmonton, AB T6E 5N2" },
+    { dates: "July 25–29", venue: "Vishnu Mandir (Fiji Sanatan Society of Alberta)", address: "12629 69 St NW, Edmonton, AB T5C 0G7" },
+    { dates: "July 27 & 28", venue: "Italian Cultural Centre", address: "14230 133 Ave NW, Edmonton, AB T5L 4W4" },
+  ],
+  calgary: [
+    { dates: "July 11 & 12", venue: "Shri Sitaram Mandir Society of Calgary", address: "3219 34 Ave SE, Calgary, AB T2B 2M6" },
+  ],
+  vancouver: [
+    { dates: "July 17–19", venue: "Hindu Buddhist Foundation of Canada", address: "12351 Winram Rd, Surrey, BC V3V 3Y4" },
+  ],
+  ottawa: [
+    { dates: "Aug 1–3", venue: "Ottawa Masonic Centre", address: "2140 Walkley Rd, Ottawa, ON K1G 3V3" },
+  ],
+  toronto: [],
+};
+
 const calgaryFaqs = [
   {
     q: "Do I need any prior meditation experience?",
@@ -111,16 +135,51 @@ export default function CityPage({ city }: CityPageProps) {
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6 md:mb-8">Program Details</h2>
 
               <div className="space-y-6 md:space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
-                    <Calendar className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-serif font-bold text-lg md:text-xl text-primary mb-1">Dates</h4>
-                    <p className="text-muted-foreground font-light text-sm md:text-base">Coming Soon</p>
-                    <p className="text-xs md:text-sm text-muted-foreground/70 mt-1">Reserve to receive updates</p>
-                  </div>
-                </div>
+                {(() => {
+                  const events = cityEvents[cityKey] ?? [];
+                  if (events.length === 0) {
+                    return (
+                      <>
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
+                            <Calendar className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
+                          </div>
+                          <div>
+                            <h4 className="font-serif font-bold text-lg md:text-xl text-primary mb-1">Dates</h4>
+                            <p className="text-muted-foreground font-light text-sm md:text-base">Coming Soon</p>
+                            <p className="text-xs md:text-sm text-muted-foreground/70 mt-1">Reserve to receive updates</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-4">
+                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
+                            <MapPin className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
+                          </div>
+                          <div>
+                            <h4 className="font-serif font-bold text-lg md:text-xl text-primary mb-1">Venue</h4>
+                            <p className="text-muted-foreground font-light text-sm md:text-base">{city} Area</p>
+                            <p className="text-xs md:text-sm text-muted-foreground/70 mt-1">Exact location coming soon</p>
+                          </div>
+                        </div>
+                      </>
+                    );
+                  }
+                  return (
+                    <>
+                      {events.map((ev, i) => (
+                        <div key={i} className="flex items-start gap-4">
+                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-0.5">
+                            <Calendar className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
+                          </div>
+                          <div>
+                            <p className="font-serif font-bold text-base md:text-lg text-primary">{ev.dates}</p>
+                            <p className="text-muted-foreground font-medium text-sm md:text-base mt-0.5">{ev.venue}</p>
+                            <p className="text-xs md:text-sm text-muted-foreground/70 mt-0.5">{ev.address}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </>
+                  );
+                })()}
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
@@ -130,17 +189,6 @@ export default function CityPage({ city }: CityPageProps) {
                     <h4 className="font-serif font-bold text-lg md:text-xl text-primary mb-1">Schedule</h4>
                     <p className="text-muted-foreground font-light text-sm md:text-base">Himalayan Siddha Mahayog Meditation</p>
                     <p className="text-xs md:text-sm text-secondary font-medium mt-1">2 Day Retreat</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-secondary/10 flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5 md:w-6 md:h-6 text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-serif font-bold text-lg md:text-xl text-primary mb-1">Venue</h4>
-                    <p className="text-muted-foreground font-light text-sm md:text-base">{city} Area</p>
-                    <p className="text-xs md:text-sm text-muted-foreground/70 mt-1">Exact location coming soon</p>
                   </div>
                 </div>
               </div>
