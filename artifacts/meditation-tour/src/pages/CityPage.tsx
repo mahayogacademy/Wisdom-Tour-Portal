@@ -82,6 +82,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       events: [
         {
           dates: "July 4 & 5",
+          time: "7 – 11 AM (both days)",
           venue: "Council of India Societies of Edmonton",
           address: "9504 37 Ave NW, Edmonton, AB T6E 5N2",
         },
