@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { MapPin, Calendar, ArrowRight, CheckCircle, BookOpen, Download, Brain, MessageCircle, Flame } from "lucide-react";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ReservationForm } from "@/components/ReservationForm";
 
 import heroImg from "@/assets/images/hero-home.png";
 import teacherImg from "@assets/IMG_9838_1778799314514.JPG";
@@ -32,11 +31,7 @@ const staggerContainer = {
   }
 };
 
-const CITY_NAMES = ["Edmonton", "Calgary", "Vancouver", "Ottawa", "Toronto"];
-
 export default function Home() {
-  const [selectedCity, setSelectedCity] = useState(CITY_NAMES[0]);
-
   const cities = [
     { name: "Edmonton", path: "/edmonton", desc: "Gateway to the north", img: cityEdmonton },
     { name: "Calgary", path: "/calgary", desc: "Foothills of wisdom", img: cityCalgary },
@@ -425,53 +420,6 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* Registration Section */}
-      <section id="register" className="py-14 md:py-24 bg-card">
-        <div className="container mx-auto px-4 lg:px-8 max-w-2xl">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            variants={fadeInUp}
-            className="text-center mb-10"
-          >
-            <div className="flex items-center gap-4 mb-5">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-primary/40" />
-              <span className="text-secondary/60 text-xl">✦</span>
-              <div className="h-px flex-1 bg-gradient-to-l from-transparent via-primary/20 to-primary/40" />
-            </div>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-primary mb-3">Reserve Your Spot</h2>
-            <p className="text-muted-foreground font-light text-base">Spaces are limited — secure your place at a city near you.</p>
-
-            {/* City selector */}
-            <div className="flex flex-wrap justify-center gap-2 mt-7">
-              {CITY_NAMES.map((city) => (
-                <button
-                  key={city}
-                  onClick={() => setSelectedCity(city)}
-                  className={`px-5 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
-                    selectedCity === city
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-background border border-border text-foreground hover:border-primary/50"
-                  }`}
-                >
-                  {city}
-                </button>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            key={selectedCity}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35 }}
-          >
-            <ReservationForm city={selectedCity} />
-          </motion.div>
-        </div>
-      </section>
 
       <Footer />
     </div>
