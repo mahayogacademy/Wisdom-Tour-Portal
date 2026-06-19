@@ -199,69 +199,58 @@ export default function CityPage({ city }: CityPageProps) {
                     return (
                       <div className="space-y-5">
                         {groups.map((group, gi) => (
-                          <div
-                            key={gi}
-                            className={`rounded-xl border p-5 md:p-6 ${
-                              group.featured
-                                ? "border-yellow-400/60 bg-gradient-to-br from-amber-50 via-yellow-50 to-orange-50 shadow-md"
-                                : group.badgeStyle === "amber"
-                                ? "border-secondary/30 bg-secondary/5"
-                                : "border-primary/20 bg-primary/5"
-                            }`}
-                          >
+                          <div key={gi} className={`${gi > 0 ? "pt-8 border-t border-border/50" : ""}`}>
+                            {/* Group header */}
                             {group.featured && (
-                              <div className="flex items-center gap-2 mb-3">
-                                <span className="text-2xl">🌕</span>
-                                <div className="h-px flex-1 bg-yellow-300/60" />
-                                <span className="text-lg">🪷</span>
-                                <div className="h-px flex-1 bg-yellow-300/60" />
-                                <span className="text-2xl">🌕</span>
+                              <div className="flex items-center gap-3 mb-4">
+                                <span className="text-xl">🌕</span>
+                                <div className="h-px flex-1 bg-secondary/20" />
+                                <span className="text-base">🪷</span>
+                                <div className="h-px flex-1 bg-secondary/20" />
+                                <span className="text-xl">🌕</span>
                               </div>
                             )}
-                            <div className="flex flex-wrap items-center gap-2 mb-3">
+                            <div className="flex flex-wrap items-center gap-3 mb-2">
                               <h3 className={`font-serif font-bold text-primary ${group.featured ? "text-xl md:text-2xl" : "text-lg md:text-xl"}`}>{group.label}</h3>
                               {group.link ? (
                                 <a
                                   href={group.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full underline-offset-2 hover:opacity-80 transition-opacity ${
+                                  className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full hover:opacity-75 transition-opacity ${
                                     group.badgeStyle === "amber"
                                       ? "bg-secondary text-white"
-                                      : "bg-primary/15 text-primary"
+                                      : "bg-primary/12 text-primary"
                                   }`}
                                 >
                                   {group.badge} ↗
                                 </a>
                               ) : (
-                                <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
+                                <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ${
                                   group.badgeStyle === "amber"
-                                    ? "bg-secondary text-white"
-                                    : "bg-primary/15 text-primary"
+                                    ? "bg-secondary/15 text-secondary"
+                                    : "bg-primary/10 text-primary/70"
                                 }`}>
                                   {group.badge}
                                 </span>
                               )}
                             </div>
                             {group.description && (
-                              <p className="text-sm md:text-base text-muted-foreground font-light italic mb-4 border-l-2 border-secondary/40 pl-3">
+                              <p className={`text-sm md:text-base font-light italic mb-5 ${group.featured ? "text-secondary/80" : "text-muted-foreground"}`}>
                                 {group.description}
                               </p>
                             )}
-                            <div className="space-y-5">
+                            {/* Events — left accent line */}
+                            <div className="ml-1 border-l-2 border-secondary/25 pl-5 space-y-5">
                               {group.events.map((ev, i) => (
-                                <div key={i} className="flex items-start gap-4">
-                                  <div className="w-9 h-9 rounded-full bg-white/70 border border-border flex items-center justify-center shrink-0 mt-0.5">
-                                    <Calendar className="w-4 h-4 text-secondary" />
-                                  </div>
-                                  <div>
-                                    <p className="font-serif font-bold text-base md:text-lg text-primary">
-                                      {ev.dates}{ev.time && <span className="font-sans font-normal text-secondary text-sm md:text-base ml-2">· {ev.time}</span>}
-                                    </p>
-                                    {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
-                                    <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
-                                    <p className="text-sm text-muted-foreground/60 mt-0.5">{ev.address}</p>
-                                  </div>
+                                <div key={i} className="relative">
+                                  <div className="absolute -left-[25px] top-1.5 w-2.5 h-2.5 rounded-full bg-secondary/40 border-2 border-background" />
+                                  <p className="font-serif font-bold text-base md:text-lg text-primary">
+                                    {ev.dates}{ev.time && <span className="font-sans font-normal text-secondary text-sm md:text-base ml-2">· {ev.time}</span>}
+                                  </p>
+                                  {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
+                                  <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
+                                  <p className="text-sm text-muted-foreground/60 mt-0.5">{ev.address}</p>
                                 </div>
                               ))}
                             </div>
