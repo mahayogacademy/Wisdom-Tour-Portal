@@ -246,9 +246,10 @@ export default function CityPage({ city }: CityPageProps) {
                               {group.events.map((ev, i) => (
                                 <div key={i} className="relative">
                                   <div className="absolute -left-[25px] top-1.5 w-2.5 h-2.5 rounded-full bg-secondary/40 border-2 border-background" />
-                                  <p className="font-sans text-base md:text-lg text-secondary">
-                                    {!ev.hideDate && <span className="font-bold">{ev.dates}</span>}{ev.time && <span className="font-normal ml-2">· {ev.time}</span>}
-                                  </p>
+                                  <div className="font-sans text-base md:text-lg text-secondary">
+                                    {!ev.hideDate && <p className="font-bold leading-snug">{ev.dates}</p>}
+                                    {ev.time && <p className="font-normal leading-snug">· {ev.time}</p>}
+                                  </div>
                                   {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
                                   <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
                                   <p className="text-sm text-muted-foreground/60 mt-0.5">{ev.address}</p>
