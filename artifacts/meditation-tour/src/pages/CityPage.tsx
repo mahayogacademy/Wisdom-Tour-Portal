@@ -40,6 +40,16 @@ interface CityEvent {
 const cityEvents: Record<string, CityEvent[]> = {
   edmonton: [
     {
+      dates: "July 4 & 5",
+      venue: "Council of India Societies of Edmonton",
+      address: "9504 37 Ave NW, Edmonton, AB T6E 5N2",
+    },
+    {
+      dates: "July 25 – 29",
+      venue: "Vishnu Mandir (Fiji Sanatan Society of Alberta)",
+      address: "12629 69 St NW, Edmonton, AB T5C 0G7",
+    },
+    {
       dates: "July 27",
       time: "4 – 7 PM",
       title: "Grand Opening",
