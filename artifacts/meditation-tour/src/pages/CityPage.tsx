@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MapPin, Calendar, Clock, Heart, ChevronDown, Users } from "lucide-react";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { ReservationForm } from "@/components/ReservationForm";
+import { Button } from "@/components/ui/button";
 
 import teacherImg from "@assets/IMG_9838_1778799314514.JPG";
 import edmontonImg from "@/assets/images/edmonton.png";
@@ -109,28 +109,15 @@ export default function CityPage({ city }: CityPageProps) {
         </div>
       </section>
 
-      {/* Content & Form Section */}
+      {/* Content Section */}
       <section className="py-12 md:py-20 bg-background">
-        <div className="container mx-auto px-4 lg:px-8">
-          {/* Reservation form first on mobile, details second */}
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-20">
-
-            {/* Reservation Form — top on mobile, right on desktop */}
+        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
+            {/* Program Details — full width */}
             <motion.div
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
-              className="w-full lg:w-7/12 order-1 lg:order-2"
-            >
-              <ReservationForm city={city} />
-            </motion.div>
-
-            {/* Program Details — below form on mobile, left on desktop */}
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp}
-              className="w-full lg:w-5/12 order-2 lg:order-1"
+              className="w-full"
             >
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6 md:mb-8">Program Details</h2>
 
@@ -225,11 +212,17 @@ export default function CityPage({ city }: CityPageProps) {
                   </div>
                 </div>
               )}
+              {/* Register Button */}
+              <div className="mt-10 md:mt-14">
+                <a href={`mailto:canada@siddhamahayog.org?subject=Registration - ${city}`}>
+                  <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white font-sans font-semibold tracking-[0.12em] uppercase px-10 h-13 rounded-full text-base">
+                    Register for {city}
+                  </Button>
+                </a>
+              </div>
             </motion.div>
 
-          </div>
-
-          {/* Calgary-only: full-width sections below the two-column row */}
+          {/* Calgary-only: full-width sections below */}
           {cityKey === "calgary" && (
             <motion.div
               initial="hidden"
