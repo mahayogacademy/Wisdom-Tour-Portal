@@ -504,7 +504,7 @@ export default function CityPage({ city }: CityPageProps) {
                 <ul className="space-y-3 text-base md:text-lg text-muted-foreground font-light">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
-                    Guided Mahayog deep meditation
+                    Guided Mahayog meditation
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
