@@ -238,7 +238,7 @@ export default function Home() {
                       className="inline-flex items-center gap-2 text-secondary font-semibold text-sm hover:text-secondary/80 transition-colors"
                     >
                       <Download className="w-4 h-4 shrink-0" />
-                      Download Free E-Book
+                      Download Free Guide
                     </a>
                     <p className="text-sm text-muted-foreground font-light leading-relaxed">
                       Mahayog reveals the profound science of the inner world — chakras, prana, and the path to samadhi.
