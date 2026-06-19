@@ -79,6 +79,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       label: "Himalayan Siddha Mahayog Meditation",
       badge: "By Registration",
       badgeStyle: "amber",
+      description: "Sessions begin at 7:00 AM sharp. Please plan to arrive 15–20 minutes early to complete registration and settle in before we begin.",
       events: [
         {
           dates: "July 4 & 5",
@@ -201,7 +202,7 @@ export default function CityPage({ city }: CityPageProps) {
                                 : "border-primary/20 bg-primary/5"
                             }`}
                           >
-                            <div className="flex flex-wrap items-center gap-2 mb-5">
+                            <div className="flex flex-wrap items-center gap-2 mb-3">
                               <h3 className="font-serif font-bold text-lg md:text-xl text-primary">{group.label}</h3>
                               <span className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
                                 group.badgeStyle === "amber"
@@ -211,6 +212,11 @@ export default function CityPage({ city }: CityPageProps) {
                                 {group.badge}
                               </span>
                             </div>
+                            {group.description && (
+                              <p className="text-sm md:text-base text-muted-foreground font-light italic mb-4 border-l-2 border-secondary/40 pl-3">
+                                {group.description}
+                              </p>
+                            )}
                             <div className="space-y-5">
                               {group.events.map((ev, i) => (
                                 <div key={i} className="flex items-start gap-4">
