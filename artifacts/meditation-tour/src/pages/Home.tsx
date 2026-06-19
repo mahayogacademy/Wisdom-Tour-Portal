@@ -356,12 +356,12 @@ export default function Home() {
                           <div className="space-y-3">
                             {city.events.map((ev, i) => (
                               <div key={i} className="space-y-0.5">
-                                <div className="flex items-center gap-2 text-xs lg:text-sm font-medium text-primary">
-                                  <Calendar className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-secondary shrink-0" />
+                                <div className="flex items-center gap-2 text-sm lg:text-base font-semibold text-primary">
+                                  <Calendar className="w-4 h-4 lg:w-5 lg:h-5 text-secondary shrink-0" />
                                   <span>{ev.dates}</span>
                                 </div>
-                                <div className="flex items-start gap-2 text-xs text-muted-foreground pl-5 lg:pl-6">
-                                  <MapPin className="w-3 h-3 text-secondary/60 shrink-0 mt-0.5" />
+                                <div className="flex items-start gap-2 text-sm text-muted-foreground pl-6 lg:pl-7">
+                                  <MapPin className="w-3.5 h-3.5 text-secondary/60 shrink-0 mt-0.5" />
                                   <span>{ev.venue}</span>
                                 </div>
                               </div>
