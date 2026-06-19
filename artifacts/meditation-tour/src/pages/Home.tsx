@@ -62,8 +62,7 @@ const faqGroups = [
   {
     title: "Fees & Registration",
     items: [
-      { q: "Is there a fee for the program?", a: "There is no fee for the meditation teaching or initiation — the teachings are offered freely as a spiritual gift. To help cover practical costs of organizing the Canada programs, participants are asked to make a one-time $100 Seva Contribution at the time of registration. No sincere seeker will be turned away due to financial hardship." },
-      { q: "What does the Seva Contribution include?", a: "Your contribution includes access to the 2-day Himalayan Siddha Mahayog meditation program, 5 guided meditation classes (in person and/or online), access to eligible Canada Tour city events, online weekend guided group meditation, an online student learning portal, online wisdom and Q&A sessions with His Holiness, and continued guidance and support in the practice." },
+      { q: "Is there a fee for the program?", a: "There is no fee for the meditation teaching or initiation — the teachings are offered freely as a spiritual gift.\n\nTo help cover the practical costs of organizing the Canada programs, including venue, administration, participant access, online resources, and ongoing meditation support, participants are asked to make a one-time $100 Seva Contribution at the time of registration. This contribution supports the volunteer-run, not-for-profit efforts of Mahayogi Siddhababa Spiritual Academy and helps make these programs accessible, organized, and sustainable for all seekers.\n\nYour one-time Seva Contribution includes:", bullets: ["Access to the 2-day Himalayan Siddha Mahayog meditation program", "5 guided meditation classes, in person and/or online", "Access to eligible Canada Tour city events", "Online weekend guided group meditation", "Online student learning portal", "Online wisdom and Q&A sessions with His Holiness", "Continued guidance and support in the practice", "Free meditation access at participating Himalayan Siddha Mahayog centres worldwide, where available"], aExtra: "No sincere seeker will be turned away due to financial hardship. If the contribution presents a barrier, please contact the organizing team." },
       { q: "Can I cancel or reschedule?", a: "If you are unable to attend, please notify the organizing team as soon as possible. Your Seva Contribution can be refunded or transferred to a future intake where space is available. Contact canada@siddhamahayog.org for support with cancellations or transfers." },
     ],
   },
@@ -516,9 +515,24 @@ export default function Home() {
                                       transition={{ duration: 0.25, ease: "easeInOut" }}
                                       className="overflow-hidden"
                                     >
-                                      <p className="px-6 pb-5 pt-1 text-base md:text-lg text-muted-foreground font-light leading-relaxed">
-                                        {item.a}
-                                      </p>
+                                      <div className="px-6 pb-5 pt-1 text-base md:text-lg text-muted-foreground font-light leading-relaxed space-y-3">
+                                        {item.a.split("\n\n").map((para, pi) => (
+                                          <p key={pi}>{para}</p>
+                                        ))}
+                                        {"bullets" in item && item.bullets && (
+                                          <ul className="space-y-1.5 pl-1">
+                                            {(item.bullets as string[]).map((b, bi) => (
+                                              <li key={bi} className="flex items-start gap-2">
+                                                <span className="text-secondary mt-1.5 text-xs shrink-0">•</span>
+                                                <span>{b}</span>
+                                              </li>
+                                            ))}
+                                          </ul>
+                                        )}
+                                        {"aExtra" in item && item.aExtra && (
+                                          <p className="italic">{item.aExtra as string}</p>
+                                        )}
+                                      </div>
                                     </motion.div>
                                   )}
                                 </AnimatePresence>
