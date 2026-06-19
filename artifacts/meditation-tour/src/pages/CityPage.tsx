@@ -51,7 +51,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
   edmonton: [
     {
       label: "Open Sessions",
-      badge: "RSVP Only",
+      badge: "RSVP Today",
       badgeStyle: "teal",
       link: "https://forms.gle/cbV8VPVZrQnp6Zoo9",
       events: [
