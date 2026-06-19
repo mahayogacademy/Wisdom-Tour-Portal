@@ -136,6 +136,11 @@ export default function Home() {
             variants={staggerContainer}
             className="max-w-xl"
           >
+            {/* Canada badge */}
+            <motion.p variants={fadeInUp} className="text-secondary text-xs md:text-sm font-semibold tracking-[0.3em] uppercase mb-3 drop-shadow">
+              Canada &nbsp;·&nbsp; 2026
+            </motion.p>
+
             {/* Subtitle — small caps */}
             <motion.p variants={fadeInUp} className="text-white/75 text-sm md:text-xl font-medium tracking-[0.28em] uppercase mb-4 drop-shadow">
               Jagadguru Mahayogi Siddha Baba
