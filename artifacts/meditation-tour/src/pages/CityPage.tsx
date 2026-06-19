@@ -431,6 +431,25 @@ export default function CityPage({ city }: CityPageProps) {
                   </Button>
                 </a>
               </div>
+
+              {/* Your Guide */}
+              <div className="mt-8 pt-8 border-t border-border">
+                <h4 className="font-serif text-lg font-bold text-primary mb-4">Your Guide</h4>
+                <div className="flex items-start gap-4">
+                  <img
+                    src={teacherImg}
+                    alt="Jagadguru Mahayogi Siddhababa"
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover object-top shrink-0 shadow-md border-2 border-secondary/30"
+                  />
+                  <div>
+                    <p className="font-serif font-semibold text-primary text-base md:text-lg leading-tight">Jagadguru Mahayogi Siddhababa</p>
+                    <p className="text-xs text-secondary font-medium tracking-wide uppercase mt-0.5 mb-2">Himalayan Siddha Master</p>
+                    <p className="text-muted-foreground font-light text-sm leading-relaxed">
+                      A living master rooted in an unbroken Himalayan lineage, Siddhababa has guided seekers from all backgrounds toward greater peace, clarity, and self-understanding. His teachings blend profound spiritual depth with warmth and practical insight.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
 
           </div>
