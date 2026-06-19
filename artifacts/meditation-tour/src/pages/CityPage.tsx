@@ -32,6 +32,7 @@ const fadeInUp = {
 interface CityEvent {
   dates: string;
   time?: string;
+  hideDate?: boolean;
   title?: string;
   venue: string;
   address: string;
@@ -71,6 +72,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
         },
         {
           dates: "July 28",
+          hideDate: true,
           time: "11 AM – 1 PM",
           title: "Satsang with His Holiness Jagadguru Mahayogi Siddhababa",
           venue: "Hindu Society of Alberta",
@@ -245,7 +247,7 @@ export default function CityPage({ city }: CityPageProps) {
                                 <div key={i} className="relative">
                                   <div className="absolute -left-[25px] top-1.5 w-2.5 h-2.5 rounded-full bg-secondary/40 border-2 border-background" />
                                   <p className="font-sans text-base md:text-lg text-secondary">
-                                    <span className="font-bold">{ev.dates}</span>{ev.time && <span className="font-normal ml-2">· {ev.time}</span>}
+                                    {!ev.hideDate && <span className="font-bold">{ev.dates}</span>}{ev.time && <span className="font-normal ml-2">· {ev.time}</span>}
                                   </p>
                                   {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
                                   <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
