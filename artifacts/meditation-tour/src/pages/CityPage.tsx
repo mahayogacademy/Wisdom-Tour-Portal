@@ -181,17 +181,16 @@ export default function CityPage({ city }: CityPageProps) {
       {/* Content Section */}
       <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-8 md:mb-10">Program Details</h2>
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
 
-            {/* LEFT — Program Details */}
+            {/* LEFT — Events */}
             <motion.div
               initial="hidden"
               animate="visible"
               variants={fadeInUp}
               className="w-full lg:w-7/12"
             >
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-6 md:mb-8">Program Details</h2>
-
               <div className="space-y-6 md:space-y-8">
                 {(() => {
                   const groups = cityEventGroups[cityKey];
@@ -319,14 +318,15 @@ export default function CityPage({ city }: CityPageProps) {
               className="w-full lg:w-5/12"
             >
               <div className="p-5 md:p-8 bg-card border border-border rounded-xl">
+                <p className="text-xs font-semibold uppercase tracking-widest text-secondary mb-2">Himalayan Siddha Mahayog Meditation</p>
                 <h3 className="font-serif text-2xl md:text-3xl font-bold text-primary mb-4">What to Expect</h3>
                 <p className="text-muted-foreground font-light text-base md:text-lg leading-relaxed mb-5">
-                  Experience ancient meditation practices transmitted through an unbroken Himalayan lineage. These sessions are designed for deep inner peace and self-realization, suitable for both beginners and experienced seekers.
+                  Himalayan Siddha Mahayog is an ancient science of meditation transmitted through an unbroken Himalayan lineage. These sessions guide you into deep states of inner stillness and self-realization — accessible to complete beginners and experienced seekers alike.
                 </p>
                 <ul className="space-y-3 text-base md:text-lg text-muted-foreground font-light">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
-                    Guided deep meditation
+                    Guided Mahayog deep meditation
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
@@ -334,7 +334,7 @@ export default function CityPage({ city }: CityPageProps) {
                   </li>
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
-                    Energy awakening practices
+                    Pranic &amp; energy awakening practices
                   </li>
                 </ul>
               </div>
