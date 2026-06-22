@@ -68,7 +68,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
         {
           dates: "Thu, July 9",
           time: "5 – 8 PM",
-          title: "Grand Welcoming & Introduction to Himalayan Siddha Mahayog Meditation",
+          title: "Grand Welcoming &\nIntroduction to Himalayan Siddha Mahayog Meditation",
           venue: "Shri Sitaram Mandir Society of Calgary",
           address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
         },
@@ -440,7 +440,7 @@ export default function CityPage({ city }: CityPageProps) {
                                   <p className="font-sans text-base md:text-lg text-secondary">
                                     {!ev.hideDate && <span className="font-bold">{ev.dates}</span>}{ev.time && <span className="font-normal ml-2">· {ev.time}</span>}
                                   </p>
-                                  {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
+                                  {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5 whitespace-pre-line">{ev.title}</p>}
                                   <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
                                   <p className="text-sm text-muted-foreground/60 mt-0.5">{ev.address}</p>
                                   {ev.note && <p className="text-sm text-secondary/80 font-medium italic mt-1">{ev.note}</p>}
