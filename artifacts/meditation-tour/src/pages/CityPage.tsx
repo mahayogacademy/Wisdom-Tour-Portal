@@ -191,6 +191,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
           title: "Introduction to Himalayan Siddha Mahayog Meditation & Questions and Answers Session",
           venue: "Hindu Buddhist Foundation of Canada",
           address: "12351 Winram Rd, Surrey, BC V3V 3Y4",
+          rsvpLink: "https://forms.gle/1y9wcQjVg9KQ818V8",
         },
         {
           dates: "Sun, July 19",
