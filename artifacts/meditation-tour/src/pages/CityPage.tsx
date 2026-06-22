@@ -43,6 +43,7 @@ interface CityEvent {
   title?: string;
   venue: string;
   address: string;
+  note?: string;
 }
 
 interface CityEventGroup {
@@ -247,12 +248,14 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
           time: "7 AM – 4 PM",
           venue: "Ottawa Masonic Centre",
           address: "2140 Walkley Rd, Ottawa, ON K1G 3V3",
+          note: "Doors close at 7:30am — please arrive on time.",
         },
         {
           dates: "Mon, Aug 3",
           time: "7 AM – 4 PM",
           venue: "Ottawa Masonic Centre",
           address: "2140 Walkley Rd, Ottawa, ON K1G 3V3",
+          note: "Doors close at 7:30am — please arrive on time.",
         },
       ],
     },
@@ -441,6 +444,7 @@ export default function CityPage({ city }: CityPageProps) {
                                   {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
                                   <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
                                   <p className="text-sm text-muted-foreground/60 mt-0.5">{ev.address}</p>
+                                  {ev.note && <p className="text-xs text-secondary/80 font-medium italic mt-1">{ev.note}</p>}
                                 </div>
                               ))}
                             </div>
