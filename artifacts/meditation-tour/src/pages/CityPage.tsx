@@ -217,14 +217,14 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       events: [
         {
           dates: "Sat, July 18",
-          time: "8:30 AM – 12 PM",
+          time: "9 AM – 12 PM",
           title: "Session 1",
           venue: "Hindu Buddhist Foundation of Canada",
           address: "12351 Winram Rd, Surrey, BC V3V 3Y4",
         },
         {
           dates: "Sat, July 18",
-          time: "6 – 8 PM",
+          time: "5 – 8 PM",
           title: "Session 2",
           venue: "Hindu Buddhist Foundation of Canada",
           address: "12351 Winram Rd, Surrey, BC V3V 3Y4",
