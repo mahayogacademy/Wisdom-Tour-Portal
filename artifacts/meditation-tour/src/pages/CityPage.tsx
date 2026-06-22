@@ -112,10 +112,8 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
   edmonton: [
     {
       label: "Open Sessions",
-      badge: "RSVP Today",
+      badge: "Free Admission",
       badgeStyle: "teal",
-      freeBadge: true,
-      link: "https://forms.gle/cbV8VPVZrQnp6Zoo9",
       events: [
         {
           dates: "Mon, July 27",
@@ -123,6 +121,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
           title: "Grand Opening",
           venue: "Italian Cultural Centre",
           address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
+          rsvpLink: "https://forms.gle/cbV8VPVZrQnp6Zoo9",
         },
         {
           dates: "Tue, July 28",
@@ -130,6 +129,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
           title: "Introductory Session: Himalayan Siddha Mahayog",
           venue: "Italian Cultural Centre",
           address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
+          rsvpLink: "https://forms.gle/cbV8VPVZrQnp6Zoo9",
         },
         {
           dates: "Tue, July 28",
@@ -137,6 +137,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
           title: "Satsang with His Holiness Jagadguru Mahayogi Siddhababa",
           venue: "Hindu Society of Alberta",
           address: "14225 133 Ave NW, Edmonton, AB T5L 4W3",
+          rsvpLink: "https://forms.gle/cbV8VPVZrQnp6Zoo9",
         },
       ],
     },
@@ -223,10 +224,8 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
   ottawa: [
     {
       label: "Open Session",
-      badge: "RSVP Today",
+      badge: "Free Admission",
       badgeStyle: "teal",
-      freeBadge: true,
-      link: "https://forms.gle/GjUBvTDQiVidSmi87",
       description: "Cultural performances, special guests, and a wisdom talk from His Holiness Jagadguru Mahayogi Siddhababa.",
       events: [
         {
