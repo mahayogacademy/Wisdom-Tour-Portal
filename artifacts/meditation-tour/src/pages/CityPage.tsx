@@ -252,7 +252,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
           title: "Grand Welcoming",
           venue: "Ottawa Masonic Centre",
           address: "2140 Walkley Rd, Ottawa, ON K1G 3V3",
-          rsvpLink: "https://forms.gle/GjUBvTDQiVidSmi87",
+          rsvpLink: "https://forms.gle/WFgJMjU4vni8AwBr8",
         },
       ],
     },
