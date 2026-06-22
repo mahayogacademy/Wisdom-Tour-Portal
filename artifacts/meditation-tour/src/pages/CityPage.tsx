@@ -46,6 +46,7 @@ interface CityEvent {
 }
 
 interface CityEventGroup {
+  freeBadge?: boolean;
   label: string;
   badge: string;
   badgeStyle: "amber" | "teal";
@@ -111,6 +112,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       label: "Open Sessions",
       badge: "RSVP Today",
       badgeStyle: "teal",
+      freeBadge: true,
       link: "https://forms.gle/cbV8VPVZrQnp6Zoo9",
       events: [
         {
@@ -395,16 +397,17 @@ export default function CityPage({ city }: CityPageProps) {
                             )}
                             <div className="flex flex-wrap items-center gap-3 mb-2">
                               <h3 className={`font-serif font-bold text-primary ${group.featured ? "text-2xl md:text-3xl" : "text-xl md:text-2xl"}`}>{group.label}</h3>
+                              {group.freeBadge && (
+                                <span className="text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full bg-primary/10 text-primary/70">
+                                  Free Admission
+                                </span>
+                              )}
                               {group.link ? (
                                 <a
                                   href={group.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className={`text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full hover:opacity-75 transition-opacity ${
-                                    group.badgeStyle === "amber"
-                                      ? "bg-secondary text-white"
-                                      : "bg-primary/12 text-primary"
-                                  }`}
+                                  className="text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full border border-secondary text-secondary hover:bg-secondary hover:text-white transition-colors"
                                 >
                                   {group.badge} ↗
                                 </a>
