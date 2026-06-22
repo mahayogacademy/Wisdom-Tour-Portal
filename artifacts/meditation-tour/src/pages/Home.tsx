@@ -56,7 +56,7 @@ const faqGroups = [
       { q: "Do I need prior meditation experience?", a: "No. The program welcomes complete beginners as well as experienced practitioners. The initiation process is guided entirely by the Guru's transmission and does not depend on prior technique or knowledge. Come as you are." },
       { q: "Are there health or age requirements?", a: "There is no strict age minimum, though participants under 18 may need parental consent. Those with significant medical or psychiatric conditions are encouraged to consult a healthcare provider before attending and to share relevant details in the health section of the registration form." },
       { q: "What should I wear or bring?", a: "Comfortable, loose-fitting clothing in natural fabrics is recommended. White or soft neutral tones are traditional, though not required. A shawl or light wrap is useful for seated sessions. You may also bring a personal meditation mat. All other essential materials will be provided." },
-      { q: "What languages are sessions conducted in?", a: "Sessions will be conducted primarily in English, Nepali, or Hindi — whichever best serves the participants present. Please indicate the languages you speak in the registration form so we can accommodate you." },
+      { q: "What languages are sessions conducted in?", a: "Sessions will be conducted primarily in Hindi, Nepali, or English — whichever best serves the participants present. Please indicate the languages you speak in the registration form so we can accommodate you." },
     ],
   },
   {
