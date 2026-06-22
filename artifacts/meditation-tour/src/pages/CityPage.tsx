@@ -221,8 +221,10 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
   ottawa: [
     {
       label: "Open Session",
-      badge: "Free Admission",
+      badge: "RSVP Today",
       badgeStyle: "teal",
+      freeBadge: true,
+      link: "https://forms.gle/GjUBvTDQiVidSmi87",
       description: "Cultural performances, special guests, and a wisdom talk from His Holiness Jagadguru Mahayogi Siddhababa.",
       events: [
         {
