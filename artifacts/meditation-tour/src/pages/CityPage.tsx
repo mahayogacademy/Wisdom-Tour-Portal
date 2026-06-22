@@ -96,13 +96,13 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       events: [
         {
           dates: "Sat, July 11",
-          time: "7 – 11 AM",
+          time: "8 – 11 AM",
           venue: "Shri Sitaram Mandir Society of Calgary",
           address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
         },
         {
           dates: "Sun, July 12",
-          time: "7 – 11 AM",
+          time: "8 – 11 AM",
           venue: "Shri Sitaram Mandir Society of Calgary",
           address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
         },
