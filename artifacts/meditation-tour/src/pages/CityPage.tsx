@@ -176,7 +176,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       label: "Open Sessions",
       badge: "Free Admission",
       badgeStyle: "teal",
-      description: "Cultural performances, special guests, and a wisdom talk from His Holiness Jagadguru Mahayogi Siddhababa.",
+      description: "Cultural performances, special guests, and wisdom talks from His Holiness Jagadguru Mahayogi Siddhababa.",
       events: [
         {
           dates: "Wed, July 15",
