@@ -68,7 +68,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
         {
           dates: "Thu, July 9",
           time: "5 – 8 PM",
-          title: "Inauguration Program",
+          title: "Grand Welcoming & Introduction to Himalayan Siddha Mahayog Meditation",
           venue: "Shri Sitaram Mandir Society of Calgary",
           address: "3219 34 Ave SE, Calgary, AB T2B 2M6",
         },
