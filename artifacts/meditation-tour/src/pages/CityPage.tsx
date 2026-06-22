@@ -444,7 +444,7 @@ export default function CityPage({ city }: CityPageProps) {
                                   {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5">{ev.title}</p>}
                                   <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
                                   <p className="text-sm text-muted-foreground/60 mt-0.5">{ev.address}</p>
-                                  {ev.note && <p className="text-xs text-secondary/80 font-medium italic mt-1">{ev.note}</p>}
+                                  {ev.note && <p className="text-sm text-secondary/80 font-medium italic mt-1">{ev.note}</p>}
                                 </div>
                               ))}
                             </div>
