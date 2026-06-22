@@ -44,6 +44,7 @@ interface CityEvent {
   venue: string;
   address: string;
   note?: string;
+  rsvpLink?: string;
 }
 
 interface CityEventGroup {
@@ -234,6 +235,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
           title: "Grand Welcoming",
           venue: "Ottawa Masonic Centre",
           address: "2140 Walkley Rd, Ottawa, ON K1G 3V3",
+          rsvpLink: "https://forms.gle/GjUBvTDQiVidSmi87",
         },
       ],
     },
@@ -445,6 +447,16 @@ export default function CityPage({ city }: CityPageProps) {
                                   <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
                                   <p className="text-sm text-muted-foreground/60 mt-0.5">{ev.address}</p>
                                   {ev.note && <p className="text-sm text-secondary/80 font-medium italic mt-1">{ev.note}</p>}
+                                  {ev.rsvpLink && (
+                                    <a
+                                      href={ev.rsvpLink}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="inline-block mt-3 px-5 py-2 rounded-full border border-secondary text-secondary text-sm font-semibold uppercase tracking-wider hover:bg-secondary hover:text-white transition-colors"
+                                    >
+                                      RSVP Today ↗
+                                    </a>
+                                  )}
                                 </div>
                               ))}
                             </div>
