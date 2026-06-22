@@ -18,6 +18,13 @@ import hiddenScienceImg from "@/assets/images/hidden-science.png";
 import featureBarImg from "@assets/ChatGPT_Image_May_14,_2026,_08_41_38_PM_1778805736984.png";
 import whatToExpectImg from "@assets/ChatGPT_Image_May_14,_2026,_08_52_19_PM_1778806499335.png";
 
+function renderBold(text: string) {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <strong key={i} className="font-semibold text-primary">{part}</strong> : part
+  );
+}
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } }
@@ -62,7 +69,7 @@ const faqGroups = [
   {
     title: "Fees & Registration",
     items: [
-      { q: "Is there a fee for the program?", a: "There is no fee for the meditation teaching or initiation. The teachings are offered freely as a spiritual gift.\n\nTo help cover the practical costs of organizing the Canada programs, including venue, administration, participant access, online resources, and ongoing meditation support, participants are asked to register through a one-time $100 Mahayog Meditation Membership.\n\nThis membership supports the volunteer-run, not-for-profit efforts of Mahayogi Siddhababa Spiritual Academy and helps make these programs accessible, organized, and sustainable for all seekers.\n\nYour one-time Mahayog Meditation Membership includes:", bullets: ["Access to the 2-day Himalayan Siddha Mahayog meditation program", "5 guided meditation classes, in person and/or online", "Access to eligible Canada Tour city events", "Online weekend guided group meditation", "Online student learning portal", "Online wisdom and Q&A sessions with His Holiness", "Continued guidance and support in the practice", "Free meditation access at participating Himalayan Siddha Mahayog centres worldwide, where available"], aExtra: "No sincere seeker will be turned away due to financial hardship. If the membership cost presents a barrier, please contact the organizing team." },
+      { q: "Is there a fee for the program?", a: "**There is no fee for the meditation teaching or initiation.** The teachings are offered freely as a spiritual gift.\n\nTo help cover the practical costs of organizing the Canada programs, including venue, administration, participant access, online resources, and ongoing meditation support, **participants are asked to register through a one-time $100 Mahayog Meditation Membership**.\n\nThis membership supports the volunteer-run, not-for-profit efforts of Mahayogi Siddhababa Spiritual Academy and helps make these programs accessible, organized, and sustainable for all seekers.\n\n**Your one-time Mahayog Meditation Membership includes:**", bullets: ["Access to the 2-day Himalayan Siddha Mahayog meditation program", "5 guided meditation classes, in person and/or online", "Access to eligible Canada Tour city events", "Online weekend guided group meditation", "Online student learning portal", "Online wisdom and Q&A sessions with His Holiness", "Continued guidance and support in the practice", "Free meditation access at participating Himalayan Siddha Mahayog centres worldwide, where available"], aExtra: "No sincere seeker will be turned away due to financial hardship. If the membership cost presents a barrier, please contact the organizing team." },
       { q: "Can I cancel or reschedule?", a: "If you are unable to attend, please notify the organizing team as soon as possible. Your Seva Contribution can be refunded or transferred to a future intake where space is available. Contact canada@siddhamahayog.org for support with cancellations or transfers." },
     ],
   },
@@ -530,7 +537,7 @@ export default function Home() {
                                     >
                                       <div className="px-6 pb-5 pt-1 text-base md:text-lg text-muted-foreground font-light leading-relaxed space-y-3">
                                         {item.a.split("\n\n").map((para, pi) => (
-                                          <p key={pi}>{para}</p>
+                                          <p key={pi}>{renderBold(para)}</p>
                                         ))}
                                         {"bullets" in item && item.bullets && (
                                           <ul className="space-y-1.5 pl-1">
