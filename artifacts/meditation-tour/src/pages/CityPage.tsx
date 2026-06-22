@@ -121,7 +121,6 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
           title: "Grand Opening",
           venue: "Italian Cultural Centre",
           address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
-          rsvpLink: "https://forms.gle/cbV8VPVZrQnp6Zoo9",
         },
         {
           dates: "Tue, July 28",
@@ -129,6 +128,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
           title: "Introductory Session: Himalayan Siddha Mahayog",
           venue: "Italian Cultural Centre",
           address: "14230 133 Ave NW, Edmonton, AB T5L 4W4",
+          rsvpLink: "https://forms.gle/cbV8VPVZrQnp6Zoo9",
         },
         {
           dates: "Tue, July 28",
