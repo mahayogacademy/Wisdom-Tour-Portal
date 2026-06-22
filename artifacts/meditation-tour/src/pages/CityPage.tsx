@@ -644,7 +644,7 @@ export default function CityPage({ city }: CityPageProps) {
                                       transition={{ duration: 0.25, ease: "easeInOut" }}
                                       className="overflow-hidden"
                                     >
-                                      <div className="px-6 pb-5 pt-1 text-base md:text-lg text-muted-foreground font-light leading-relaxed space-y-3">
+                                      <div className="px-6 pb-5 pt-1 text-base md:text-lg text-foreground font-light leading-relaxed space-y-3">
                                         {item.a.split("\n\n").map((para, pi) => (
                                           <p key={pi}>{renderBold(para)}</p>
                                         ))}
