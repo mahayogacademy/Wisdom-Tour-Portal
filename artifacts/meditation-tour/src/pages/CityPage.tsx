@@ -180,7 +180,7 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       events: [
         {
           dates: "Wed, July 15",
-          time: "3 PM onwards",
+          time: "3 PM",
           title: "Welcome Program",
           venue: "Hindu Buddhist Foundation of Canada",
           address: "12351 Winram Rd, Surrey, BC V3V 3Y4",
