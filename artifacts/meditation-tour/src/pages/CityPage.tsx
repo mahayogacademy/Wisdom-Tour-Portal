@@ -323,7 +323,7 @@ const cityWhatToExpect: Record<string, string> = {
 
 const cityBullets: Record<string, string[]> = {
   toronto: [
-    "Spiritual discourse & wisdom",
+    "Spiritual discourse",
     "A rare opportunity for spiritual wisdom, reflection and inner energy awakening",
   ],
 };
