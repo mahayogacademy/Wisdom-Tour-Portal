@@ -11,6 +11,7 @@ import calgaryImg from "@/assets/images/calgary.png";
 import vancouverImg from "@/assets/images/vancouver.png";
 import ottawaImg from "@/assets/images/ottawa.png";
 import torontoImg from "@/assets/images/toronto.png";
+import torontoPosterImg from "@assets/bharat_mata_mandir_-_final__1782223959663.png";
 
 const cityImages: Record<string, string> = {
   edmonton: edmontonImg,
@@ -565,6 +566,17 @@ export default function CityPage({ city }: CityPageProps) {
                 })()}
 
               </div>
+
+              {/* Toronto poster */}
+              {cityKey === "toronto" && (
+                <div className="mt-8">
+                  <img
+                    src={torontoPosterImg}
+                    alt="2-Day Special Satsang — Bharat Mata Mandir"
+                    className="w-full max-w-md rounded-2xl shadow-lg mx-auto block"
+                  />
+                </div>
+              )}
             </motion.div>
 
             {/* RIGHT — What to Expect + Register */}
