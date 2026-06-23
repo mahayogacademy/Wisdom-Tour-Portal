@@ -279,6 +279,27 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       ],
     },
   ],
+  toronto: [
+    {
+      label: "2-Day Special Satsang",
+      badge: "Free Admission",
+      badgeStyle: "teal",
+      events: [
+        {
+          dates: "Mon, Aug 10",
+          time: "5 – 8 PM",
+          venue: "Bharat Mata Mandir",
+          address: "8887 The Gore Rd #44, Brampton, ON L6P 2K9",
+        },
+        {
+          dates: "Tue, Aug 11",
+          time: "5 – 8 PM",
+          venue: "Bharat Mata Mandir",
+          address: "8887 The Gore Rd #44, Brampton, ON L6P 2K9",
+        },
+      ],
+    },
+  ],
 };
 
 const cityEvents: Record<string, CityEvent[]> = {
@@ -292,6 +313,7 @@ const cityEvents: Record<string, CityEvent[]> = {
     { dates: "Aug 1–3", venue: "Ottawa Masonic Centre", address: "2140 Walkley Rd, Ottawa, ON K1G 3V3" },
   ],
   toronto: [],
+
 };
 
 
