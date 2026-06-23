@@ -318,7 +318,14 @@ const cityEvents: Record<string, CityEvent[]> = {
 
 
 const cityWhatToExpect: Record<string, string> = {
-  toronto: "These sessions offer guided practice for cultivating inner stillness and self-awareness, whether you are new to spirituality or already experienced.\n\nA rare opportunity for spiritual wisdom, reflection and inner energy awakening.",
+  toronto: "These sessions offer guided practice for cultivating inner stillness and self-awareness, whether you are new to spirituality or already experienced.",
+};
+
+const cityBullets: Record<string, string[]> = {
+  toronto: [
+    "Spiritual discourse & wisdom",
+    "A rare opportunity for spiritual wisdom, reflection and inner energy awakening",
+  ],
 };
 
 const faqGroups = [
@@ -577,18 +584,12 @@ export default function CityPage({ city }: CityPageProps) {
                   </p>
                 ))}
                 <ul className="space-y-3 text-base md:text-lg text-muted-foreground font-light">
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
-                    Guided Mahayog meditation
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
-                    Spiritual discourse &amp; wisdom
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
-                    Pranic &amp; energy awakening practices
-                  </li>
+                  {(cityBullets[cityKey] ?? ["Guided Mahayog meditation", "Spiritual discourse & wisdom", "Pranic & energy awakening practices"]).map((bullet, i) => (
+                    <li key={i} className="flex items-center gap-3">
+                      <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
+                      {bullet}
+                    </li>
+                  ))}
                 </ul>
               </div>
 
