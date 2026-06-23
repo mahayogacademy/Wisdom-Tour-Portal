@@ -317,6 +317,10 @@ const cityEvents: Record<string, CityEvent[]> = {
 };
 
 
+const cityWhatToExpect: Record<string, string> = {
+  toronto: "These sessions offer guided practice for cultivating inner stillness and self-awareness, whether you are new to spirituality or already experienced.\n\nA rare opportunity for spiritual wisdom, reflection and inner energy awakening.",
+};
+
 const faqGroups = [
   {
     title: "Understanding Mahayog",
@@ -567,9 +571,11 @@ export default function CityPage({ city }: CityPageProps) {
 
               <div className="p-5 md:p-8 bg-card border border-border rounded-xl">
                 <h4 className="font-serif text-xl md:text-2xl font-bold text-primary mb-4">What to Expect</h4>
-                <p className="text-muted-foreground font-light text-base md:text-lg leading-relaxed mb-5">
-                  These sessions offer guided practice for cultivating inner stillness and self-awareness, whether you are new to meditation or already experienced.
-                </p>
+                {(cityWhatToExpect[cityKey] ?? "These sessions offer guided practice for cultivating inner stillness and self-awareness, whether you are new to meditation or already experienced.").split("\n\n").map((para, i) => (
+                  <p key={i} className="text-muted-foreground font-light text-base md:text-lg leading-relaxed mb-5">
+                    {para}
+                  </p>
+                ))}
                 <ul className="space-y-3 text-base md:text-lg text-muted-foreground font-light">
                   <li className="flex items-center gap-3">
                     <div className="w-2 h-2 rounded-full bg-secondary shrink-0" />
