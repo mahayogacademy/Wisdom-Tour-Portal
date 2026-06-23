@@ -166,8 +166,8 @@ const cityEventGroups: Record<string, CityEventGroup[]> = {
       events: [
         {
           dates: "Sat–Wed, July 25–29",
-          venue: "Vishnu Mandir (Fiji Sanatan Society of Alberta)",
-          address: "12629 69 St NW, Edmonton, AB T5C 0G7",
+          venue: "",
+          address: "",
         },
       ],
     },
@@ -501,7 +501,7 @@ export default function CityPage({ city }: CityPageProps) {
                                     {!ev.hideDate && <span className="font-bold">{ev.dates}</span>}{ev.time && <span className="font-normal ml-2">· {ev.time}</span>}
                                   </p>
                                   {ev.title && <p className="text-primary/80 font-medium text-sm md:text-base mt-0.5 whitespace-pre-line">{ev.title}</p>}
-                                  <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>
+                                  {ev.venue && <p className="text-muted-foreground font-light text-sm md:text-base mt-0.5">{ev.venue}</p>}
                                   {ev.address && <p className="text-sm text-muted-foreground/60 mt-0.5">{ev.address}</p>}
                                   {ev.note && <p className="text-sm text-secondary/80 font-medium italic mt-1">{ev.note}</p>}
                                   {ev.rsvpLink && (
