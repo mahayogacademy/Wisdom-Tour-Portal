@@ -412,12 +412,18 @@ export default function CityPage({ city }: CityPageProps) {
             <p className="text-base md:text-xl text-white/80 font-light max-w-xl drop-shadow">
               Join Jagadguru Mahayogi Siddhababa for a transformative program.
             </p>
-            <a
-              href={`mailto:canada@siddhamahayog.org?subject=Registration - ${city}`}
-              className="inline-block mt-6 px-7 py-3 bg-secondary text-white font-semibold text-sm uppercase tracking-widest rounded-full shadow-lg hover:bg-secondary/90 transition-colors"
-            >
-              Register
-            </a>
+            {cityKey === "toronto" ? (
+              <span className="inline-block mt-6 px-7 py-3 bg-secondary text-white font-semibold text-sm uppercase tracking-widest rounded-full shadow-lg">
+                Join
+              </span>
+            ) : (
+              <a
+                href={`mailto:canada@siddhamahayog.org?subject=Registration - ${city}`}
+                className="inline-block mt-6 px-7 py-3 bg-secondary text-white font-semibold text-sm uppercase tracking-widest rounded-full shadow-lg hover:bg-secondary/90 transition-colors"
+              >
+                Register
+              </a>
+            )}
           </motion.div>
         </div>
       </section>
