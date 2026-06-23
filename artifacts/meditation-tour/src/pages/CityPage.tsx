@@ -574,7 +574,7 @@ export default function CityPage({ city }: CityPageProps) {
               variants={fadeInUp}
               className="w-full lg:w-5/12"
             >
-              <h3 className="font-serif font-bold text-xl md:text-2xl text-primary mb-6">Himalayan Siddha Mahayog Meditation</h3>
+              {cityKey !== "toronto" && <h3 className="font-serif font-bold text-xl md:text-2xl text-primary mb-6">Himalayan Siddha Mahayog Meditation</h3>}
 
               <div className="p-5 md:p-8 bg-card border border-border rounded-xl">
                 <h4 className="font-serif text-xl md:text-2xl font-bold text-primary mb-4">What to Expect</h4>
@@ -595,13 +595,15 @@ export default function CityPage({ city }: CityPageProps) {
 
 
               {/* Register Button */}
-              <div className="mt-8">
-                <a href={`mailto:canada@siddhamahayog.org?subject=Registration - ${city}`}>
-                  <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white font-sans font-semibold tracking-[0.12em] uppercase px-10 h-13 rounded-full text-base w-full sm:w-auto">
-                    Register for {city}
-                  </Button>
-                </a>
-              </div>
+              {cityKey !== "toronto" && (
+                <div className="mt-8">
+                  <a href={`mailto:canada@siddhamahayog.org?subject=Registration - ${city}`}>
+                    <Button size="lg" className="bg-secondary hover:bg-secondary/90 text-white font-sans font-semibold tracking-[0.12em] uppercase px-10 h-13 rounded-full text-base w-full sm:w-auto">
+                      Register for {city}
+                    </Button>
+                  </a>
+                </div>
+              )}
 
               {/* Your Guide */}
               <div className="mt-8 pt-8 border-t border-border">
