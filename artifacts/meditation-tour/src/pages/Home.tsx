@@ -114,7 +114,9 @@ export default function Home() {
     },
     {
       name: "Toronto", path: "/toronto", img: cityToronto,
-      events: [],
+      events: [
+        { dates: "Aug 10–11", venue: "Bharat Mata Mandir" },
+      ],
     },
   ];
 
@@ -434,7 +436,7 @@ export default function Home() {
                       </div>
                       <div className="mt-auto pt-1">
                         <div className="inline-block bg-secondary hover:bg-secondary/90 text-white text-sm font-semibold font-sans px-5 py-2.5 rounded-xl transition-colors duration-200">
-                          Register
+                          {city.name === "Toronto" ? "Join" : "Register"}
                         </div>
                       </div>
                     </div>
